@@ -1,0 +1,28 @@
+{
+  "name": "Commander Keen: Goodbye Galaxy AP Tracker",
+  "game_name": "Commander Keen",
+  "package_uid": "keen_goodbye_galaxy_ap_tracker",
+  "package_version": "0.0.1",
+  "min_poptracker_version": "0.25.0",
+  "versions_url": "https://github.com/joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/latest/download/versions.json",
+  "variants": {
+    "both": {
+      "display_name": "Both Episodes (4 & 5)",
+      "flags": [
+        "ap"
+      ]
+    },
+    "ck4_only": {
+      "display_name": "Episode 4 Only",
+      "flags": [
+        "ap"
+      ]
+    },
+    "ck5_only": {
+      "display_name": "Episode 5 Only",
+      "flags": [
+        "ap"
+      ]
+    }
+  }
+}

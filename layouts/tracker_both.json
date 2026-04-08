@@ -1,0 +1,190 @@
+{
+  "tracker_default": {
+    "type": "tabbed",
+    "tabs": [
+      {
+        "title": "Keen 4",
+        "content": {
+          "type": "container",
+          "background": "#000000",
+          "content": {
+            "type": "dock",
+            "content": [
+              {
+                "type": "dock",
+                "dock": "left",
+                "content": [
+                  {
+                    "type": "group",
+                    "header": "Key Items",
+                    "dock": "top",
+                    "content": {
+                      "type": "itemgrid",
+                      "item_size": 40,
+                      "item_margin": 3,
+                      "rows": [
+                        ["pogo", "stunner", "wetsuit", "extra_keen", "stunner_ammo", "ck4_victory", "ck5_victory", "gemsets"]
+                      ]
+                    }
+                  },
+                  {
+                    "type": "group",
+                    "header": "Keen 4 - Levels",
+                    "dock": "top",
+                    "content": {
+                      "type": "itemgrid",
+                      "item_size": 40,
+                      "item_margin": 2,
+                      "rows": [
+                        ["level_bv", "level_sv", "level_pp", "level_cotd", "level_coc", "level_crys"],
+                        ["level_hil", "level_sy", "level_mir", "level_lo", "level_potm", "level_pos"],
+                        ["level_potga", "level_iot", "level_iof", "level_wow", "level_bwbm"]
+                      ]
+                    }
+                  },
+                  {
+                    "type": "group",
+                    "header": "Keen 4 - Gems",
+                    "dock": "top",
+                    "content": {
+                      "type": "itemgrid",
+                      "item_size": 28,
+                      "item_margin": 1,
+                      "rows": [
+                        ["pp_red",    "cotd_red",    "crys_red",    "sy_green",  "lo_green",  "potm_yellow", "pos_blue",  "potga_red",    "iot_red",    "iof_yellow"],
+                        ["pp_blue",   "cotd_yellow", "crys_yellow", "_",         "_",         "_",           "_",         "potga_green",  "iot_yellow", "iof_blue"],
+                        ["_",         "_",           "crys_blue",   "_",         "_",         "_",           "_",         "_",            "iot_blue",   "_"],
+                        ["_",         "_",           "crys_green",  "_",         "_",         "_",           "_",         "_",            "_",          "_"],
+                        ["pp_gemset", "cotd_gemset", "crys_gemset", "sy_gemset", "lo_gemset", "potm_gemset", "pos_gemset","potga_gemset", "iot_gemset", "iof_gemset"]
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "dock",
+                "content": {
+                  "type": "map",
+                  "maps": ["Keen 4 - Shadowlands"]
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "title": "Keen 5",
+        "content": {
+          "type": "container",
+          "background": "#000000",
+          "content": {
+            "type": "dock",
+            "content": [
+              {
+                "type": "dock",
+                "dock": "left",
+                "content": [
+                  {
+                    "type": "group",
+                    "header": "Key Items",
+                    "dock": "top",
+                    "content": {
+                      "type": "itemgrid",
+                      "item_size": 40,
+                      "item_margin": 3,
+                      "rows": [
+                        ["pogo", "stunner", "wetsuit", "extra_keen", "stunner_ammo", "ck4_victory", "ck5_victory", "gemsets"]
+                      ]
+                    }
+                  },
+                  {
+                    "type": "group",
+                    "header": "Keen 5 - Levels",
+                    "dock": "top",
+                    "content": {
+                      "type": "itemgrid",
+                      "item_size": 40,
+                      "item_margin": 2,
+                      "rows": [
+                        ["level_ivs", "level_sc", "level_dtv", "level_efs", "level_dtb", "level_rcc"],
+                        ["level_dts", "level_nbi", "level_dtt", "level_bmi", "level_gdh", "level_qed"]
+                      ]
+                    }
+                  },
+                  {
+                    "type": "group",
+                    "header": "Keen 5 - Gems & Keycards",
+                    "dock": "top",
+                    "content": {
+                      "type": "itemgrid",
+                      "item_size": 28,
+                      "item_margin": 1,
+                      "rows": [
+                        ["sc_red",     "dtv_red",     "efs_red",   "dtb_red",     "rcc_red",     "dts_yellow",  "nbi_red",   "dtt_red",     "bmi_yellow", "gdh_red",     "qed_red"],
+                        ["sc_blue",    "dtv_yellow",  "efs_yellow","dtb_yellow",  "rcc_yellow",  "_",           "nbi_blue",  "dtt_yellow",  "bmi_blue",   "gdh_green",   "qed_yellow"],
+                        ["_",          "_",           "efs_blue",  "dtb_blue",    "rcc_blue",    "_",           "_",         "dtt_blue",    "_",          "_",           "qed_blue"],
+                        ["_",          "_",           "efs_green", "dtb_green",   "_",           "_",           "_",         "dtt_green",   "_",          "_",           "qed_green"],
+                        ["sc_keycard", "dtv_keycard", "_",         "dtb_keycard", "_",           "dts_keycard", "_",         "dtt_keycard", "_",          "gdh_keycard", "_"],
+                        ["sc_gemset",  "dtv_gemset",  "efs_gemset","dtb_gemset",  "rcc_gemset",  "dts_gemset",  "nbi_gemset","dtt_gemset",  "bmi_gemset", "gdh_gemset",  "qed_gemset"]
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "dock",
+                "content": {
+                  "type": "map",
+                  "maps": ["Keen 5 - Omegamatic"]
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "tracker_broadcast": {
+    "type": "dock",
+    "dock_direction": "vertical",
+    "content": [
+      {
+        "type": "group",
+        "header": "Key Items",
+        "content": {
+          "type": "itemgrid",
+          "item_size": 36,
+          "item_margin": 2,
+          "rows": [
+            ["pogo", "stunner", "wetsuit", "extra_keen", "stunner_ammo", "ck4_victory", "ck5_victory", "gemsets"]
+          ]
+        }
+      },
+      {
+        "type": "group",
+        "header": "Keen 4 - Levels",
+        "content": {
+          "type": "itemgrid",
+          "item_size": 28,
+          "item_margin": 1,
+          "rows": [
+            ["level_bv", "level_sv", "level_pp", "level_cotd", "level_coc", "level_crys", "level_hil", "level_sy", "level_mir"],
+            ["level_lo", "level_potm", "level_pos", "level_potga", "level_iot", "level_iof", "level_wow", "level_bwbm"]
+          ]
+        }
+      },
+      {
+        "type": "group",
+        "header": "Keen 5 - Levels",
+        "content": {
+          "type": "itemgrid",
+          "item_size": 28,
+          "item_margin": 1,
+          "rows": [
+            ["level_ivs", "level_sc", "level_dtv", "level_efs", "level_dtb", "level_rcc", "level_dts", "level_nbi", "level_dtt", "level_bmi", "level_gdh", "level_qed"]
+          ]
+        }
+      }
+    ]
+  }
+}

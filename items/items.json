@@ -1,0 +1,692 @@
+[
+  {
+    "name": "",
+    "type": "static",
+    "img": "images/blank.png",
+    "codes": "_"
+  },
+  {
+    "name": "Gemsets",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "gemsets"
+  },
+  {
+    "name": "Pogo Stick",
+    "type": "toggle",
+    "img": "images/pogo.png",
+    "codes": "pogo,keen_101"
+  },
+  {
+    "name": "Neural Stunner",
+    "type": "toggle",
+    "img": "images/stunner.png",
+    "codes": "stunner,keen_102"
+  },
+  {
+    "name": "Wetsuit",
+    "type": "toggle",
+    "img": "images/wetsuit.png",
+    "codes": "wetsuit,keen_103"
+  },
+  {
+    "name": "Border Village",
+    "type": "toggle",
+    "img": "images/border_village.png",
+    "codes": "level_bv,keen_1001"
+  },
+  {
+    "name": "Slug Village",
+    "type": "toggle",
+    "img": "images/slug_village.png",
+    "codes": "level_sv,keen_1002"
+  },
+  {
+    "name": "The Perilous Pit",
+    "type": "toggle",
+    "img": "images/the_perilous_pit.png",
+    "codes": "level_pp,keen_1003"
+  },
+  {
+    "name": "Cave of the Descendents",
+    "type": "toggle",
+    "img": "images/cave_of_the_descendents.png",
+    "codes": "level_cotd,keen_1004"
+  },
+  {
+    "name": "Chasm of Chills",
+    "type": "toggle",
+    "img": "images/chasm_of_chills.png",
+    "codes": "level_coc,keen_1005"
+  },
+  {
+    "name": "Crystalus",
+    "type": "toggle",
+    "img": "images/crystalus.png",
+    "codes": "level_crys,keen_1006"
+  },
+  {
+    "name": "Hillville",
+    "type": "toggle",
+    "img": "images/hillville.png",
+    "codes": "level_hil,keen_1007"
+  },
+  {
+    "name": "Sand Yego",
+    "type": "toggle",
+    "img": "images/sand_yego.png",
+    "codes": "level_sy,keen_1008"
+  },
+  {
+    "name": "Miragia",
+    "type": "toggle",
+    "img": "images/miragia.png",
+    "codes": "level_mir,keen_1009"
+  },
+  {
+    "name": "Lifewater Oasis",
+    "type": "toggle",
+    "img": "images/lifewater_oasis.png",
+    "codes": "level_lo,keen_1010"
+  },
+  {
+    "name": "Pyramid of the Moons",
+    "type": "toggle",
+    "img": "images/pyramid_of_the_moons.png",
+    "codes": "level_potm,keen_1011"
+  },
+  {
+    "name": "Pyramid of Shadows",
+    "type": "toggle",
+    "img": "images/pyramid_of_shadows.png",
+    "codes": "level_pos,keen_1012"
+  },
+  {
+    "name": "Pyramid of the Gnosticine Ancients",
+    "type": "toggle",
+    "img": "images/pyramid_of_the_gnosticene_ancients.png",
+    "codes": "level_potga,keen_1013"
+  },
+  {
+    "name": "Isle of Tar",
+    "type": "toggle",
+    "img": "images/isle_of_tar.png",
+    "codes": "level_iot,keen_1015"
+  },
+  {
+    "name": "Isle of Fire",
+    "type": "toggle",
+    "img": "images/isle_of_fire.png",
+    "codes": "level_iof,keen_1016"
+  },
+  {
+    "name": "Well of Wishes",
+    "type": "toggle",
+    "img": "images/well_of_wishes.png",
+    "codes": "level_wow,keen_1017"
+  },
+  {
+    "name": "Bean-With-Bacon Megarocket",
+    "type": "toggle",
+    "img": "images/bean_with_bacon_megarocket.png",
+    "codes": "level_bwbm,keen_1018"
+  },
+  {
+    "name": "The Perilous Pit - Red Gem",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "pp_red,keen_100300"
+  },
+  {
+    "name": "The Perilous Pit - Blue Gem",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "pp_blue,keen_100302"
+  },
+  {
+    "name": "The Perilous Pit Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "pp_gemset,keen_100399"
+  },
+  {
+    "name": "Cave of the Descendents - Red Gem",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "cotd_red,keen_100400"
+  },
+  {
+    "name": "Cave of the Descendents - Yellow Gem",
+    "type": "toggle",
+    "img": "images/gem_yellow.png",
+    "codes": "cotd_yellow,keen_100401"
+  },
+  {
+    "name": "Cave of the Descendents Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "cotd_gemset,keen_100499"
+  },
+  {
+    "name": "Crystalus - Red Gem",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "crys_red,keen_100600"
+  },
+  {
+    "name": "Crystalus - Yellow Gem",
+    "type": "toggle",
+    "img": "images/gem_yellow.png",
+    "codes": "crys_yellow,keen_100601"
+  },
+  {
+    "name": "Crystalus - Blue Gem",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "crys_blue,keen_100602"
+  },
+  {
+    "name": "Crystalus - Green Gem",
+    "type": "toggle",
+    "img": "images/gem_green.png",
+    "codes": "crys_green,keen_100603"
+  },
+  {
+    "name": "Crystalus Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "crys_gemset,keen_100699"
+  },
+  {
+    "name": "Sand Yego - Green Gem",
+    "type": "toggle",
+    "img": "images/gem_green.png",
+    "codes": "sy_green,keen_100803"
+  },
+  {
+    "name": "Sand Yego Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "sy_gemset,keen_100899"
+  },
+  {
+    "name": "Lifewater Oasis - Green Gem",
+    "type": "toggle",
+    "img": "images/gem_green.png",
+    "codes": "lo_green,keen_101003"
+  },
+  {
+    "name": "Lifewater Oasis Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "lo_gemset,keen_101099"
+  },
+  {
+    "name": "Pyramid of the Moons - Yellow Gem",
+    "type": "toggle",
+    "img": "images/gem_yellow.png",
+    "codes": "potm_yellow,keen_101101"
+  },
+  {
+    "name": "Pyramid of the Moons Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "potm_gemset,keen_101199"
+  },
+  {
+    "name": "Pyramid of Shadows - Blue Gem",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "pos_blue,keen_101202"
+  },
+  {
+    "name": "Pyramid of Shadows Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "pos_gemset,keen_101299"
+  },
+  {
+    "name": "Pyramid of the Gnosticine Ancients - Red Gem",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "potga_red,keen_101300"
+  },
+  {
+    "name": "Pyramid of the Gnosticine Ancients - Green Gem",
+    "type": "toggle",
+    "img": "images/gem_green.png",
+    "codes": "potga_green,keen_101303"
+  },
+  {
+    "name": "Pyramid of the Gnosticine Ancients Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "potga_gemset,keen_101399"
+  },
+  {
+    "name": "Isle of Tar - Red Gem",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "iot_red,keen_101500"
+  },
+  {
+    "name": "Isle of Tar - Yellow Gem",
+    "type": "toggle",
+    "img": "images/gem_yellow.png",
+    "codes": "iot_yellow,keen_101501"
+  },
+  {
+    "name": "Isle of Tar - Blue Gem",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "iot_blue,keen_101502"
+  },
+  {
+    "name": "Isle of Tar Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "iot_gemset,keen_101599"
+  },
+  {
+    "name": "Isle of Fire - Yellow Gem",
+    "type": "toggle",
+    "img": "images/gem_yellow.png",
+    "codes": "iof_yellow,keen_101601"
+  },
+  {
+    "name": "Isle of Fire - Blue Gem",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "iof_blue,keen_101602"
+  },
+  {
+    "name": "Isle of Fire Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "iof_gemset,keen_101699"
+  },
+  {
+    "name": "Ion Ventilation System",
+    "type": "toggle",
+    "img": "images/ion_ventilation_system.png",
+    "codes": "level_ivs,keen_2001"
+  },
+  {
+    "name": "Security Center",
+    "type": "toggle",
+    "img": "images/security_center.png",
+    "codes": "level_sc,keen_2002"
+  },
+  {
+    "name": "Defense Tunnel Vlook",
+    "type": "toggle",
+    "img": "images/defense_tunnel_vlook.png",
+    "codes": "level_dtv,keen_2003"
+  },
+  {
+    "name": "Energy Flow Systems",
+    "type": "toggle",
+    "img": "images/energy_flow_systems.png",
+    "codes": "level_efs,keen_2004"
+  },
+  {
+    "name": "Defense Tunnel Burrh",
+    "type": "toggle",
+    "img": "images/defense_tunnel_burrh.png",
+    "codes": "level_dtb,keen_2005"
+  },
+  {
+    "name": "Regulation Control Center",
+    "type": "toggle",
+    "img": "images/regulation_control_center.png",
+    "codes": "level_rcc,keen_2006"
+  },
+  {
+    "name": "Defense Tunnel Sorra",
+    "type": "toggle",
+    "img": "images/defense_tunnel_sorra.png",
+    "codes": "level_dts,keen_2007"
+  },
+  {
+    "name": "Neutrino Burst Injector",
+    "type": "toggle",
+    "img": "images/neutrino_burst_injector.png",
+    "codes": "level_nbi,keen_2008"
+  },
+  {
+    "name": "Defense Tunnel Teln",
+    "type": "toggle",
+    "img": "images/defense_tunnel_teln.png",
+    "codes": "level_dtt,keen_2009"
+  },
+  {
+    "name": "Brownian Motion Inducer",
+    "type": "toggle",
+    "img": "images/brownian_motion_inducer.png",
+    "codes": "level_bmi,keen_2010"
+  },
+  {
+    "name": "Gravitational Damping Hub",
+    "type": "toggle",
+    "img": "images/gravitational_damping_hub.png",
+    "codes": "level_gdh,keen_2011"
+  },
+  {
+    "name": "Quantum Explosion Dynamo",
+    "type": "toggle",
+    "img": "images/quantum_explosion_dynamo.png",
+    "codes": "level_qed,keen_2012"
+  },
+  {
+    "name": "Security Center - Red Gem",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "sc_red,keen_200200"
+  },
+  {
+    "name": "Security Center - Blue Gem",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "sc_blue,keen_200202"
+  },
+  {
+    "name": "Security Center Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "sc_gemset,keen_200299"
+  },
+  {
+    "name": "Security Center - Keycard",
+    "type": "toggle",
+    "img": "images/keycard.png",
+    "codes": "sc_keycard,keen_200204"
+  },
+  {
+    "name": "Defense Tunnel Vlook - Red Gem",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "dtv_red,keen_200300"
+  },
+  {
+    "name": "Defense Tunnel Vlook - Yellow Gem",
+    "type": "toggle",
+    "img": "images/gem_yellow.png",
+    "codes": "dtv_yellow,keen_200301"
+  },
+  {
+    "name": "Defense Tunnel Vlook Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "dtv_gemset,keen_200399"
+  },
+  {
+    "name": "Defense Tunnel Vlook - Keycard",
+    "type": "toggle",
+    "img": "images/keycard.png",
+    "codes": "dtv_keycard,keen_200304"
+  },
+  {
+    "name": "Energy Flow Systems - Red Gem",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "efs_red,keen_200400"
+  },
+  {
+    "name": "Energy Flow Systems - Yellow Gem",
+    "type": "toggle",
+    "img": "images/gem_yellow.png",
+    "codes": "efs_yellow,keen_200401"
+  },
+  {
+    "name": "Energy Flow Systems - Blue Gem",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "efs_blue,keen_200402"
+  },
+  {
+    "name": "Energy Flow Systems - Green Gem",
+    "type": "toggle",
+    "img": "images/gem_green.png",
+    "codes": "efs_green,keen_200403"
+  },
+  {
+    "name": "Energy Flow Systems Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "efs_gemset,keen_200499"
+  },
+  {
+    "name": "Defense Tunnel Burrh - Red Gem",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "dtb_red,keen_200500"
+  },
+  {
+    "name": "Defense Tunnel Burrh - Yellow Gem",
+    "type": "toggle",
+    "img": "images/gem_yellow.png",
+    "codes": "dtb_yellow,keen_200501"
+  },
+  {
+    "name": "Defense Tunnel Burrh - Blue Gem",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "dtb_blue,keen_200502"
+  },
+  {
+    "name": "Defense Tunnel Burrh - Green Gem",
+    "type": "toggle",
+    "img": "images/gem_green.png",
+    "codes": "dtb_green,keen_200503"
+  },
+  {
+    "name": "Defense Tunnel Burrh Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "dtb_gemset,keen_200599"
+  },
+  {
+    "name": "Defense Tunnel Burrh - Keycard",
+    "type": "toggle",
+    "img": "images/keycard.png",
+    "codes": "dtb_keycard,keen_200504"
+  },
+  {
+    "name": "Regulation Control Center - Red Gem",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "rcc_red,keen_200600"
+  },
+  {
+    "name": "Regulation Control Center - Yellow Gem",
+    "type": "toggle",
+    "img": "images/gem_yellow.png",
+    "codes": "rcc_yellow,keen_200601"
+  },
+  {
+    "name": "Regulation Control Center - Blue Gem",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "rcc_blue,keen_200602"
+  },
+  {
+    "name": "Regulation Control Center Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "rcc_gemset,keen_200699"
+  },
+  {
+    "name": "Defense Tunnel Sorra - Yellow Gem",
+    "type": "toggle",
+    "img": "images/gem_yellow.png",
+    "codes": "dts_yellow,keen_200701"
+  },
+  {
+    "name": "Defense Tunnel Sorra Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "dts_gemset,keen_200799"
+  },
+  {
+    "name": "Defense Tunnel Sorra - Keycard",
+    "type": "toggle",
+    "img": "images/keycard.png",
+    "codes": "dts_keycard,keen_200704"
+  },
+  {
+    "name": "Neutrino Burst Injector - Red Gem",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "nbi_red,keen_200800"
+  },
+  {
+    "name": "Neutrino Burst Injector - Blue Gem",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "nbi_blue,keen_200802"
+  },
+  {
+    "name": "Neutrino Burst Injector Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "nbi_gemset,keen_200899"
+  },
+  {
+    "name": "Defense Tunnel Teln - Red Gem",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "dtt_red,keen_200900"
+  },
+  {
+    "name": "Defense Tunnel Teln - Yellow Gem",
+    "type": "toggle",
+    "img": "images/gem_yellow.png",
+    "codes": "dtt_yellow,keen_200901"
+  },
+  {
+    "name": "Defense Tunnel Teln - Blue Gem",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "dtt_blue,keen_200902"
+  },
+  {
+    "name": "Defense Tunnel Teln - Green Gem",
+    "type": "toggle",
+    "img": "images/gem_green.png",
+    "codes": "dtt_green,keen_200903"
+  },
+  {
+    "name": "Defense Tunnel Teln Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "dtt_gemset,keen_200999"
+  },
+  {
+    "name": "Defense Tunnel Teln - Keycard",
+    "type": "toggle",
+    "img": "images/keycard.png",
+    "codes": "dtt_keycard,keen_200904"
+  },
+  {
+    "name": "Brownian Motion Inducer - Yellow Gem",
+    "type": "toggle",
+    "img": "images/gem_yellow.png",
+    "codes": "bmi_yellow,keen_201001"
+  },
+  {
+    "name": "Brownian Motion Inducer - Blue Gem",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "bmi_blue,keen_201002"
+  },
+  {
+    "name": "Brownian Motion Inducer Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "bmi_gemset,keen_201099"
+  },
+  {
+    "name": "Gravitational Damping Hub - Red Gem",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "gdh_red,keen_201100"
+  },
+  {
+    "name": "Gravitational Damping Hub - Green Gem",
+    "type": "toggle",
+    "img": "images/gem_green.png",
+    "codes": "gdh_green,keen_201103"
+  },
+  {
+    "name": "Gravitational Damping Hub Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "gdh_gemset,keen_201199"
+  },
+  {
+    "name": "Gravitational Damping Hub - Keycard",
+    "type": "toggle",
+    "img": "images/keycard.png",
+    "codes": "gdh_keycard,keen_201104"
+  },
+  {
+    "name": "Quantum Explosion Dynamo - Red Gem",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "qed_red,keen_201200"
+  },
+  {
+    "name": "Quantum Explosion Dynamo - Yellow Gem",
+    "type": "toggle",
+    "img": "images/gem_yellow.png",
+    "codes": "qed_yellow,keen_201201"
+  },
+  {
+    "name": "Quantum Explosion Dynamo - Blue Gem",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "qed_blue,keen_201202"
+  },
+  {
+    "name": "Quantum Explosion Dynamo - Green Gem",
+    "type": "toggle",
+    "img": "images/gem_green.png",
+    "codes": "qed_green,keen_201203"
+  },
+  {
+    "name": "Quantum Explosion Dynamo Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "qed_gemset,keen_201299"
+  },
+  {
+    "name": "Keen 4 Victory",
+    "type": "toggle",
+    "img": "images/council_member.png",
+    "codes": "ck4_victory"
+  },
+  {
+    "name": "Keen 5 Victory",
+    "type": "toggle",
+    "img": "images/omegamatic_ad.png",
+    "codes": "ck5_victory"
+  },
+  {
+    "name": "Extra Keen",
+    "type": "consumable",
+    "img": "images/life.png",
+    "codes": "extra_keen,keen_900",
+    "max_quantity": 99,
+    "increment": 1,
+    "initial_quantity": 0
+  },
+  {
+    "name": "Stunner Ammo",
+    "type": "consumable",
+    "img": "images/ammo.png",
+    "codes": "stunner_ammo,keen_901",
+    "max_quantity": 99,
+    "increment": 1,
+    "initial_quantity": 0
+  }
+]

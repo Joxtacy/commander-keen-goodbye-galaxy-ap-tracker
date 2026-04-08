@@ -1,0 +1,476 @@
+[
+  {
+    "name": "Border Village",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 840,
+        "y": 440
+      }
+    ],
+    "sections": [
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "level_bv"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Slug Village",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 777,
+        "y": 313
+      }
+    ],
+    "sections": [
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "level_sv"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Perilous Pit",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 730,
+        "y": 555
+      }
+    ],
+    "sections": [
+      {
+        "name": "Red Gem",
+        "item_count": 1,
+        "access_rules": [
+          "level_pp"
+        ]
+      },
+      {
+        "name": "Blue Gem",
+        "item_count": 1,
+        "access_rules": [
+          "level_pp"
+        ]
+      },
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "level_pp,pp_red,pp_blue",
+          "level_pp,pp_gemset"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Cave of the Descendents",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 312,
+        "y": 60
+      }
+    ],
+    "sections": [
+      {
+        "name": "Red Gem",
+        "item_count": 1,
+        "access_rules": [
+          "level_cotd"
+        ]
+      },
+      {
+        "name": "Yellow Gem",
+        "item_count": 1,
+        "access_rules": [
+          "level_cotd,cotd_red",
+          "level_cotd,cotd_gemset"
+        ]
+      },
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "level_cotd,pogo,cotd_yellow",
+          "level_cotd,pogo,cotd_gemset"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Chasm of Chills",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 473,
+        "y": 43
+      }
+    ],
+    "sections": [
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "level_coc"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Crystalus",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 710,
+        "y": 110
+      }
+    ],
+    "sections": [
+      {
+        "name": "Green Gem",
+        "item_count": 1,
+        "access_rules": [
+          "level_crys,pogo"
+        ]
+      },
+      {
+        "name": "Yellow Gem",
+        "item_count": 1,
+        "access_rules": [
+          "level_crys,pogo,crys_green",
+          "level_crys,pogo,crys_gemset"
+        ]
+      },
+      {
+        "name": "Red Gem",
+        "item_count": 1,
+        "access_rules": [
+          "level_crys,pogo,crys_yellow",
+          "level_crys,pogo,crys_gemset"
+        ]
+      },
+      {
+        "name": "Blue Gem",
+        "item_count": 1,
+        "access_rules": [
+          "level_crys,pogo,crys_red",
+          "level_crys,pogo,crys_gemset"
+        ]
+      },
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "level_crys,crys_blue",
+          "level_crys,crys_gemset"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hilville",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 456,
+        "y": 426
+      }
+    ],
+    "sections": [
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "level_hil"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sand Yego",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 120,
+        "y": 410
+      }
+    ],
+    "sections": [
+      {
+        "name": "Green Gem",
+        "item_count": 1,
+        "access_rules": [
+          "level_sy,pogo"
+        ]
+      },
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "level_sy,pogo,sy_green",
+          "level_sy,pogo,sy_gemset"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Miragia",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 280,
+        "y": 330
+      }
+    ],
+    "sections": [
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "level_mir,pogo"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lifewater Oasis",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 105,
+        "y": 201
+      }
+    ],
+    "sections": [
+      {
+        "name": "Green Gem",
+        "item_count": 1,
+        "access_rules": [
+          "level_lo"
+        ]
+      },
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "level_lo,lo_green",
+          "level_lo,lo_gemset"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Pyramid of the Moons",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 200,
+        "y": 617
+      }
+    ],
+    "sections": [
+      {
+        "name": "Yellow Gem",
+        "item_count": 1,
+        "access_rules": [
+          "level_potm"
+        ]
+      },
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "level_potm,potm_yellow",
+          "level_potm,potm_gemset"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Pyramid of Shadows",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 472,
+        "y": 697
+      }
+    ],
+    "sections": [
+      {
+        "name": "Blue Gem",
+        "item_count": 1,
+        "access_rules": [
+          "level_pos"
+        ]
+      },
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "level_pos,pos_blue",
+          "level_pos,pos_gemset"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Pyramid of the Gnosticine Ancients",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 216,
+        "y": 793
+      }
+    ],
+    "sections": [
+      {
+        "name": "Red Gem",
+        "item_count": 1,
+        "access_rules": [
+          "level_potga"
+        ]
+      },
+      {
+        "name": "Green Gem",
+        "item_count": 1,
+        "access_rules": [
+          "level_potga,pogo,potga_red",
+          "level_potga,pogo,potga_gemset"
+        ]
+      },
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "level_potga,pogo,potga_red,potga_green",
+          "level_potga,pogo,potga_gemset"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Isle of Tar",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 870,
+        "y": 700
+      }
+    ],
+    "sections": [
+      {
+        "name": "Red Gem",
+        "item_count": 1,
+        "access_rules": [
+          "wetsuit,level_iot,pogo"
+        ]
+      },
+      {
+        "name": "Yellow Gem",
+        "item_count": 1,
+        "access_rules": [
+          "wetsuit,level_iot,iot_red",
+          "wetsuit,level_iot,iot_gemset"
+        ]
+      },
+      {
+        "name": "Blue Gem",
+        "item_count": 1,
+        "access_rules": [
+          "wetsuit,level_iot,iot_yellow",
+          "wetsuit,level_iot,iot_gemset"
+        ]
+      },
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "wetsuit,level_iot,pogo,iot_blue",
+          "wetsuit,level_iot,pogo,iot_gemset"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Isle of Fire",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 680,
+        "y": 810
+      }
+    ],
+    "sections": [
+      {
+        "name": "Yellow Gem",
+        "item_count": 1,
+        "access_rules": [
+          "wetsuit,level_iof"
+        ]
+      },
+      {
+        "name": "Blue Gem",
+        "item_count": 1,
+        "access_rules": [
+          "wetsuit,level_iof,iof_yellow",
+          "wetsuit,level_iof,iof_gemset"
+        ]
+      },
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "wetsuit,level_iof,iof_yellow,iof_blue",
+          "wetsuit,level_iof,iof_gemset"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Well of Wishes",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 888,
+        "y": 810
+      }
+    ],
+    "sections": [
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "wetsuit,level_wow"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bean-With-Bacon Megarocket",
+    "map_locations": [
+      {
+        "map": "Keen 4 - Shadowlands",
+        "x": 840,
+        "y": 590
+      }
+    ],
+    "sections": [
+      {
+        "name": "Complete",
+        "item_count": 1,
+        "access_rules": [
+          "level_bwbm,$ck4_all_completable"
+        ]
+      }
+    ]
+  }
+]
