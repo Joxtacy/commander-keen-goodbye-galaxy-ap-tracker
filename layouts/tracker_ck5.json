@@ -59,8 +59,73 @@
         {
           "type": "dock",
           "content": {
-            "type": "map",
-            "maps": ["Keen 5 - Omegamatic"]
+            "type": "tabbed",
+            "tabs": [
+              {
+                "title": "Overworld",
+                "content": { "type": "map", "maps": ["Keen 5 - Omegamatic"] }
+              },
+              {
+                "title": "Ion Vent. Sys.",
+                "icon": "images/ion_ventilation_system.png",
+                "content": { "type": "map", "maps": ["keen5_ivs"] }
+              },
+              {
+                "title": "Security Ctr.",
+                "icon": "images/security_center.png",
+                "content": { "type": "map", "maps": ["keen5_sc"] }
+              },
+              {
+                "title": "DT Vlook",
+                "icon": "images/defense_tunnel_vlook.png",
+                "content": { "type": "map", "maps": ["keen5_dtv"] }
+              },
+              {
+                "title": "Energy Flow",
+                "icon": "images/energy_flow_systems.png",
+                "content": { "type": "map", "maps": ["keen5_efs"] }
+              },
+              {
+                "title": "DT Burrh",
+                "icon": "images/defense_tunnel_burrh.png",
+                "content": { "type": "map", "maps": ["keen5_dtb"] }
+              },
+              {
+                "title": "Reg. Control",
+                "icon": "images/regulation_control_center.png",
+                "content": { "type": "map", "maps": ["keen5_rcc"] }
+              },
+              {
+                "title": "DT Sorra",
+                "icon": "images/defense_tunnel_sorra.png",
+                "content": { "type": "map", "maps": ["keen5_dts"] }
+              },
+              {
+                "title": "Neutrino Burst",
+                "icon": "images/neutrino_burst_injector.png",
+                "content": { "type": "map", "maps": ["keen5_nbi"] }
+              },
+              {
+                "title": "DT Teln",
+                "icon": "images/defense_tunnel_teln.png",
+                "content": { "type": "map", "maps": ["keen5_dtt"] }
+              },
+              {
+                "title": "Brownian Mot.",
+                "icon": "images/brownian_motion_inducer.png",
+                "content": { "type": "map", "maps": ["keen5_bmi"] }
+              },
+              {
+                "title": "Grav. Damp.",
+                "icon": "images/gravitational_damping_hub.png",
+                "content": { "type": "map", "maps": ["keen5_gdh"] }
+              },
+              {
+                "title": "QED",
+                "icon": "images/quantum_explosion_dynamo.png",
+                "content": { "type": "map", "maps": ["keen5_qed"] }
+              }
+            ]
           }
         }
       ]

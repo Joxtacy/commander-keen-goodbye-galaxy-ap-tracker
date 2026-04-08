@@ -4,5 +4,107 @@
     "img": "images/map_keen4.png",
     "location_size": 30,
     "location_border_thickness": 3
+  },
+  {
+    "name": "keen4_bv",
+    "img": "images/Ck4lv01.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_sv",
+    "img": "images/Ck4lv02.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_pp",
+    "img": "images/Ck4lv03.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_cotd",
+    "img": "images/Ck4lv04.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_coc",
+    "img": "images/Ck4lv05.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_crys",
+    "img": "images/Ck4lv06.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_hil",
+    "img": "images/Ck4lv07.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_sy",
+    "img": "images/Ck4lv08.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_mir",
+    "img": "images/Ck4lv09.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_lo",
+    "img": "images/Ck4lv10.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_potm",
+    "img": "images/Ck4lv11.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_pos",
+    "img": "images/Ck4lv12.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_potga",
+    "img": "images/Ck4lv13.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_iot",
+    "img": "images/Ck4lv15.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_iof",
+    "img": "images/Ck4lv16.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_wow",
+    "img": "images/Ck4lv17.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen4_bwbm",
+    "img": "images/Ck4lv18.png",
+    "location_size": 24,
+    "location_border_thickness": 2
   }
 ]

@@ -1,507 +1,512 @@
 [
   {
-    "name": "Ion Ventilation System",
-    "map_locations": [
+    "name": "Keen 5",
+    "children": [
       {
-        "map": "Keen 5 - Omegamatic",
-        "x": 440,
-        "y": 1380
-      }
-    ],
-    "sections": [
-      {
-        "name": "Complete",
-        "item_count": 1,
-        "access_rules": [
-          "level_ivs"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Security Center",
-    "map_locations": [
-      {
-        "map": "Keen 5 - Omegamatic",
-        "x": 440,
-        "y": 1280
-      }
-    ],
-    "sections": [
-      {
-        "name": "Red Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_sc"
+        "name": "Ion Ventilation System",
+        "map_locations": [
+          {
+            "map": "Keen 5 - Omegamatic",
+            "x": 440,
+            "y": 1380
+          }
+        ],
+        "sections": [
+          {
+            "name": "Complete",
+            "item_count": 1,
+            "access_rules": [
+              "level_ivs"
+            ]
+          }
         ]
       },
       {
-        "name": "Blue Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_sc,pogo,sc_red",
-          "level_sc,pogo,sc_gemset"
+        "name": "Security Center",
+        "map_locations": [
+          {
+            "map": "Keen 5 - Omegamatic",
+            "x": 440,
+            "y": 1280
+          }
+        ],
+        "sections": [
+          {
+            "name": "Red Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_sc"
+            ]
+          },
+          {
+            "name": "Blue Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_sc,pogo,sc_red",
+              "level_sc,pogo,sc_gemset"
+            ]
+          },
+          {
+            "name": "Keycard",
+            "item_count": 1,
+            "access_rules": [
+              "level_sc,sc_blue",
+              "level_sc,sc_gemset"
+            ]
+          },
+          {
+            "name": "Complete",
+            "item_count": 1,
+            "access_rules": [
+              "level_sc,sc_keycard,sc_blue",
+              "level_sc,sc_keycard,sc_gemset"
+            ]
+          }
         ]
       },
       {
-        "name": "Keycard",
-        "item_count": 1,
-        "access_rules": [
-          "level_sc,sc_blue",
-          "level_sc,sc_gemset"
+        "name": "Defense Tunnel Vlook",
+        "map_locations": [
+          {
+            "map": "Keen 5 - Omegamatic",
+            "x": 200,
+            "y": 788
+          }
+        ],
+        "sections": [
+          {
+            "name": "Red Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtv"
+            ]
+          },
+          {
+            "name": "Yellow Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtv,dtv_red",
+              "level_dtv,dtv_gemset"
+            ]
+          },
+          {
+            "name": "Keycard",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtv"
+            ]
+          },
+          {
+            "name": "Complete",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtv,dtv_keycard,dtv_yellow",
+              "level_dtv,dtv_keycard,dtv_gemset"
+            ]
+          }
         ]
       },
       {
-        "name": "Complete",
-        "item_count": 1,
-        "access_rules": [
-          "level_sc,sc_keycard,sc_blue",
-          "level_sc,sc_keycard,sc_gemset"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Defense Tunnel Vlook",
-    "map_locations": [
-      {
-        "map": "Keen 5 - Omegamatic",
-        "x": 200,
-        "y": 788
-      }
-    ],
-    "sections": [
-      {
-        "name": "Red Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtv"
-        ]
-      },
-      {
-        "name": "Yellow Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtv,dtv_red",
-          "level_dtv,dtv_gemset"
-        ]
-      },
-      {
-        "name": "Keycard",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtv"
-        ]
-      },
-      {
-        "name": "Complete",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtv,dtv_keycard,dtv_yellow",
-          "level_dtv,dtv_keycard,dtv_gemset"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Energy Flow Systems",
-    "map_locations": [
-      {
-        "map": "Keen 5 - Omegamatic",
-        "x": 136,
-        "y": 788
-      }
-    ],
-    "sections": [
-      {
-        "name": "Red Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_efs"
+        "name": "Energy Flow Systems",
+        "map_locations": [
+          {
+            "map": "Keen 5 - Omegamatic",
+            "x": 136,
+            "y": 788
+          }
+        ],
+        "sections": [
+          {
+            "name": "Red Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_efs"
+            ]
+          },
+          {
+            "name": "Yellow Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_efs,efs_red",
+              "level_efs,efs_gemset"
+            ]
+          },
+          {
+            "name": "Blue Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_efs,efs_yellow",
+              "level_efs,efs_gemset"
+            ]
+          },
+          {
+            "name": "Green Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_efs,efs_blue",
+              "level_efs,efs_gemset"
+            ]
+          },
+          {
+            "name": "Complete",
+            "item_count": 1,
+            "access_rules": [
+              "level_efs,pogo,efs_green",
+              "level_efs,pogo,efs_gemset"
+            ]
+          }
         ]
       },
       {
-        "name": "Yellow Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_efs,efs_red",
-          "level_efs,efs_gemset"
+        "name": "Defense Tunnel Burrh",
+        "map_locations": [
+          {
+            "map": "Keen 5 - Omegamatic",
+            "x": 440,
+            "y": 980
+          }
+        ],
+        "sections": [
+          {
+            "name": "Red Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtb"
+            ]
+          },
+          {
+            "name": "Yellow Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtb"
+            ]
+          },
+          {
+            "name": "Blue Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtb,dtb_red,dtb_yellow",
+              "level_dtb,dtb_gemset"
+            ]
+          },
+          {
+            "name": "Green Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtb,dtb_red,dtb_blue",
+              "level_dtb,dtb_gemset"
+            ]
+          },
+          {
+            "name": "Keycard",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtb,dtb_red,dtb_green",
+              "level_dtb,dtb_gemset"
+            ]
+          },
+          {
+            "name": "Complete",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtb,dtb_keycard,dtb_red",
+              "level_dtb,dtb_keycard,dtb_gemset"
+            ]
+          }
         ]
       },
       {
-        "name": "Blue Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_efs,efs_yellow",
-          "level_efs,efs_gemset"
+        "name": "Regulation Control Center",
+        "map_locations": [
+          {
+            "map": "Keen 5 - Omegamatic",
+            "x": 457,
+            "y": 1060
+          }
+        ],
+        "sections": [
+          {
+            "name": "Red Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_rcc"
+            ]
+          },
+          {
+            "name": "Yellow Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_rcc,pogo,rcc_red",
+              "level_rcc,pogo,rcc_gemset"
+            ]
+          },
+          {
+            "name": "Blue Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_rcc,pogo,rcc_red,rcc_yellow",
+              "level_rcc,pogo,rcc_gemset"
+            ]
+          },
+          {
+            "name": "Complete",
+            "item_count": 1,
+            "access_rules": [
+              "level_rcc,pogo,rcc_red,rcc_yellow,rcc_blue",
+              "level_rcc,pogo,rcc_gemset"
+            ]
+          }
         ]
       },
       {
-        "name": "Green Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_efs,efs_blue",
-          "level_efs,efs_gemset"
+        "name": "Defense Tunnel Sorra",
+        "map_locations": [
+          {
+            "map": "Keen 5 - Omegamatic",
+            "x": 536,
+            "y": 788
+          }
+        ],
+        "sections": [
+          {
+            "name": "Yellow Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_dts,pogo"
+            ]
+          },
+          {
+            "name": "Keycard",
+            "item_count": 1,
+            "access_rules": [
+              "level_dts"
+            ]
+          },
+          {
+            "name": "Complete",
+            "item_count": 1,
+            "access_rules": [
+              "level_dts,dts_keycard,dts_yellow",
+              "level_dts,dts_keycard,dts_gemset"
+            ]
+          }
         ]
       },
       {
-        "name": "Complete",
-        "item_count": 1,
-        "access_rules": [
-          "level_efs,pogo,efs_green",
-          "level_efs,pogo,efs_gemset"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Defense Tunnel Burrh",
-    "map_locations": [
-      {
-        "map": "Keen 5 - Omegamatic",
-        "x": 440,
-        "y": 980
-      }
-    ],
-    "sections": [
-      {
-        "name": "Red Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtb"
-        ]
-      },
-      {
-        "name": "Yellow Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtb"
-        ]
-      },
-      {
-        "name": "Blue Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtb,dtb_red,dtb_yellow",
-          "level_dtb,dtb_gemset"
+        "name": "Neutrino Burst Injector",
+        "map_locations": [
+          {
+            "map": "Keen 5 - Omegamatic",
+            "x": 600,
+            "y": 788
+          }
+        ],
+        "sections": [
+          {
+            "name": "Red Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_nbi"
+            ]
+          },
+          {
+            "name": "Blue Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_nbi,pogo"
+            ]
+          },
+          {
+            "name": "Complete",
+            "item_count": 1,
+            "access_rules": [
+              "level_nbi,pogo,nbi_red,nbi_blue",
+              "level_nbi,pogo,nbi_gemset"
+            ]
+          }
         ]
       },
       {
-        "name": "Green Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtb,dtb_red,dtb_blue",
-          "level_dtb,dtb_gemset"
+        "name": "Defense Tunnel Teln",
+        "map_locations": [
+          {
+            "map": "Keen 5 - Omegamatic",
+            "x": 440,
+            "y": 723
+          }
+        ],
+        "sections": [
+          {
+            "name": "Red Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtt"
+            ]
+          },
+          {
+            "name": "Yellow Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtt,dtt_red",
+              "level_dtt,dtt_gemset"
+            ]
+          },
+          {
+            "name": "Blue Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtt,dtt_yellow",
+              "level_dtt,dtt_gemset"
+            ]
+          },
+          {
+            "name": "Green Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtt,dtt_yellow",
+              "level_dtt,dtt_gemset"
+            ]
+          },
+          {
+            "name": "Keycard",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtt,dtt_yellow,dtt_green",
+              "level_dtt,dtt_gemset"
+            ]
+          },
+          {
+            "name": "Complete",
+            "item_count": 1,
+            "access_rules": [
+              "level_dtt,dtt_keycard,dtt_yellow,dtt_blue",
+              "level_dtt,dtt_keycard,dtt_gemset"
+            ]
+          }
         ]
       },
       {
-        "name": "Keycard",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtb,dtb_red,dtb_green",
-          "level_dtb,dtb_gemset"
+        "name": "Brownian Motion Inducer",
+        "map_locations": [
+          {
+            "map": "Keen 5 - Omegamatic",
+            "x": 456,
+            "y": 660
+          }
+        ],
+        "sections": [
+          {
+            "name": "Yellow Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_bmi,pogo"
+            ]
+          },
+          {
+            "name": "Blue Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_bmi,pogo"
+            ]
+          },
+          {
+            "name": "Complete",
+            "item_count": 1,
+            "access_rules": [
+              "level_bmi,pogo,bmi_yellow,bmi_blue",
+              "level_bmi,pogo,bmi_gemset"
+            ]
+          }
         ]
       },
       {
-        "name": "Complete",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtb,dtb_keycard,dtb_red",
-          "level_dtb,dtb_keycard,dtb_gemset"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Regulation Control Center",
-    "map_locations": [
-      {
-        "map": "Keen 5 - Omegamatic",
-        "x": 457,
-        "y": 1060
-      }
-    ],
-    "sections": [
-      {
-        "name": "Red Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_rcc"
-        ]
-      },
-      {
-        "name": "Yellow Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_rcc,pogo,rcc_red",
-          "level_rcc,pogo,rcc_gemset"
-        ]
-      },
-      {
-        "name": "Blue Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_rcc,pogo,rcc_red,rcc_yellow",
-          "level_rcc,pogo,rcc_gemset"
-        ]
-      },
-      {
-        "name": "Complete",
-        "item_count": 1,
-        "access_rules": [
-          "level_rcc,pogo,rcc_red,rcc_yellow,rcc_blue",
-          "level_rcc,pogo,rcc_gemset"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Defense Tunnel Sorra",
-    "map_locations": [
-      {
-        "map": "Keen 5 - Omegamatic",
-        "x": 536,
-        "y": 788
-      }
-    ],
-    "sections": [
-      {
-        "name": "Yellow Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_dts,pogo"
+        "name": "Gravitational Damping Hub",
+        "map_locations": [
+          {
+            "map": "Keen 5 - Omegamatic",
+            "x": 440,
+            "y": 323
+          }
+        ],
+        "sections": [
+          {
+            "name": "Green Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_gdh,pogo"
+            ]
+          },
+          {
+            "name": "Red Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_gdh,pogo,gdh_green",
+              "level_gdh,pogo,gdh_gemset"
+            ]
+          },
+          {
+            "name": "Keycard",
+            "item_count": 1,
+            "access_rules": [
+              "level_gdh,pogo"
+            ]
+          },
+          {
+            "name": "Complete",
+            "item_count": 1,
+            "access_rules": [
+              "level_gdh,pogo,gdh_keycard,gdh_green",
+              "level_gdh,pogo,gdh_keycard,gdh_gemset"
+            ]
+          }
         ]
       },
       {
-        "name": "Keycard",
-        "item_count": 1,
-        "access_rules": [
-          "level_dts"
-        ]
-      },
-      {
-        "name": "Complete",
-        "item_count": 1,
-        "access_rules": [
-          "level_dts,dts_keycard,dts_yellow",
-          "level_dts,dts_keycard,dts_gemset"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Neutrino Burst Injector",
-    "map_locations": [
-      {
-        "map": "Keen 5 - Omegamatic",
-        "x": 600,
-        "y": 788
-      }
-    ],
-    "sections": [
-      {
-        "name": "Red Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_nbi"
-        ]
-      },
-      {
-        "name": "Blue Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_nbi,pogo"
-        ]
-      },
-      {
-        "name": "Complete",
-        "item_count": 1,
-        "access_rules": [
-          "level_nbi,pogo,nbi_red,nbi_blue",
-          "level_nbi,pogo,nbi_gemset"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Defense Tunnel Teln",
-    "map_locations": [
-      {
-        "map": "Keen 5 - Omegamatic",
-        "x": 440,
-        "y": 723
-      }
-    ],
-    "sections": [
-      {
-        "name": "Red Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtt"
-        ]
-      },
-      {
-        "name": "Yellow Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtt,dtt_red",
-          "level_dtt,dtt_gemset"
-        ]
-      },
-      {
-        "name": "Blue Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtt,dtt_yellow",
-          "level_dtt,dtt_gemset"
-        ]
-      },
-      {
-        "name": "Green Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtt,dtt_yellow",
-          "level_dtt,dtt_gemset"
-        ]
-      },
-      {
-        "name": "Keycard",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtt,dtt_yellow,dtt_green",
-          "level_dtt,dtt_gemset"
-        ]
-      },
-      {
-        "name": "Complete",
-        "item_count": 1,
-        "access_rules": [
-          "level_dtt,dtt_keycard,dtt_yellow,dtt_blue",
-          "level_dtt,dtt_keycard,dtt_gemset"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Brownian Motion Inducer",
-    "map_locations": [
-      {
-        "map": "Keen 5 - Omegamatic",
-        "x": 456,
-        "y": 660
-      }
-    ],
-    "sections": [
-      {
-        "name": "Yellow Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_bmi,pogo"
-        ]
-      },
-      {
-        "name": "Blue Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_bmi,pogo"
-        ]
-      },
-      {
-        "name": "Complete",
-        "item_count": 1,
-        "access_rules": [
-          "level_bmi,pogo,bmi_yellow,bmi_blue",
-          "level_bmi,pogo,bmi_gemset"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Gravitational Damping Hub",
-    "map_locations": [
-      {
-        "map": "Keen 5 - Omegamatic",
-        "x": 440,
-        "y": 323
-      }
-    ],
-    "sections": [
-      {
-        "name": "Green Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_gdh,pogo"
-        ]
-      },
-      {
-        "name": "Red Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_gdh,pogo,gdh_green",
-          "level_gdh,pogo,gdh_gemset"
-        ]
-      },
-      {
-        "name": "Keycard",
-        "item_count": 1,
-        "access_rules": [
-          "level_gdh,pogo"
-        ]
-      },
-      {
-        "name": "Complete",
-        "item_count": 1,
-        "access_rules": [
-          "level_gdh,pogo,gdh_keycard,gdh_green",
-          "level_gdh,pogo,gdh_keycard,gdh_gemset"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Quantum Explosion Dynamo",
-    "map_locations": [
-      {
-        "map": "Keen 5 - Omegamatic",
-        "x": 296,
-        "y": 275
-      }
-    ],
-    "sections": [
-      {
-        "name": "Red Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_qed,pogo"
-        ]
-      },
-      {
-        "name": "Yellow Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_qed,pogo"
-        ]
-      },
-      {
-        "name": "Blue Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_qed,pogo"
-        ]
-      },
-      {
-        "name": "Green Gem",
-        "item_count": 1,
-        "access_rules": [
-          "level_qed,pogo"
-        ]
-      },
-      {
-        "name": "Complete",
-        "item_count": 1,
-        "access_rules": [
-          "level_qed,pogo,qed_red,qed_yellow,qed_blue,qed_green,$ck5_all_completable",
-          "level_qed,pogo,qed_gemset,$ck5_all_completable"
+        "name": "Quantum Explosion Dynamo",
+        "map_locations": [
+          {
+            "map": "Keen 5 - Omegamatic",
+            "x": 296,
+            "y": 275
+          }
+        ],
+        "sections": [
+          {
+            "name": "Red Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_qed,pogo"
+            ]
+          },
+          {
+            "name": "Yellow Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_qed,pogo"
+            ]
+          },
+          {
+            "name": "Blue Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_qed,pogo"
+            ]
+          },
+          {
+            "name": "Green Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_qed,pogo"
+            ]
+          },
+          {
+            "name": "Complete",
+            "item_count": 1,
+            "access_rules": [
+              "level_qed,pogo,qed_red,qed_yellow,qed_blue,qed_green,$ck5_all_completable",
+              "level_qed,pogo,qed_gemset,$ck5_all_completable"
+            ]
+          }
         ]
       }
     ]

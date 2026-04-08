@@ -1,0 +1,302 @@
+[
+  {
+    "name": "Ion Ventilation System",
+    "children": [
+      {
+        "name": "Exit",
+        "sections": [{ "ref": "Keen 5/Ion Ventilation System/Complete", "name": "Complete" }],
+        "map_locations": [{ "map": "keen5_ivs", "x": 528, "y": 56 }]
+      }
+    ]
+  },
+  {
+    "name": "Security Center",
+    "children": [
+      {
+        "name": "Red Gem",
+        "sections": [{ "ref": "Keen 5/Security Center/Red Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_sc", "x": 248, "y": 840 }]
+      },
+      {
+        "name": "Blue Gem",
+        "sections": [{ "ref": "Keen 5/Security Center/Blue Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_sc", "x": 1049, "y": 712 }]
+      },
+      {
+        "name": "Keycard",
+        "sections": [{ "ref": "Keen 5/Security Center/Keycard", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_sc", "x": 41, "y": 360 }]
+      },
+      {
+        "name": "Exit",
+        "sections": [{ "ref": "Keen 5/Security Center/Complete", "name": "Complete" }],
+        "map_locations": [{ "map": "keen5_sc", "x": 1007, "y": 93 }]
+      }
+    ]
+  },
+  {
+    "name": "Defense Tunnel Vlook",
+    "children": [
+      {
+        "name": "Red Gem",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Vlook/Red Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_dtv", "x": 1368, "y": 200 }]
+      },
+      {
+        "name": "Yellow Gem",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Vlook/Yellow Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_dtv", "x": 1352, "y": 55 }]
+      },
+      {
+        "name": "Keycard",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Vlook/Keycard", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_dtv", "x": 2232, "y": 263 }]
+      },
+      {
+        "name": "Exit",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Vlook/Complete", "name": "Complete" }],
+        "map_locations": [{ "map": "keen5_dtv", "x": 128, "y": 90 }]
+      }
+    ]
+  },
+  {
+    "name": "Energy Flow Systems",
+    "children": [
+      {
+        "name": "Red Gem",
+        "sections": [{ "ref": "Keen 5/Energy Flow Systems/Red Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_efs", "x": 664, "y": 394 }]
+      },
+      {
+        "name": "Yellow Gem",
+        "sections": [{ "ref": "Keen 5/Energy Flow Systems/Yellow Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_efs", "x": 665, "y": 232 }]
+      },
+      {
+        "name": "Blue Gem",
+        "sections": [{ "ref": "Keen 5/Energy Flow Systems/Blue Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_efs", "x": 905, "y": 985 }]
+      },
+      {
+        "name": "Green Gem",
+        "sections": [{ "ref": "Keen 5/Energy Flow Systems/Green Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_efs", "x": 183, "y": 727 }]
+      },
+      {
+        "name": "Exit",
+        "sections": [{ "ref": "Keen 5/Energy Flow Systems/Complete", "name": "Complete" }],
+        "map_locations": [{ "map": "keen5_efs", "x": 250, "y": 250 }]
+      }
+    ]
+  },
+  {
+    "name": "Defense Tunnel Burrh",
+    "children": [
+      {
+        "name": "Red Gem",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Burrh/Red Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_dtb", "x": 1240, "y": 265 }]
+      },
+      {
+        "name": "Yellow Gem",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Burrh/Yellow Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_dtb", "x": 1528, "y": 56 }]
+      },
+      {
+        "name": "Blue Gem",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Burrh/Blue Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_dtb", "x": 2841, "y": 71 }]
+      },
+      {
+        "name": "Green Gem",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Burrh/Green Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_dtb", "x": 3096, "y": 137 }]
+      },
+      {
+        "name": "Keycard",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Burrh/Keycard", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_dtb", "x": 3096, "y": 41 }]
+      },
+      {
+        "name": "Exit",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Burrh/Complete", "name": "Complete" }],
+        "map_locations": [{ "map": "keen5_dtb", "x": 3070, "y": 248 }]
+      }
+    ]
+  },
+  {
+    "name": "Regulation Control Center",
+    "children": [
+      {
+        "name": "Red Gem",
+        "sections": [{ "ref": "Keen 5/Regulation Control Center/Red Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_rcc", "x": 105, "y": 312 }]
+      },
+      {
+        "name": "Yellow Gem",
+        "sections": [{ "ref": "Keen 5/Regulation Control Center/Yellow Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_rcc", "x": 376, "y": 184 }]
+      },
+      {
+        "name": "Blue Gem",
+        "sections": [{ "ref": "Keen 5/Regulation Control Center/Blue Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_rcc", "x": 105, "y": 890 }]
+      },
+      {
+        "name": "Exit",
+        "sections": [{ "ref": "Keen 5/Regulation Control Center/Complete", "name": "Complete" }],
+        "map_locations": [{ "map": "keen5_rcc", "x": 538, "y": 420 }]
+      }
+    ]
+  },
+  {
+    "name": "Defense Tunnel Sorra",
+    "children": [
+      {
+        "name": "Yellow Gem",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Sorra/Yellow Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_dts", "x": 2713, "y": 89 }]
+      },
+      {
+        "name": "Keycard",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Sorra/Keycard", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_dts", "x": 1802, "y": 122 }]
+      },
+      {
+        "name": "Exit",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Sorra/Complete", "name": "Complete" }],
+        "map_locations": [{ "map": "keen5_dts", "x": 3087, "y": 139 }]
+      }
+    ]
+  },
+  {
+    "name": "Neutrino Burst Injector",
+    "children": [
+      {
+        "name": "Red Gem",
+        "sections": [{ "ref": "Keen 5/Neutrino Burst Injector/Red Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_nbi", "x": 1000, "y": 1000 }]
+      },
+      {
+        "name": "Blue Gem",
+        "sections": [{ "ref": "Keen 5/Neutrino Burst Injector/Blue Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_nbi", "x": 1000, "y": 41 }]
+      },
+      {
+        "name": "Exit",
+        "sections": [{ "ref": "Keen 5/Neutrino Burst Injector/Complete", "name": "Complete" }],
+        "map_locations": [{ "map": "keen5_nbi", "x": 155, "y": 910 }]
+      }
+    ]
+  },
+  {
+    "name": "Defense Tunnel Teln",
+    "children": [
+      {
+        "name": "Red Gem",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Teln/Red Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_dtt", "x": 2760, "y": 25 }]
+      },
+      {
+        "name": "Yellow Gem",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Teln/Yellow Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_dtt", "x": 2344, "y": 25 }]
+      },
+      {
+        "name": "Blue Gem",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Teln/Blue Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_dtt", "x": 1289, "y": 56 }]
+      },
+      {
+        "name": "Green Gem",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Teln/Green Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_dtt", "x": 1784, "y": 25 }]
+      },
+      {
+        "name": "Keycard",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Teln/Keycard", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_dtt", "x": 377, "y": 57 }]
+      },
+      {
+        "name": "Exit",
+        "sections": [{ "ref": "Keen 5/Defense Tunnel Teln/Complete", "name": "Complete" }],
+        "map_locations": [{ "map": "keen5_dtt", "x": 80, "y": 73 }]
+      }
+    ]
+  },
+  {
+    "name": "Brownian Motion Inducer",
+    "children": [
+      {
+        "name": "Yellow Gem",
+        "sections": [{ "ref": "Keen 5/Brownian Motion Inducer/Yellow Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_bmi", "x": 280, "y": 88 }]
+      },
+      {
+        "name": "Blue Gem",
+        "sections": [{ "ref": "Keen 5/Brownian Motion Inducer/Blue Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_bmi", "x": 840, "y": 1050 }]
+      },
+      {
+        "name": "Exit",
+        "sections": [{ "ref": "Keen 5/Brownian Motion Inducer/Complete", "name": "Complete" }],
+        "map_locations": [{ "map": "keen5_bmi", "x": 424, "y": 886 }]
+      }
+    ]
+  },
+  {
+    "name": "Gravitational Damping Hub",
+    "children": [
+      {
+        "name": "Green Gem",
+        "sections": [{ "ref": "Keen 5/Gravitational Damping Hub/Green Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_gdh", "x": 633, "y": 505 }]
+      },
+      {
+        "name": "Red Gem",
+        "sections": [{ "ref": "Keen 5/Gravitational Damping Hub/Red Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_gdh", "x": 72, "y": 648 }]
+      },
+      {
+        "name": "Keycard",
+        "sections": [{ "ref": "Keen 5/Gravitational Damping Hub/Keycard", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_gdh", "x": 72, "y": 200 }]
+      },
+      {
+        "name": "Exit",
+        "sections": [{ "ref": "Keen 5/Gravitational Damping Hub/Complete", "name": "Complete" }],
+        "map_locations": [{ "map": "keen5_gdh", "x": 95, "y": 55 }]
+      }
+    ]
+  },
+  {
+    "name": "Quantum Explosion Dynamo",
+    "children": [
+      {
+        "name": "Red Gem",
+        "sections": [{ "ref": "Keen 5/Quantum Explosion Dynamo/Red Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_qed", "x": 394, "y": 1003 }]
+      },
+      {
+        "name": "Yellow Gem",
+        "sections": [{ "ref": "Keen 5/Quantum Explosion Dynamo/Yellow Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_qed", "x": 360, "y": 747 }]
+      },
+      {
+        "name": "Blue Gem",
+        "sections": [{ "ref": "Keen 5/Quantum Explosion Dynamo/Blue Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_qed", "x": 1065, "y": 906 }]
+      },
+      {
+        "name": "Green Gem",
+        "sections": [{ "ref": "Keen 5/Quantum Explosion Dynamo/Green Gem", "name": "Item" }],
+        "map_locations": [{ "map": "keen5_qed", "x": 682, "y": 169 }]
+      },
+      {
+        "name": "Exit",
+        "sections": [{ "ref": "Keen 5/Quantum Explosion Dynamo/Complete", "name": "Complete" }],
+        "map_locations": [{ "map": "keen5_qed", "x": 256, "y": 128 }]
+      }
+    ]
+  }
+]

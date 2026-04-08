@@ -64,8 +64,98 @@
               {
                 "type": "dock",
                 "content": {
-                  "type": "map",
-                  "maps": ["Keen 4 - Shadowlands"]
+                  "type": "tabbed",
+                  "tabs": [
+                    {
+                      "title": "Overworld",
+                      "content": { "type": "map", "maps": ["Keen 4 - Shadowlands"] }
+                    },
+                    {
+                      "title": "Border Village",
+                      "icon": "images/border_village.png",
+                      "content": { "type": "map", "maps": ["keen4_bv"] }
+                    },
+                    {
+                      "title": "Slug Village",
+                      "icon": "images/slug_village.png",
+                      "content": { "type": "map", "maps": ["keen4_sv"] }
+                    },
+                    {
+                      "title": "Perilous Pit",
+                      "icon": "images/the_perilous_pit.png",
+                      "content": { "type": "map", "maps": ["keen4_pp"] }
+                    },
+                    {
+                      "title": "Cave of Desc.",
+                      "icon": "images/cave_of_the_descendents.png",
+                      "content": { "type": "map", "maps": ["keen4_cotd"] }
+                    },
+                    {
+                      "title": "Chasm of Chills",
+                      "icon": "images/chasm_of_chills.png",
+                      "content": { "type": "map", "maps": ["keen4_coc"] }
+                    },
+                    {
+                      "title": "Crystalus",
+                      "icon": "images/crystalus.png",
+                      "content": { "type": "map", "maps": ["keen4_crys"] }
+                    },
+                    {
+                      "title": "Hilville",
+                      "icon": "images/hillville.png",
+                      "content": { "type": "map", "maps": ["keen4_hil"] }
+                    },
+                    {
+                      "title": "Sand Yego",
+                      "icon": "images/sand_yego.png",
+                      "content": { "type": "map", "maps": ["keen4_sy"] }
+                    },
+                    {
+                      "title": "Miragia",
+                      "icon": "images/miragia.png",
+                      "content": { "type": "map", "maps": ["keen4_mir"] }
+                    },
+                    {
+                      "title": "Lifewater Oasis",
+                      "icon": "images/lifewater_oasis.png",
+                      "content": { "type": "map", "maps": ["keen4_lo"] }
+                    },
+                    {
+                      "title": "Pyr. of Moons",
+                      "icon": "images/pyramid_of_the_moons.png",
+                      "content": { "type": "map", "maps": ["keen4_potm"] }
+                    },
+                    {
+                      "title": "Pyr. of Shadows",
+                      "icon": "images/pyramid_of_shadows.png",
+                      "content": { "type": "map", "maps": ["keen4_pos"] }
+                    },
+                    {
+                      "title": "Pyr. of Gnost.",
+                      "icon": "images/pyramid_of_the_gnosticene_ancients.png",
+                      "content": { "type": "map", "maps": ["keen4_potga"] }
+                    },
+                    {
+                      "title": "Isle of Tar",
+                      "icon": "images/isle_of_tar.png",
+                      "content": { "type": "map", "maps": ["keen4_iot"] }
+                    },
+                    {
+                      "title": "Isle of Fire",
+                      "icon": "images/isle_of_fire.png",
+                      "content": { "type": "map", "maps": ["keen4_iof"] }
+                    },
+                    {
+                      "title": "Well of Wishes",
+                      "icon": "images/well_of_wishes.png",
+                      "content": { "type": "map", "maps": ["keen4_wow"] }
+                    },
+                    {
+                      "title": "BWBM",
+                      "icon": "images/bean_with_bacon_megarocket.png",
+                      "content": { "type": "map", "maps": ["keen4_bwbm"] }
+                    }
+                  ]
                 }
               }
             ]
@@ -134,8 +224,73 @@
               {
                 "type": "dock",
                 "content": {
-                  "type": "map",
-                  "maps": ["Keen 5 - Omegamatic"]
+                  "type": "tabbed",
+                  "tabs": [
+                    {
+                      "title": "Overworld",
+                      "content": { "type": "map", "maps": ["Keen 5 - Omegamatic"] }
+                    },
+                    {
+                      "title": "Ion Vent. Sys.",
+                      "icon": "images/ion_ventilation_system.png",
+                      "content": { "type": "map", "maps": ["keen5_ivs"] }
+                    },
+                    {
+                      "title": "Security Ctr.",
+                      "icon": "images/security_center.png",
+                      "content": { "type": "map", "maps": ["keen5_sc"] }
+                    },
+                    {
+                      "title": "DT Vlook",
+                      "icon": "images/defense_tunnel_vlook.png",
+                      "content": { "type": "map", "maps": ["keen5_dtv"] }
+                    },
+                    {
+                      "title": "Energy Flow",
+                      "icon": "images/energy_flow_systems.png",
+                      "content": { "type": "map", "maps": ["keen5_efs"] }
+                    },
+                    {
+                      "title": "DT Burrh",
+                      "icon": "images/defense_tunnel_burrh.png",
+                      "content": { "type": "map", "maps": ["keen5_dtb"] }
+                    },
+                    {
+                      "title": "Reg. Control",
+                      "icon": "images/regulation_control_center.png",
+                      "content": { "type": "map", "maps": ["keen5_rcc"] }
+                    },
+                    {
+                      "title": "DT Sorra",
+                      "icon": "images/defense_tunnel_sorra.png",
+                      "content": { "type": "map", "maps": ["keen5_dts"] }
+                    },
+                    {
+                      "title": "Neutrino Burst",
+                      "icon": "images/neutrino_burst_injector.png",
+                      "content": { "type": "map", "maps": ["keen5_nbi"] }
+                    },
+                    {
+                      "title": "DT Teln",
+                      "icon": "images/defense_tunnel_teln.png",
+                      "content": { "type": "map", "maps": ["keen5_dtt"] }
+                    },
+                    {
+                      "title": "Brownian Mot.",
+                      "icon": "images/brownian_motion_inducer.png",
+                      "content": { "type": "map", "maps": ["keen5_bmi"] }
+                    },
+                    {
+                      "title": "Grav. Damp.",
+                      "icon": "images/gravitational_damping_hub.png",
+                      "content": { "type": "map", "maps": ["keen5_gdh"] }
+                    },
+                    {
+                      "title": "QED",
+                      "icon": "images/quantum_explosion_dynamo.png",
+                      "content": { "type": "map", "maps": ["keen5_qed"] }
+                    }
+                  ]
                 }
               }
             ]

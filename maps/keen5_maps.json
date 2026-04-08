@@ -4,5 +4,77 @@
     "img": "images/map_keen5.png",
     "location_size": 30,
     "location_border_thickness": 3
+  },
+  {
+    "name": "keen5_ivs",
+    "img": "images/Ck5lv01.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen5_sc",
+    "img": "images/Ck5lv02.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen5_dtv",
+    "img": "images/Ck5lv03.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen5_efs",
+    "img": "images/Ck5lv04.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen5_dtb",
+    "img": "images/Ck5lv05.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen5_rcc",
+    "img": "images/Ck5lv06.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen5_dts",
+    "img": "images/Ck5lv07.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen5_nbi",
+    "img": "images/Ck5lv08.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen5_dtt",
+    "img": "images/Ck5lv09.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen5_bmi",
+    "img": "images/Ck5lv10.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen5_gdh",
+    "img": "images/Ck5lv11.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
+    "name": "keen5_qed",
+    "img": "images/Ck5lv12.png",
+    "location_size": 24,
+    "location_border_thickness": 2
   }
 ]

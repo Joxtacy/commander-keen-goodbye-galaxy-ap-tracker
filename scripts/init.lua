@@ -12,16 +12,20 @@ local variant = Tracker.ActiveVariantUID
 
 if variant == "ck4_only" then
     Tracker:AddLocations("locations/keen4_locations.json")
+    Tracker:AddLocations("locations/keen4_level_maps.json")
     Tracker:AddMaps("maps/keen4_maps.json")
     Tracker:AddLayouts("layouts/tracker_ck4.json")
 elseif variant == "ck5_only" then
     Tracker:AddLocations("locations/keen5_locations.json")
+    Tracker:AddLocations("locations/keen5_level_maps.json")
     Tracker:AddMaps("maps/keen5_maps.json")
     Tracker:AddLayouts("layouts/tracker_ck5.json")
 else
     -- "both" variant (default)
     Tracker:AddLocations("locations/keen4_locations.json")
+    Tracker:AddLocations("locations/keen4_level_maps.json")
     Tracker:AddLocations("locations/keen5_locations.json")
+    Tracker:AddLocations("locations/keen5_level_maps.json")
     Tracker:AddMaps("maps/keen4_maps.json")
     Tracker:AddMaps("maps/keen5_maps.json")
     Tracker:AddLayouts("layouts/tracker_both.json")
