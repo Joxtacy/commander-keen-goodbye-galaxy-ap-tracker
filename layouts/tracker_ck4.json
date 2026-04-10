@@ -18,7 +18,7 @@
                 "item_size": 48,
                 "item_margin": 4,
                 "rows": [
-                  ["pogo", "stunner", "wetsuit", "extra_keen", "stunner_ammo", "ck4_victory", "gemsets"]
+                  ["pogo", "stunner", "wetsuit", "extra_keen", "stunner_ammo", "ck4_victory", "gemsets", "automap"]
                 ]
               }
             },

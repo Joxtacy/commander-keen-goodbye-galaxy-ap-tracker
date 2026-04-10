@@ -23,7 +23,7 @@
                       "item_size": 40,
                       "item_margin": 3,
                       "rows": [
-                        ["pogo", "stunner", "wetsuit", "extra_keen", "stunner_ammo", "ck4_victory", "ck5_victory", "gemsets"]
+                        ["pogo", "stunner", "wetsuit", "extra_keen", "stunner_ammo", "ck4_victory", "ck5_victory", "gemsets", "automap"]
                       ]
                     }
                   },
@@ -183,7 +183,7 @@
                       "item_size": 40,
                       "item_margin": 3,
                       "rows": [
-                        ["pogo", "stunner", "wetsuit", "extra_keen", "stunner_ammo", "ck4_victory", "ck5_victory", "gemsets"]
+                        ["pogo", "stunner", "wetsuit", "extra_keen", "stunner_ammo", "ck4_victory", "ck5_victory", "gemsets", "automap"]
                       ]
                     }
                   },
@@ -311,7 +311,7 @@
           "item_size": 36,
           "item_margin": 2,
           "rows": [
-            ["pogo", "stunner", "wetsuit", "extra_keen", "stunner_ammo", "ck4_victory", "ck5_victory", "gemsets"]
+            ["pogo", "stunner", "wetsuit", "extra_keen", "stunner_ammo", "ck4_victory", "ck5_victory", "gemsets", "automap"]
           ]
         }
       },

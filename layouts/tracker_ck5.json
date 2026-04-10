@@ -18,7 +18,7 @@
                 "item_size": 48,
                 "item_margin": 4,
                 "rows": [
-                  ["pogo", "stunner", "extra_keen", "stunner_ammo", "ck5_victory", "gemsets"]
+                  ["pogo", "stunner", "extra_keen", "stunner_ammo", "ck5_victory", "gemsets", "automap"]
                 ]
               }
             },

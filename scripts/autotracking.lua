@@ -238,6 +238,48 @@ LOCATION_MAP = {
 	[35100] = "Keen 5/Gravitational Damping Hub/Keycard",
 }
 
+-- Map game level numbers to layout tab titles for auto map switching
+-- Tab titles must match exactly what's in the layout JSON
+CK4_MAP_TABS = {
+	[0]  = "Overworld",
+	[1]  = "Border Village",
+	[2]  = "Slug Village",
+	[3]  = "Perilous Pit",
+	[4]  = "Cave of Desc.",
+	[5]  = "Chasm of Chills",
+	[6]  = "Crystalus",
+	[7]  = "Hilville",
+	[8]  = "Sand Yego",
+	[9]  = "Miragia",
+	[10] = "Lifewater Oasis",
+	[11] = "Pyr. of Moons",
+	[12] = "Pyr. of Shadows",
+	[13] = "Pyr. of Gnost.",
+	[15] = "Isle of Tar",
+	[16] = "Isle of Fire",
+	[17] = "Well of Wishes",
+	[18] = "BWBM",
+}
+
+CK5_MAP_TABS = {
+	[0]  = "Overworld",
+	[1]  = "Ion Vent. Sys.",
+	[2]  = "Security Ctr.",
+	[3]  = "DT Vlook",
+	[4]  = "Energy Flow",
+	[5]  = "DT Burrh",
+	[6]  = "Reg. Control",
+	[7]  = "DT Sorra",
+	[8]  = "Neutrino Burst",
+	[9]  = "DT Teln",
+	[10] = "Brownian Mot.",
+	[11] = "Grav. Damp.",
+	[12] = "QED",
+}
+
+-- DataStorage key for current level (set after connecting)
+MAP_KEY = nil
+
 -- ============================================================
 -- Handlers
 -- ============================================================
@@ -291,6 +333,13 @@ function onClear(slot_data)
 			loc.AvailableChestCount = loc.ChestCount
 		end
 	end
+
+	-- Subscribe to DataStorage for auto map switching
+	if Archipelago.PlayerNumber and Archipelago.PlayerNumber > -1 then
+		MAP_KEY = "_read_keen_current_level_" .. tostring(Archipelago.PlayerNumber)
+		Archipelago:SetNotify({MAP_KEY})
+		Archipelago:Get({MAP_KEY})
+	end
 end
 
 function onItem(index, item_id, item_name, player_number)
@@ -341,7 +390,36 @@ function onLocation(location_id, location_name)
 	end
 end
 
+function onMapChange(key, value, old_value)
+	-- Only switch if automap toggle is enabled
+	local automap = Tracker:FindObjectForCode("automap")
+	if not automap or not automap.Active then return end
+
+	-- value is { level = N, episode = M } from DataStorage
+	if type(value) ~= "table" then return end
+
+	local level = value["level"]
+	local ep = value["episode"]
+	if not level or not ep then return end
+
+	local tab = nil
+	if ep == 1 then
+		tab = CK4_MAP_TABS[level]
+		-- For "both" variant, switch to the Keen 4 episode tab first
+		Tracker:UiHint("ActivateTab", "Keen 4")
+	elseif ep == 2 then
+		tab = CK5_MAP_TABS[level]
+		Tracker:UiHint("ActivateTab", "Keen 5")
+	end
+
+	if tab then
+		Tracker:UiHint("ActivateTab", tab)
+	end
+end
+
 -- Register AP handlers
 Archipelago:AddClearHandler("keen_clear_handler", onClear)
 Archipelago:AddItemHandler("keen_item_handler", onItem)
 Archipelago:AddLocationHandler("keen_location_handler", onLocation)
+Archipelago:AddSetReplyHandler("keen_map_handler", onMapChange)
+Archipelago:AddRetrievedHandler("keen_map_retrieved", onMapChange)

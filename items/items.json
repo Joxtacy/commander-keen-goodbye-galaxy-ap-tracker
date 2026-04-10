@@ -12,6 +12,12 @@
     "codes": "gemsets"
   },
   {
+    "name": "Auto Map",
+    "type": "toggle",
+    "img": "images/automap.png",
+    "codes": "automap"
+  },
+  {
     "name": "Pogo Stick",
     "type": "toggle",
     "img": "images/pogo.png",
