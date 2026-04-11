@@ -503,8 +503,8 @@
             "name": "Complete",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,level_qed,pogo,qed_red,qed_yellow,qed_blue,qed_green,$ck5_all_completable",
-              "$ck5_endgame_reachable,level_qed,pogo,qed_gemset,$ck5_all_completable"
+              "$ck5_endgame_reachable,level_qed,pogo,qed_red,qed_yellow,qed_blue,qed_green",
+              "$ck5_endgame_reachable,level_qed,pogo,qed_gemset"
             ]
           }
         ]

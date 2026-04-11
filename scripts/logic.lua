@@ -1,6 +1,7 @@
 -- logic.lua
 -- Custom access rule functions for final-level gating.
--- BWBM (CK4) and QED (CK5) require all other episode levels to be completable.
+-- BWBM (CK4) requires all other CK4 levels to be completable.
+-- QED (CK5) requires the End Game region to be reachable.
 
 -- Helper: check if an item code is active.
 -- Uses ProviderCountForCode which correctly handles progressive items
@@ -74,18 +75,3 @@ function ck5_endgame_reachable()
     return 1
 end
 
--- All 11 CK5 levels (other than QED) completable
-function ck5_all_completable()
-    if not level_completable("level_ivs") then return 0 end
-    if not level_completable("level_sc",  {"sc_blue"},                       "sc_gemset",  false, false, "sc_keycard")  then return 0 end
-    if not level_completable("level_dtv", {"dtv_yellow"},                    "dtv_gemset", false, false, "dtv_keycard") then return 0 end
-    if not level_completable("level_efs", {"efs_green"},                     "efs_gemset", true)  then return 0 end
-    if not level_completable("level_dtb", {"dtb_red"},                       "dtb_gemset", false, false, "dtb_keycard") then return 0 end
-    if not level_completable("level_rcc", {"rcc_red","rcc_yellow","rcc_blue"}, "rcc_gemset", true) then return 0 end
-    if not level_completable("level_dts", {"dts_yellow"},                    "dts_gemset", false, false, "dts_keycard") then return 0 end
-    if not level_completable("level_nbi", {"nbi_red","nbi_blue"},            "nbi_gemset", true)  then return 0 end
-    if not level_completable("level_dtt", {"dtt_yellow","dtt_blue"},          "dtt_gemset", false, false, "dtt_keycard") then return 0 end
-    if not level_completable("level_bmi", {"bmi_yellow","bmi_blue"},          "bmi_gemset", true)  then return 0 end
-    if not level_completable("level_gdh", {"gdh_green"},                     "gdh_gemset", true, false, "gdh_keycard") then return 0 end
-    return 1
-end
