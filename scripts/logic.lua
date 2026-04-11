@@ -48,6 +48,32 @@ function ck4_all_completable()
     return 1
 end
 
+-- End Game region gate: EFS, RCC, NBI, BMI must be completable
+-- (matches Regions.py K5 Hub → End Game connection)
+function ck5_endgame_reachable()
+    -- Energy Flow Systems: level + all 4 gems or gemset
+    if not (has("level_efs") and (
+        (has("efs_red") and has("efs_yellow") and has("efs_blue") and has("efs_green")) or
+        has("efs_gemset")
+    )) then return 0 end
+    -- Regulation Control Center: level + R+Y+B gems or gemset
+    if not (has("level_rcc") and (
+        (has("rcc_red") and has("rcc_yellow") and has("rcc_blue")) or
+        has("rcc_gemset")
+    )) then return 0 end
+    -- Neutrino Burst Injector: level + R+B gems or gemset
+    if not (has("level_nbi") and (
+        (has("nbi_red") and has("nbi_blue")) or
+        has("nbi_gemset")
+    )) then return 0 end
+    -- Brownian Motion Inducer: level + Y+B gems or gemset
+    if not (has("level_bmi") and (
+        (has("bmi_yellow") and has("bmi_blue")) or
+        has("bmi_gemset")
+    )) then return 0 end
+    return 1
+end
+
 -- All 11 CK5 levels (other than QED) completable
 function ck5_all_completable()
     if not level_completable("level_ivs") then return 0 end

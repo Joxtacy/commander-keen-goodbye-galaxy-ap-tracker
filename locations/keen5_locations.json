@@ -433,30 +433,30 @@
             "name": "Green Gem",
             "item_count": 1,
             "access_rules": [
-              "level_gdh,pogo"
+              "$ck5_endgame_reachable,level_gdh,pogo"
             ]
           },
           {
             "name": "Red Gem",
             "item_count": 1,
             "access_rules": [
-              "level_gdh,pogo,gdh_green",
-              "level_gdh,pogo,gdh_gemset"
+              "$ck5_endgame_reachable,level_gdh,pogo,gdh_green",
+              "$ck5_endgame_reachable,level_gdh,pogo,gdh_gemset"
             ]
           },
           {
             "name": "Keycard",
             "item_count": 1,
             "access_rules": [
-              "level_gdh,pogo"
+              "$ck5_endgame_reachable,level_gdh,pogo"
             ]
           },
           {
             "name": "Complete",
             "item_count": 1,
             "access_rules": [
-              "level_gdh,pogo,gdh_keycard,gdh_green",
-              "level_gdh,pogo,gdh_keycard,gdh_gemset"
+              "$ck5_endgame_reachable,level_gdh,pogo,gdh_keycard,gdh_green",
+              "$ck5_endgame_reachable,level_gdh,pogo,gdh_keycard,gdh_gemset"
             ]
           }
         ]
@@ -475,36 +475,36 @@
             "name": "Red Gem",
             "item_count": 1,
             "access_rules": [
-              "level_qed,pogo"
+              "$ck5_endgame_reachable,level_qed,pogo"
             ]
           },
           {
             "name": "Yellow Gem",
             "item_count": 1,
             "access_rules": [
-              "level_qed,pogo"
+              "$ck5_endgame_reachable,level_qed,pogo"
             ]
           },
           {
             "name": "Blue Gem",
             "item_count": 1,
             "access_rules": [
-              "level_qed,pogo"
+              "$ck5_endgame_reachable,level_qed,pogo"
             ]
           },
           {
             "name": "Green Gem",
             "item_count": 1,
             "access_rules": [
-              "level_qed,pogo"
+              "$ck5_endgame_reachable,level_qed,pogo"
             ]
           },
           {
             "name": "Complete",
             "item_count": 1,
             "access_rules": [
-              "level_qed,pogo,qed_red,qed_yellow,qed_blue,qed_green,$ck5_all_completable",
-              "level_qed,pogo,qed_gemset,$ck5_all_completable"
+              "$ck5_endgame_reachable,level_qed,pogo,qed_red,qed_yellow,qed_blue,qed_green,$ck5_all_completable",
+              "$ck5_endgame_reachable,level_qed,pogo,qed_gemset,$ck5_all_completable"
             ]
           }
         ]
