@@ -5,6 +5,7 @@
   "package_version": "0.0.1",
   "min_poptracker_version": "0.25.0",
   "versions_url": "https://github.com/joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/latest/download/versions.json",
+  "author": "Joxtacy",
   "variants": {
     "both": {
       "display_name": "Both Episodes (4 & 5)",
