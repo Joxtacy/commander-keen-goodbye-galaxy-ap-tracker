@@ -2,7 +2,7 @@
   "name": "Commander Keen: Goodbye Galaxy AP Tracker",
   "game_name": "Commander Keen",
   "package_uid": "keen_goodbye_galaxy_ap_tracker",
-  "package_version": "0.0.1",
+  "package_version": "0.0.4",
   "min_poptracker_version": "0.25.0",
   "versions_url": "https://github.com/joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/latest/download/versions.json",
   "author": "Joxtacy",
