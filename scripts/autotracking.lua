@@ -336,7 +336,7 @@ function onClear(slot_data)
 
 	-- Subscribe to DataStorage for auto map switching
 	if Archipelago.PlayerNumber and Archipelago.PlayerNumber > -1 then
-		MAP_KEY = "_read_keen_current_level_" .. tostring(Archipelago.PlayerNumber)
+		MAP_KEY = "keen_current_level_" .. tostring(Archipelago.PlayerNumber)
 		Archipelago:SetNotify({MAP_KEY})
 		Archipelago:Get({MAP_KEY})
 	end
