@@ -1,3 +1,12 @@
 {
-  "versions": []
+  "versions": [
+    {
+      "package_version": "0.0.5",
+      "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.5/keen_goodbye_galaxy_ap_tracker_0.0.5.zip",
+      "sha256": "09b34aa83783c4c59cd49ac7dc1f143c8780bbef23cb560d469b1ce295dc9d8b",
+      "changelog": [
+        "ci(release): auto-populate versions.json for PopTracker auto-update"
+      ]
+    }
+  ]
 }
