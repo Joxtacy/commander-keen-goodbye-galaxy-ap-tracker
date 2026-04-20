@@ -241,16 +241,16 @@ LOCATION_MAP = {
 -- Map game level numbers to layout tab titles for auto map switching
 -- Tab titles must match exactly what's in the layout JSON
 CK4_MAP_TABS = {
-	[0]  = "Overworld",
-	[1]  = "Border Village",
-	[2]  = "Slug Village",
-	[3]  = "Perilous Pit",
-	[4]  = "Cave of Desc.",
-	[5]  = "Chasm of Chills",
-	[6]  = "Crystalus",
-	[7]  = "Hilville",
-	[8]  = "Sand Yego",
-	[9]  = "Miragia",
+	[0] = "Overworld",
+	[1] = "Border Village",
+	[2] = "Slug Village",
+	[3] = "Perilous Pit",
+	[4] = "Cave of Desc.",
+	[5] = "Chasm of Chills",
+	[6] = "Crystalus",
+	[7] = "Hilville",
+	[8] = "Sand Yego",
+	[9] = "Miragia",
 	[10] = "Lifewater Oasis",
 	[11] = "Pyr. of Moons",
 	[12] = "Pyr. of Shadows",
@@ -262,16 +262,16 @@ CK4_MAP_TABS = {
 }
 
 CK5_MAP_TABS = {
-	[0]  = "Overworld",
-	[1]  = "Ion Vent. Sys.",
-	[2]  = "Security Ctr.",
-	[3]  = "DT Vlook",
-	[4]  = "Energy Flow",
-	[5]  = "DT Burrh",
-	[6]  = "Reg. Control",
-	[7]  = "DT Sorra",
-	[8]  = "Neutrino Burst",
-	[9]  = "DT Teln",
+	[0] = "Overworld",
+	[1] = "Ion Vent. Sys.",
+	[2] = "Security Ctr.",
+	[3] = "DT Vlook",
+	[4] = "Energy Flow",
+	[5] = "DT Burrh",
+	[6] = "Reg. Control",
+	[7] = "DT Sorra",
+	[8] = "Neutrino Burst",
+	[9] = "DT Teln",
 	[10] = "Brownian Mot.",
 	[11] = "Grav. Damp.",
 	[12] = "QED",
@@ -337,8 +337,8 @@ function onClear(slot_data)
 	-- Subscribe to DataStorage for auto map switching
 	if Archipelago.PlayerNumber and Archipelago.PlayerNumber > -1 then
 		MAP_KEY = "keen_current_level_" .. tostring(Archipelago.PlayerNumber)
-		Archipelago:SetNotify({MAP_KEY})
-		Archipelago:Get({MAP_KEY})
+		Archipelago:SetNotify({ MAP_KEY })
+		Archipelago:Get({ MAP_KEY })
 	end
 end
 
@@ -393,14 +393,20 @@ end
 function onMapChange(key, value, old_value)
 	-- Only switch if automap toggle is enabled
 	local automap = Tracker:FindObjectForCode("automap")
-	if not automap or not automap.Active then return end
+	if not automap or not automap.Active then
+		return
+	end
 
 	-- value is { level = N, episode = M } from DataStorage
-	if type(value) ~= "table" then return end
+	if type(value) ~= "table" then
+		return
+	end
 
 	local level = value["level"]
 	local ep = value["episode"]
-	if not level or not ep then return end
+	if not level or not ep then
+		return
+	end
 
 	local tab = nil
 	if ep == 1 then
