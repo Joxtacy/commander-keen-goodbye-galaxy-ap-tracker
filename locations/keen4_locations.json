@@ -18,6 +18,13 @@
             "access_rules": [
               "level_bv"
             ]
+          },
+          {
+            "name": "Lifewater Flasks",
+            "item_count": 7,
+            "access_rules": [
+              "flasksanity,level_bv"
+            ]
           }
         ]
       },
@@ -70,6 +77,13 @@
             "access_rules": [
               "level_pp,pp_red,pp_blue",
               "level_pp,pp_gemset"
+            ]
+          },
+          {
+            "name": "Lifewater Flasks",
+            "item_count": 2,
+            "access_rules": [
+              "flasksanity,level_pp"
             ]
           }
         ]
@@ -124,6 +138,13 @@
             "item_count": 1,
             "access_rules": [
               "level_coc"
+            ]
+          },
+          {
+            "name": "Lifewater Flasks",
+            "item_count": 1,
+            "access_rules": [
+              "flasksanity,level_coc"
             ]
           }
         ]
@@ -195,6 +216,13 @@
             "access_rules": [
               "level_hil"
             ]
+          },
+          {
+            "name": "Lifewater Flasks",
+            "item_count": 1,
+            "access_rules": [
+              "flasksanity,level_hil"
+            ]
           }
         ]
       },
@@ -222,6 +250,13 @@
               "level_sy,pogo,sy_green",
               "level_sy,pogo,sy_gemset"
             ]
+          },
+          {
+            "name": "Lifewater Flasks",
+            "item_count": 1,
+            "access_rules": [
+              "flasksanity,level_sy"
+            ]
           }
         ]
       },
@@ -240,6 +275,13 @@
             "item_count": 1,
             "access_rules": [
               "level_mir,pogo"
+            ]
+          },
+          {
+            "name": "Lifewater Flasks",
+            "item_count": 1,
+            "access_rules": [
+              "flasksanity,level_mir"
             ]
           }
         ]
@@ -295,6 +337,13 @@
               "level_potm,potm_yellow",
               "level_potm,potm_gemset"
             ]
+          },
+          {
+            "name": "Lifewater Flasks",
+            "item_count": 1,
+            "access_rules": [
+              "flasksanity,level_potm"
+            ]
           }
         ]
       },
@@ -321,6 +370,13 @@
             "access_rules": [
               "level_pos,pos_blue",
               "level_pos,pos_gemset"
+            ]
+          },
+          {
+            "name": "Lifewater Flasks",
+            "item_count": 8,
+            "access_rules": [
+              "flasksanity,level_pos"
             ]
           }
         ]
@@ -356,6 +412,13 @@
             "access_rules": [
               "level_potga,pogo,potga_red,potga_green",
               "level_potga,pogo,potga_gemset"
+            ]
+          },
+          {
+            "name": "Lifewater Flasks",
+            "item_count": 4,
+            "access_rules": [
+              "flasksanity,level_potga"
             ]
           }
         ]
@@ -400,6 +463,13 @@
               "wetsuit,level_iot,pogo,iot_blue",
               "wetsuit,level_iot,pogo,iot_gemset"
             ]
+          },
+          {
+            "name": "Lifewater Flasks",
+            "item_count": 2,
+            "access_rules": [
+              "flasksanity,level_iot"
+            ]
           }
         ]
       },
@@ -435,6 +505,13 @@
               "wetsuit,level_iof,iof_yellow,iof_blue",
               "wetsuit,level_iof,iof_gemset"
             ]
+          },
+          {
+            "name": "Lifewater Flasks",
+            "item_count": 1,
+            "access_rules": [
+              "flasksanity,level_iof"
+            ]
           }
         ]
       },
@@ -453,6 +530,13 @@
             "item_count": 1,
             "access_rules": [
               "wetsuit,level_wow"
+            ]
+          },
+          {
+            "name": "Lifewater Flasks",
+            "item_count": 1,
+            "access_rules": [
+              "flasksanity,level_wow"
             ]
           }
         ]

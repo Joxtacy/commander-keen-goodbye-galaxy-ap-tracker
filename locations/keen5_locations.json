@@ -18,6 +18,13 @@
             "access_rules": [
               "level_ivs"
             ]
+          },
+          {
+            "name": "Vitalin Kegs",
+            "item_count": 10,
+            "access_rules": [
+              "kegsanity,level_ivs"
+            ]
           }
         ]
       },
@@ -61,6 +68,13 @@
               "level_sc,sc_keycard,sc_blue",
               "level_sc,sc_keycard,sc_gemset"
             ]
+          },
+          {
+            "name": "Vitalin Kegs",
+            "item_count": 2,
+            "access_rules": [
+              "kegsanity,level_sc"
+            ]
           }
         ]
       },
@@ -102,6 +116,13 @@
             "access_rules": [
               "level_dtv,dtv_keycard,dtv_yellow",
               "level_dtv,dtv_keycard,dtv_gemset"
+            ]
+          },
+          {
+            "name": "Vitalin Kegs",
+            "item_count": 2,
+            "access_rules": [
+              "kegsanity,level_dtv"
             ]
           }
         ]
@@ -153,6 +174,13 @@
             "access_rules": [
               "level_efs,pogo,efs_green",
               "level_efs,pogo,efs_gemset"
+            ]
+          },
+          {
+            "name": "Vitalin Kegs",
+            "item_count": 1,
+            "access_rules": [
+              "kegsanity,level_efs"
             ]
           }
         ]
@@ -211,6 +239,13 @@
             "access_rules": [
               "level_dtb,dtb_keycard,dtb_red",
               "level_dtb,dtb_keycard,dtb_gemset"
+            ]
+          },
+          {
+            "name": "Vitalin Kegs",
+            "item_count": 2,
+            "access_rules": [
+              "kegsanity,level_dtb"
             ]
           }
         ]
@@ -382,6 +417,13 @@
               "level_dtt,dtt_keycard,dtt_yellow,dtt_blue",
               "level_dtt,dtt_keycard,dtt_gemset"
             ]
+          },
+          {
+            "name": "Vitalin Kegs",
+            "item_count": 1,
+            "access_rules": [
+              "kegsanity,level_dtt"
+            ]
           }
         ]
       },
@@ -415,6 +457,13 @@
             "access_rules": [
               "level_bmi,pogo,bmi_yellow,bmi_blue",
               "level_bmi,pogo,bmi_gemset"
+            ]
+          },
+          {
+            "name": "Vitalin Kegs",
+            "item_count": 1,
+            "access_rules": [
+              "kegsanity,level_bmi"
             ]
           }
         ]
@@ -457,6 +506,13 @@
             "access_rules": [
               "$ck5_endgame_reachable,level_gdh,pogo,gdh_keycard,gdh_green",
               "$ck5_endgame_reachable,level_gdh,pogo,gdh_keycard,gdh_gemset"
+            ]
+          },
+          {
+            "name": "Vitalin Kegs",
+            "item_count": 1,
+            "access_rules": [
+              "kegsanity,level_gdh"
             ]
           }
         ]
@@ -505,6 +561,13 @@
             "access_rules": [
               "$ck5_endgame_reachable,level_qed,pogo,qed_red,qed_yellow,qed_blue,qed_green",
               "$ck5_endgame_reachable,level_qed,pogo,qed_gemset"
+            ]
+          },
+          {
+            "name": "Vitalin Kegs",
+            "item_count": 2,
+            "access_rules": [
+              "kegsanity,level_qed"
             ]
           }
         ]

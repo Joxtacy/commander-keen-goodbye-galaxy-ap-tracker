@@ -12,6 +12,18 @@
     "codes": "gemsets"
   },
   {
+    "name": "Flasksanity",
+    "type": "toggle",
+    "img": "images/blank.png",
+    "codes": "flasksanity"
+  },
+  {
+    "name": "Kegsanity",
+    "type": "toggle",
+    "img": "images/blank.png",
+    "codes": "kegsanity"
+  },
+  {
     "name": "Auto Map",
     "type": "toggle",
     "img": "images/automap.png",

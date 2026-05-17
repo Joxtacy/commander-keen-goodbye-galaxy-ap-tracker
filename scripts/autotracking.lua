@@ -5,6 +5,10 @@
 EPISODE_SELECT = 0
 -- Gemsets setting from slot_data (0=off, 1=on)
 ENABLE_GEMSETS = 1
+-- Flasksanity (CK4 Lifewater Flask pickups) toggle from slot_data
+ENABLE_FLASKSANITY = 0
+-- Kegsanity (CK5 Vitalin Keg pickups) toggle from slot_data
+ENABLE_KEGSANITY = 0
 
 -- Final level location IDs for victory tracking
 CK4_VICTORY_LOCATION = 13800 -- Bean-With-Bacon Megarocket Complete
@@ -238,6 +242,50 @@ LOCATION_MAP = {
 	[35100] = "Keen 5/Gravitational Damping Hub/Keycard",
 }
 
+-- Flasksanity (CK4 Lifewater Flasks) and Kegsanity (CK5 Vitalin Kegs).
+-- Counts are post-exclusion; the apworld doesn't generate excluded IDs so
+-- the server never sends them. The per-level section's AvailableChestCount
+-- ticks down once per received ID match.
+-- IDs: LOC_FLASK = 60000 + 1*2000 + lvl*100 + idx
+--      LOC_KEG   = 50000 + 2*2000 + lvl*100 + idx
+local FLASKSANITY_CK4 = {
+	[1]  = {count = 7, name = "Border Village"},
+	[3]  = {count = 2, name = "The Perilous Pit"},
+	[5]  = {count = 1, name = "Chasm of Chills"},
+	[7]  = {count = 1, name = "Hilville"},
+	[8]  = {count = 1, name = "Sand Yego"},
+	[9]  = {count = 1, name = "Miragia"},
+	[11] = {count = 1, name = "Pyramid of the Moons"},
+	[12] = {count = 8, name = "Pyramid of Shadows"},
+	[13] = {count = 4, name = "Pyramid of the Gnosticine Ancients"},
+	[15] = {count = 2, name = "Isle of Tar"},
+	[16] = {count = 1, name = "Isle of Fire"},
+	[17] = {count = 1, name = "Well of Wishes"},
+}
+local KEGSANITY_CK5 = {
+	[1]  = {count = 10, name = "Ion Ventilation System"},
+	[2]  = {count = 2,  name = "Security Center"},
+	[3]  = {count = 2,  name = "Defense Tunnel Vlook"},
+	[4]  = {count = 1,  name = "Energy Flow Systems"},
+	[5]  = {count = 2,  name = "Defense Tunnel Burrh"},
+	[9]  = {count = 1,  name = "Defense Tunnel Teln"},
+	[10] = {count = 1,  name = "Brownian Motion Inducer"},
+	[11] = {count = 1,  name = "Gravitational Damping Hub"},
+	[12] = {count = 2,  name = "Quantum Explosion Dynamo"},
+}
+for lvl_id, info in pairs(FLASKSANITY_CK4) do
+	for idx = 0, info.count - 1 do
+		LOCATION_MAP[60000 + 1 * 2000 + lvl_id * 100 + idx] =
+			"Keen 4/" .. info.name .. "/Lifewater Flasks"
+	end
+end
+for lvl_id, info in pairs(KEGSANITY_CK5) do
+	for idx = 0, info.count - 1 do
+		LOCATION_MAP[50000 + 2 * 2000 + lvl_id * 100 + idx] =
+			"Keen 5/" .. info.name .. "/Vitalin Kegs"
+	end
+end
+
 -- Map game level numbers to layout tab titles for auto map switching
 -- Tab titles must match exactly what's in the layout JSON
 CK4_MAP_TABS = {
@@ -298,10 +346,33 @@ function onClear(slot_data)
 		ENABLE_GEMSETS = 1
 	end
 
+	if slot_data and slot_data["enable_flasksanity"] ~= nil then
+		ENABLE_FLASKSANITY = slot_data["enable_flasksanity"]
+	else
+		ENABLE_FLASKSANITY = 0
+	end
+
+	if slot_data and slot_data["enable_kegsanity"] ~= nil then
+		ENABLE_KEGSANITY = slot_data["enable_kegsanity"]
+	else
+		ENABLE_KEGSANITY = 0
+	end
+
 	-- Set the gemsets setting toggle
 	local gemsets_setting = Tracker:FindObjectForCode("gemsets")
 	if gemsets_setting then
 		gemsets_setting.Active = (ENABLE_GEMSETS == 1)
+	end
+
+	-- Set the flasksanity / kegsanity toggles (gate CK4 Lifewater Flask /
+	-- CK5 Vitalin Keg section access_rules).
+	local flasksanity_setting = Tracker:FindObjectForCode("flasksanity")
+	if flasksanity_setting then
+		flasksanity_setting.Active = (ENABLE_FLASKSANITY == 1)
+	end
+	local kegsanity_setting = Tracker:FindObjectForCode("kegsanity")
+	if kegsanity_setting then
+		kegsanity_setting.Active = (ENABLE_KEGSANITY == 1)
 	end
 
 	-- Reset all tracked items
