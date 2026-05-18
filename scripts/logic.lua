@@ -11,12 +11,13 @@ local function has(code)
 end
 
 -- Helper: check if a level's completion requirements are met.
--- A level is completable when:  level unlock  AND  optional pogo/wetsuit/keycard
+-- A level is completable when:  level unlock  AND  optional pogo/wetsuit/stunner/keycard
 -- AND  (all required gems  OR  gemset).
-local function level_completable(level, gems, gemset, pogo, wetsuit, keycard)
+local function level_completable(level, gems, gemset, pogo, wetsuit, keycard, stunner)
     if not has(level) then return false end
     if pogo and not has("pogo") then return false end
     if wetsuit and not has("wetsuit") then return false end
+    if stunner and not has("stunner") then return false end
     if keycard and not has(keycard) then return false end
     if gems then
         local all_gems = true
@@ -41,7 +42,7 @@ function ck4_all_completable()
     if not level_completable("level_mir",   nil, nil,                                     true)  then return 0 end
     if not level_completable("level_lo",    {"lo_green"},                "lo_gemset")    then return 0 end
     if not level_completable("level_potm",  {"potm_yellow"},             "potm_gemset")  then return 0 end
-    if not level_completable("level_pos",   {"pos_blue"},                "pos_gemset")   then return 0 end
+    if not level_completable("level_pos",   {"pos_blue"},                "pos_gemset",   false, false, nil, true) then return 0 end
     if not level_completable("level_potga", {"potga_red","potga_green"}, "potga_gemset", true)  then return 0 end
     if not level_completable("level_iot",   {"iot_blue"},                "iot_gemset",   true, true) then return 0 end
     if not level_completable("level_iof",   {"iof_yellow","iof_blue"},   "iof_gemset",  false, true) then return 0 end
@@ -51,7 +52,10 @@ end
 
 -- End Game region gate: EFS, RCC, NBI, BMI must be completable
 -- (matches Regions.py K5 Hub → End Game connection)
+-- All four levels are requires_pogo=True in Rules.py — without pogo you cannot
+-- complete them and therefore cannot reach the End Game region.
 function ck5_endgame_reachable()
+    if not has("pogo") then return 0 end
     -- Energy Flow Systems: level + all 4 gems or gemset
     if not (has("level_efs") and (
         (has("efs_red") and has("efs_yellow") and has("efs_blue") and has("efs_green")) or

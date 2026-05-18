@@ -264,7 +264,7 @@
             "name": "Red Gem",
             "item_count": 1,
             "access_rules": [
-              "level_rcc"
+              "level_rcc,stunner"
             ]
           },
           {
@@ -272,7 +272,9 @@
             "item_count": 1,
             "access_rules": [
               "level_rcc,pogo,rcc_red",
-              "level_rcc,pogo,rcc_gemset"
+              "level_rcc,stunner,rcc_red",
+              "level_rcc,pogo,rcc_gemset",
+              "level_rcc,stunner,rcc_gemset"
             ]
           },
           {
@@ -280,7 +282,9 @@
             "item_count": 1,
             "access_rules": [
               "level_rcc,pogo,rcc_red,rcc_yellow",
-              "level_rcc,pogo,rcc_gemset"
+              "level_rcc,stunner,rcc_red,rcc_yellow",
+              "level_rcc,pogo,rcc_gemset",
+              "level_rcc,stunner,rcc_gemset"
             ]
           },
           {
@@ -314,7 +318,7 @@
             "name": "Keycard",
             "item_count": 1,
             "access_rules": [
-              "level_dts"
+              "level_dts,stunner"
             ]
           },
           {

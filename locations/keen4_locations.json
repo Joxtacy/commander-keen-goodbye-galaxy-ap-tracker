@@ -361,15 +361,15 @@
             "name": "Blue Gem",
             "item_count": 1,
             "access_rules": [
-              "level_pos"
+              "level_pos,stunner"
             ]
           },
           {
             "name": "Complete",
             "item_count": 1,
             "access_rules": [
-              "level_pos,pos_blue",
-              "level_pos,pos_gemset"
+              "level_pos,stunner,pos_blue",
+              "level_pos,stunner,pos_gemset"
             ]
           },
           {
