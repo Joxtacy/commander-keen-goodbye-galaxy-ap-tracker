@@ -23,7 +23,7 @@
             "name": "Vitalin Kegs",
             "item_count": 10,
             "access_rules": [
-              "kegsanity,level_ivs"
+              "kegsanity,level_ivs,pogo"
             ]
           }
         ]
@@ -70,8 +70,16 @@
             ]
           },
           {
+            "name": "Vitalin Kegs (Blue Gem)",
+            "item_count": 1,
+            "access_rules": [
+              "kegsanity,level_sc,sc_blue",
+              "kegsanity,level_sc,sc_gemset"
+            ]
+          },
+          {
             "name": "Vitalin Kegs",
-            "item_count": 2,
+            "item_count": 1,
             "access_rules": [
               "kegsanity,level_sc"
             ]
@@ -119,8 +127,16 @@
             ]
           },
           {
+            "name": "Vitalin Kegs (Yellow Gem+Pogo)",
+            "item_count": 1,
+            "access_rules": [
+              "kegsanity,level_dtv,dtv_yellow,pogo",
+              "kegsanity,level_dtv,dtv_gemset,pogo"
+            ]
+          },
+          {
             "name": "Vitalin Kegs",
-            "item_count": 2,
+            "item_count": 1,
             "access_rules": [
               "kegsanity,level_dtv"
             ]
@@ -180,7 +196,8 @@
             "name": "Vitalin Kegs",
             "item_count": 1,
             "access_rules": [
-              "kegsanity,level_efs"
+              "kegsanity,level_efs,efs_yellow",
+              "kegsanity,level_efs,efs_gemset"
             ]
           }
         ]
@@ -245,7 +262,7 @@
             "name": "Vitalin Kegs",
             "item_count": 2,
             "access_rules": [
-              "kegsanity,level_dtb"
+              "kegsanity,level_dtb,pogo"
             ]
           }
         ]
@@ -426,7 +443,8 @@
             "name": "Vitalin Kegs",
             "item_count": 1,
             "access_rules": [
-              "kegsanity,level_dtt"
+              "kegsanity,level_dtt,dtt_red",
+              "kegsanity,level_dtt,dtt_gemset"
             ]
           }
         ]
@@ -467,7 +485,7 @@
             "name": "Vitalin Kegs",
             "item_count": 1,
             "access_rules": [
-              "kegsanity,level_bmi"
+              "kegsanity,level_bmi,pogo"
             ]
           }
         ]
@@ -511,12 +529,24 @@
               "$ck5_endgame_reachable,level_gdh,pogo,gdh_keycard,gdh_green",
               "$ck5_endgame_reachable,level_gdh,pogo,gdh_keycard,gdh_gemset"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Gravitational Damping Hub - Vitalin Keg",
+        "map_locations": [
+          {
+            "map": "keen5_gdh",
+            "x": 248,
+            "y": 392
+          }
+        ],
+        "sections": [
           {
             "name": "Vitalin Kegs",
             "item_count": 1,
             "access_rules": [
-              "kegsanity,level_gdh"
+              "$ck5_endgame_reachable,kegsanity,level_gdh"
             ]
           }
         ]
@@ -571,7 +601,7 @@
             "name": "Vitalin Kegs",
             "item_count": 2,
             "access_rules": [
-              "kegsanity,level_qed"
+              "$ck5_endgame_reachable,kegsanity,level_qed,pogo,stunner"
             ]
           }
         ]

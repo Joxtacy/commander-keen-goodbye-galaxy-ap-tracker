@@ -23,7 +23,7 @@
             "name": "Lifewater Flasks",
             "item_count": 7,
             "access_rules": [
-              "flasksanity,level_bv"
+              "flasksanity,level_bv,pogo"
             ]
           }
         ]
@@ -77,13 +77,6 @@
             "access_rules": [
               "level_pp,pp_red,pp_blue",
               "level_pp,pp_gemset"
-            ]
-          },
-          {
-            "name": "Lifewater Flasks",
-            "item_count": 2,
-            "access_rules": [
-              "flasksanity,level_pp"
             ]
           }
         ]
@@ -221,7 +214,7 @@
             "name": "Lifewater Flasks",
             "item_count": 1,
             "access_rules": [
-              "flasksanity,level_hil"
+              "flasksanity,level_hil,pogo"
             ]
           }
         ]
@@ -255,7 +248,7 @@
             "name": "Lifewater Flasks",
             "item_count": 1,
             "access_rules": [
-              "flasksanity,level_sy"
+              "flasksanity,level_sy,pogo"
             ]
           }
         ]
@@ -281,7 +274,7 @@
             "name": "Lifewater Flasks",
             "item_count": 1,
             "access_rules": [
-              "flasksanity,level_mir"
+              "flasksanity,level_mir,pogo"
             ]
           }
         ]
@@ -342,7 +335,7 @@
             "name": "Lifewater Flasks",
             "item_count": 1,
             "access_rules": [
-              "flasksanity,level_potm"
+              "flasksanity,level_potm,pogo"
             ]
           }
         ]
@@ -373,10 +366,17 @@
             ]
           },
           {
-            "name": "Lifewater Flasks",
-            "item_count": 8,
+            "name": "Lifewater Flasks (Pogo+Stunner)",
+            "item_count": 1,
             "access_rules": [
-              "flasksanity,level_pos"
+              "flasksanity,level_pos,pogo,stunner"
+            ]
+          },
+          {
+            "name": "Lifewater Flasks (Stunner)",
+            "item_count": 7,
+            "access_rules": [
+              "flasksanity,level_pos,stunner"
             ]
           }
         ]
@@ -415,10 +415,17 @@
             ]
           },
           {
-            "name": "Lifewater Flasks",
-            "item_count": 4,
+            "name": "Lifewater Flasks (Stunner)",
+            "item_count": 2,
             "access_rules": [
-              "flasksanity,level_potga"
+              "flasksanity,level_potga,stunner"
+            ]
+          },
+          {
+            "name": "Lifewater Flasks (Pogo)",
+            "item_count": 1,
+            "access_rules": [
+              "flasksanity,level_potga,pogo"
             ]
           }
         ]
@@ -465,10 +472,18 @@
             ]
           },
           {
-            "name": "Lifewater Flasks",
-            "item_count": 2,
+            "name": "Lifewater Flasks (Pogo)",
+            "item_count": 1,
             "access_rules": [
-              "flasksanity,level_iot"
+              "wetsuit,flasksanity,level_iot,pogo"
+            ]
+          },
+          {
+            "name": "Lifewater Flasks (Pogo+Blue)",
+            "item_count": 1,
+            "access_rules": [
+              "wetsuit,flasksanity,level_iot,pogo,iot_blue",
+              "wetsuit,flasksanity,level_iot,pogo,iot_gemset"
             ]
           }
         ]
@@ -510,7 +525,7 @@
             "name": "Lifewater Flasks",
             "item_count": 1,
             "access_rules": [
-              "flasksanity,level_iof"
+              "wetsuit,flasksanity,level_iof"
             ]
           }
         ]
@@ -536,7 +551,7 @@
             "name": "Lifewater Flasks",
             "item_count": 1,
             "access_rules": [
-              "flasksanity,level_wow"
+              "wetsuit,flasksanity,level_wow"
             ]
           }
         ]
