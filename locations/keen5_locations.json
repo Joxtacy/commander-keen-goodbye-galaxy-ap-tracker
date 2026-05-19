@@ -9,6 +9,11 @@
             "map": "Keen 5 - Omegamatic",
             "x": 440,
             "y": 1380
+          },
+          {
+            "map": "keen5_ivs",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -18,6 +23,9 @@
             "access_rules": [
               "level_ivs"
             ]
+          },
+          {
+            "ref": "Keen 5/Ion Ventilation System - Vitalin Kegs/Vitalin Kegs"
           }
         ]
       },
@@ -47,6 +55,11 @@
             "map": "Keen 5 - Omegamatic",
             "x": 440,
             "y": 1280
+          },
+          {
+            "map": "keen5_sc",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -80,6 +93,12 @@
               "level_sc,sc_keycard,sc_blue",
               "level_sc,sc_keycard,sc_gemset"
             ]
+          },
+          {
+            "ref": "Keen 5/Security Center - Vitalin Keg 1/Vitalin Keg (Blue Gem)"
+          },
+          {
+            "ref": "Keen 5/Security Center - Vitalin Keg 2/Vitalin Keg"
           }
         ]
       },
@@ -129,6 +148,11 @@
             "map": "Keen 5 - Omegamatic",
             "x": 200,
             "y": 788
+          },
+          {
+            "map": "keen5_dtv",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -161,6 +185,12 @@
               "level_dtv,dtv_keycard,dtv_yellow",
               "level_dtv,dtv_keycard,dtv_gemset"
             ]
+          },
+          {
+            "ref": "Keen 5/Defense Tunnel Vlook - Vitalin Keg 1/Vitalin Keg (Yellow Gem+Pogo)"
+          },
+          {
+            "ref": "Keen 5/Defense Tunnel Vlook - Vitalin Keg 2/Vitalin Keg"
           }
         ]
       },
@@ -210,6 +240,11 @@
             "map": "Keen 5 - Omegamatic",
             "x": 136,
             "y": 788
+          },
+          {
+            "map": "keen5_efs",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -251,6 +286,9 @@
               "level_efs,pogo,efs_green",
               "level_efs,pogo,efs_gemset"
             ]
+          },
+          {
+            "ref": "Keen 5/Energy Flow Systems - Vitalin Kegs/Vitalin Kegs"
           }
         ]
       },
@@ -281,6 +319,11 @@
             "map": "Keen 5 - Omegamatic",
             "x": 440,
             "y": 980
+          },
+          {
+            "map": "keen5_dtb",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -329,6 +372,9 @@
               "level_dtb,dtb_keycard,dtb_red",
               "level_dtb,dtb_keycard,dtb_gemset"
             ]
+          },
+          {
+            "ref": "Keen 5/Defense Tunnel Burrh - Vitalin Kegs/Vitalin Kegs"
           }
         ]
       },
@@ -358,6 +404,11 @@
             "map": "Keen 5 - Omegamatic",
             "x": 457,
             "y": 1060
+          },
+          {
+            "map": "keen5_rcc",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -405,6 +456,11 @@
             "map": "Keen 5 - Omegamatic",
             "x": 536,
             "y": 788
+          },
+          {
+            "map": "keen5_dts",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -439,6 +495,11 @@
             "map": "Keen 5 - Omegamatic",
             "x": 600,
             "y": 788
+          },
+          {
+            "map": "keen5_nbi",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -473,6 +534,11 @@
             "map": "Keen 5 - Omegamatic",
             "x": 440,
             "y": 723
+          },
+          {
+            "map": "keen5_dtt",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -522,6 +588,9 @@
               "level_dtt,dtt_keycard,dtt_yellow,dtt_blue",
               "level_dtt,dtt_keycard,dtt_gemset"
             ]
+          },
+          {
+            "ref": "Keen 5/Defense Tunnel Teln - Vitalin Kegs/Vitalin Kegs"
           }
         ]
       },
@@ -552,6 +621,11 @@
             "map": "Keen 5 - Omegamatic",
             "x": 456,
             "y": 660
+          },
+          {
+            "map": "keen5_bmi",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -576,6 +650,9 @@
               "level_bmi,pogo,bmi_yellow,bmi_blue",
               "level_bmi,pogo,bmi_gemset"
             ]
+          },
+          {
+            "ref": "Keen 5/Brownian Motion Inducer - Vitalin Kegs/Vitalin Kegs"
           }
         ]
       },
@@ -605,6 +682,11 @@
             "map": "Keen 5 - Omegamatic",
             "x": 440,
             "y": 323
+          },
+          {
+            "map": "keen5_gdh",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -637,6 +719,9 @@
               "$ck5_endgame_reachable,level_gdh,pogo,gdh_keycard,gdh_green",
               "$ck5_endgame_reachable,level_gdh,pogo,gdh_keycard,gdh_gemset"
             ]
+          },
+          {
+            "ref": "Keen 5/Gravitational Damping Hub - Vitalin Kegs/Vitalin Kegs"
           }
         ]
       },
@@ -667,6 +752,11 @@
             "map": "Keen 5 - Omegamatic",
             "x": 296,
             "y": 275
+          },
+          {
+            "map": "keen5_qed",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -705,6 +795,9 @@
               "$ck5_all_completable,level_qed,pogo,qed_red,qed_yellow,qed_blue,qed_green",
               "$ck5_all_completable,level_qed,pogo,qed_gemset"
             ]
+          },
+          {
+            "ref": "Keen 5/Quantum Explosion Dynamo - Vitalin Kegs/Vitalin Kegs"
           }
         ]
       },

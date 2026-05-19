@@ -9,6 +9,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 840,
             "y": 440
+          },
+          {
+            "map": "keen4_bv",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -18,6 +23,9 @@
             "access_rules": [
               "level_bv"
             ]
+          },
+          {
+            "ref": "Keen 4/Border Village - Lifewater Flasks/Lifewater Flasks"
           }
         ]
       },
@@ -47,6 +55,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 777,
             "y": 313
+          },
+          {
+            "map": "keen4_sv",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -66,6 +79,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 730,
             "y": 555
+          },
+          {
+            "map": "keen4_pp",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -100,6 +118,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 312,
             "y": 60
+          },
+          {
+            "map": "keen4_cotd",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -135,6 +158,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 473,
             "y": 43
+          },
+          {
+            "map": "keen4_coc",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -144,6 +172,9 @@
             "access_rules": [
               "level_coc"
             ]
+          },
+          {
+            "ref": "Keen 4/Chasm of Chills - Lifewater Flasks/Lifewater Flasks"
           }
         ]
       },
@@ -173,6 +204,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 710,
             "y": 110
+          },
+          {
+            "map": "keen4_crys",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -224,6 +260,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 456,
             "y": 426
+          },
+          {
+            "map": "keen4_hil",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -233,6 +274,9 @@
             "access_rules": [
               "level_hil"
             ]
+          },
+          {
+            "ref": "Keen 4/Hilville - Lifewater Flasks/Lifewater Flasks"
           }
         ]
       },
@@ -262,6 +306,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 120,
             "y": 410
+          },
+          {
+            "map": "keen4_sy",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -279,6 +328,9 @@
               "level_sy,pogo,sy_green",
               "level_sy,pogo,sy_gemset"
             ]
+          },
+          {
+            "ref": "Keen 4/Sand Yego - Lifewater Flasks/Lifewater Flasks"
           }
         ]
       },
@@ -308,6 +360,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 280,
             "y": 330
+          },
+          {
+            "map": "keen4_mir",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -317,6 +374,9 @@
             "access_rules": [
               "level_mir,pogo"
             ]
+          },
+          {
+            "ref": "Keen 4/Miragia - Lifewater Flasks/Lifewater Flasks"
           }
         ]
       },
@@ -346,6 +406,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 105,
             "y": 201
+          },
+          {
+            "map": "keen4_lo",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -373,6 +438,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 200,
             "y": 617
+          },
+          {
+            "map": "keen4_potm",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -390,6 +460,9 @@
               "level_potm,potm_yellow",
               "level_potm,potm_gemset"
             ]
+          },
+          {
+            "ref": "Keen 4/Pyramid of the Moons - Lifewater Flasks/Lifewater Flasks"
           }
         ]
       },
@@ -419,6 +492,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 472,
             "y": 697
+          },
+          {
+            "map": "keen4_pos",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -436,6 +514,15 @@
               "level_pos,stunner,pos_blue",
               "level_pos,stunner,pos_gemset"
             ]
+          },
+          {
+            "ref": "Keen 4/Pyramid of Shadows - Lifewater Flask 1/Lifewater Flask (Pogo+Stunner)"
+          },
+          {
+            "ref": "Keen 4/Pyramid of Shadows - Lifewater Flask 2/Lifewater Flask (Stunner)"
+          },
+          {
+            "ref": "Keen 4/Pyramid of Shadows - Lifewater Flasks 3-8/Lifewater Flasks (Stunner)"
           }
         ]
       },
@@ -503,6 +590,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 216,
             "y": 793
+          },
+          {
+            "map": "keen4_potga",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -528,6 +620,15 @@
               "level_potga,pogo,potga_red,potga_green",
               "level_potga,pogo,potga_gemset"
             ]
+          },
+          {
+            "ref": "Keen 4/Pyramid of the Gnosticine Ancients - Lifewater Flask 2/Lifewater Flask (Stunner)"
+          },
+          {
+            "ref": "Keen 4/Pyramid of the Gnosticine Ancients - Lifewater Flask 3/Lifewater Flask (Stunner)"
+          },
+          {
+            "ref": "Keen 4/Pyramid of the Gnosticine Ancients - Lifewater Flask 4/Lifewater Flask (Pogo)"
           }
         ]
       },
@@ -595,6 +696,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 870,
             "y": 700
+          },
+          {
+            "map": "keen4_iot",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -628,6 +734,12 @@
               "wetsuit,level_iot,pogo,iot_blue",
               "wetsuit,level_iot,pogo,iot_gemset"
             ]
+          },
+          {
+            "ref": "Keen 4/Isle of Tar - Lifewater Flask 1/Lifewater Flask (Pogo)"
+          },
+          {
+            "ref": "Keen 4/Isle of Tar - Lifewater Flask 2/Lifewater Flask (Pogo+Blue)"
           }
         ]
       },
@@ -677,6 +789,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 680,
             "y": 810
+          },
+          {
+            "map": "keen4_iof",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -702,6 +819,9 @@
               "wetsuit,level_iof,iof_yellow,iof_blue",
               "wetsuit,level_iof,iof_gemset"
             ]
+          },
+          {
+            "ref": "Keen 4/Isle of Fire - Lifewater Flasks/Lifewater Flasks"
           }
         ]
       },
@@ -731,6 +851,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 888,
             "y": 810
+          },
+          {
+            "map": "keen4_wow",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [
@@ -740,6 +865,9 @@
             "access_rules": [
               "wetsuit,level_wow"
             ]
+          },
+          {
+            "ref": "Keen 4/Well of Wishes - Lifewater Flasks/Lifewater Flasks"
           }
         ]
       },
@@ -769,6 +897,11 @@
             "map": "Keen 4 - Shadowlands",
             "x": 840,
             "y": 590
+          },
+          {
+            "map": "keen4_bwbm",
+            "x": 16,
+            "y": 16
           }
         ],
         "sections": [

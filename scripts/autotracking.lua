@@ -353,6 +353,47 @@ CK5_MAP_TABS = {
 MAP_KEY = nil
 
 -- ============================================================
+-- Helpers
+-- ============================================================
+
+-- Lua-side counters for the score-item progress widgets. The widgets are
+-- declared as toggles in items.json (rather than consumables) because the
+-- consumable widget paints its own AcquiredCount as a badge that always
+-- overrides BadgeText/SetOverlay once the count is non-zero — which left
+-- "X/N" only visible at zero. Toggles have no default badge so the text
+-- shows through at every count.
+SCORE_COUNT = { flask_count = 0, keg_count = 0 }
+SCORE_MAX   = { flask_count = 27, keg_count = 22 }
+
+-- Update the items-panel score-item counter widget. If `count` is given,
+-- it replaces the running count for this code; otherwise the existing value
+-- is re-displayed. obj.Active is bound to whether the corresponding sanity
+-- option is enabled for this run (so the icon stays colored when the user
+-- is tracking flasks/kegs and stays grey when they aren't), not to whether
+-- any have been collected yet. Writes BadgeText (PopTracker 0.31.0+) and
+-- SetOverlay (older API) plus a green-when-full tint, all wrapped in pcall.
+function update_score_overlay(code, count)
+	local obj = Tracker:FindObjectForCode(code)
+	if not obj then return end
+	if count ~= nil then SCORE_COUNT[code] = count end
+	local n = SCORE_COUNT[code] or 0
+	local max = SCORE_MAX[code] or 0
+	local enabled = false
+	if code == "flask_count" then
+		enabled = (ENABLE_FLASKSANITY == 1)
+	elseif code == "keg_count" then
+		enabled = (ENABLE_KEGSANITY == 1)
+	end
+	pcall(function() obj.Active = enabled end)
+	local text = string.format("%d/%d", n, max)
+	local color = n >= max and "#00FF00" or "#FFFFFF"
+	pcall(function() obj.BadgeText = text end)
+	pcall(function() obj.BadgeTextColor = color end)
+	if obj.SetOverlay then pcall(function() obj:SetOverlay(text) end) end
+	if obj.SetOverlayColor then pcall(function() obj:SetOverlayColor(color) end) end
+end
+
+-- ============================================================
 -- Handlers
 -- ============================================================
 
@@ -422,12 +463,8 @@ function onClear(slot_data)
 	end
 
 	-- Reset score-item progress counters (bumped from onLocation)
-	for _, code in ipairs({ "flask_count", "keg_count" }) do
-		local obj = Tracker:FindObjectForCode(code)
-		if obj and obj.Type == "consumable" then
-			obj.AcquiredCount = 0
-		end
-	end
+	update_score_overlay("flask_count", 0)
+	update_score_overlay("keg_count", 0)
 
 	-- Reset all locations
 	for _, loc_path in pairs(LOCATION_MAP) do
@@ -496,11 +533,9 @@ function onLocation(location_id, location_name)
 	-- Flask IDs are 60000 + 1*2000 + lvl*100 + idx (range 62100..63707).
 	-- Keg IDs are   50000 + 2*2000 + lvl*100 + idx (range 54100..55209).
 	if location_id >= 62000 and location_id < 64000 then
-		local f = Tracker:FindObjectForCode("flask_count")
-		if f then f.AcquiredCount = f.AcquiredCount + 1 end
+		update_score_overlay("flask_count", (SCORE_COUNT["flask_count"] or 0) + 1)
 	elseif location_id >= 54000 and location_id < 56000 then
-		local k = Tracker:FindObjectForCode("keg_count")
-		if k then k.AcquiredCount = k.AcquiredCount + 1 end
+		update_score_overlay("keg_count", (SCORE_COUNT["keg_count"] or 0) + 1)
 	end
 end
 

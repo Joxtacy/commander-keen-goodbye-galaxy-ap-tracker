@@ -709,20 +709,20 @@
   },
   {
     "name": "Lifewater Flasks Collected",
-    "type": "consumable",
+    "type": "toggle",
     "img": "images/life.png",
     "codes": "flask_count",
-    "max_quantity": 27,
-    "increment": 1,
-    "initial_quantity": 0
+    "overlay_font_size": 11,
+    "overlay_align": "center",
+    "overlay_background": "#80000000"
   },
   {
     "name": "Vitalin Kegs Collected",
-    "type": "consumable",
+    "type": "toggle",
     "img": "images/keg_o_vitalin.png",
     "codes": "keg_count",
-    "max_quantity": 22,
-    "increment": 1,
-    "initial_quantity": 0
+    "overlay_font_size": 11,
+    "overlay_align": "center",
+    "overlay_background": "#80000000"
   }
 ]
