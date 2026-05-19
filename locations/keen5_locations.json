@@ -18,7 +18,19 @@
             "access_rules": [
               "level_ivs"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Ion Ventilation System - Vitalin Kegs",
+        "map_locations": [
+          {
+            "map": "keen5_ivs",
+            "x": 854,
+            "y": 1117
+          }
+        ],
+        "sections": [
           {
             "name": "Vitalin Kegs",
             "item_count": 10,
@@ -68,17 +80,41 @@
               "level_sc,sc_keycard,sc_blue",
               "level_sc,sc_keycard,sc_gemset"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Security Center - Vitalin Keg 1",
+        "map_locations": [
           {
-            "name": "Vitalin Kegs (Blue Gem)",
+            "map": "keen5_sc",
+            "x": 1048,
+            "y": 232
+          }
+        ],
+        "sections": [
+          {
+            "name": "Vitalin Keg (Blue Gem)",
             "item_count": 1,
             "access_rules": [
               "kegsanity,level_sc,sc_blue",
               "kegsanity,level_sc,sc_gemset"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Security Center - Vitalin Keg 2",
+        "map_locations": [
           {
-            "name": "Vitalin Kegs",
+            "map": "keen5_sc",
+            "x": 72,
+            "y": 536
+          }
+        ],
+        "sections": [
+          {
+            "name": "Vitalin Keg",
             "item_count": 1,
             "access_rules": [
               "kegsanity,level_sc"
@@ -125,17 +161,41 @@
               "level_dtv,dtv_keycard,dtv_yellow",
               "level_dtv,dtv_keycard,dtv_gemset"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Defense Tunnel Vlook - Vitalin Keg 1",
+        "map_locations": [
           {
-            "name": "Vitalin Kegs (Yellow Gem+Pogo)",
+            "map": "keen5_dtv",
+            "x": 824,
+            "y": 40
+          }
+        ],
+        "sections": [
+          {
+            "name": "Vitalin Keg (Yellow Gem+Pogo)",
             "item_count": 1,
             "access_rules": [
               "kegsanity,level_dtv,dtv_yellow,pogo",
               "kegsanity,level_dtv,dtv_gemset,pogo"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Defense Tunnel Vlook - Vitalin Keg 2",
+        "map_locations": [
           {
-            "name": "Vitalin Kegs",
+            "map": "keen5_dtv",
+            "x": 3000,
+            "y": 56
+          }
+        ],
+        "sections": [
+          {
+            "name": "Vitalin Keg",
             "item_count": 1,
             "access_rules": [
               "kegsanity,level_dtv"
@@ -191,7 +251,19 @@
               "level_efs,pogo,efs_green",
               "level_efs,pogo,efs_gemset"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Energy Flow Systems - Vitalin Kegs",
+        "map_locations": [
+          {
+            "map": "keen5_efs",
+            "x": 520,
+            "y": 1048
+          }
+        ],
+        "sections": [
           {
             "name": "Vitalin Kegs",
             "item_count": 1,
@@ -257,7 +329,19 @@
               "level_dtb,dtb_keycard,dtb_red",
               "level_dtb,dtb_keycard,dtb_gemset"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Defense Tunnel Burrh - Vitalin Kegs",
+        "map_locations": [
+          {
+            "map": "keen5_dtb",
+            "x": 944,
+            "y": 152
+          }
+        ],
+        "sections": [
           {
             "name": "Vitalin Kegs",
             "item_count": 2,
@@ -438,7 +522,19 @@
               "level_dtt,dtt_keycard,dtt_yellow,dtt_blue",
               "level_dtt,dtt_keycard,dtt_gemset"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Defense Tunnel Teln - Vitalin Kegs",
+        "map_locations": [
+          {
+            "map": "keen5_dtt",
+            "x": 168,
+            "y": 280
+          }
+        ],
+        "sections": [
           {
             "name": "Vitalin Kegs",
             "item_count": 1,
@@ -480,7 +576,19 @@
               "level_bmi,pogo,bmi_yellow,bmi_blue",
               "level_bmi,pogo,bmi_gemset"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Brownian Motion Inducer - Vitalin Kegs",
+        "map_locations": [
+          {
+            "map": "keen5_bmi",
+            "x": 744,
+            "y": 344
+          }
+        ],
+        "sections": [
           {
             "name": "Vitalin Kegs",
             "item_count": 1,
@@ -533,7 +641,7 @@
         ]
       },
       {
-        "name": "Gravitational Damping Hub - Vitalin Keg",
+        "name": "Gravitational Damping Hub - Vitalin Kegs",
         "map_locations": [
           {
             "map": "keen5_gdh",
@@ -546,7 +654,8 @@
             "name": "Vitalin Kegs",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,kegsanity,level_gdh"
+              "$ck5_endgame_reachable,kegsanity,level_gdh,pogo,gdh_green",
+              "$ck5_endgame_reachable,kegsanity,level_gdh,pogo,gdh_gemset"
             ]
           }
         ]
@@ -596,7 +705,19 @@
               "$ck5_endgame_reachable,level_qed,pogo,qed_red,qed_yellow,qed_blue,qed_green",
               "$ck5_endgame_reachable,level_qed,pogo,qed_gemset"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Quantum Explosion Dynamo - Vitalin Kegs",
+        "map_locations": [
+          {
+            "map": "keen5_qed",
+            "x": 600,
+            "y": 504
+          }
+        ],
+        "sections": [
           {
             "name": "Vitalin Kegs",
             "item_count": 2,

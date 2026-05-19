@@ -18,7 +18,19 @@
             "access_rules": [
               "level_bv"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Border Village - Lifewater Flasks",
+        "map_locations": [
+          {
+            "map": "keen4_bv",
+            "x": 408,
+            "y": 600
+          }
+        ],
+        "sections": [
           {
             "name": "Lifewater Flasks",
             "item_count": 7,
@@ -132,7 +144,19 @@
             "access_rules": [
               "level_coc"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Chasm of Chills - Lifewater Flasks",
+        "map_locations": [
+          {
+            "map": "keen4_coc",
+            "x": 1672,
+            "y": 952
+          }
+        ],
+        "sections": [
           {
             "name": "Lifewater Flasks",
             "item_count": 1,
@@ -209,7 +233,19 @@
             "access_rules": [
               "level_hil"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Hilville - Lifewater Flasks",
+        "map_locations": [
+          {
+            "map": "keen4_hil",
+            "x": 1240,
+            "y": 120
+          }
+        ],
+        "sections": [
           {
             "name": "Lifewater Flasks",
             "item_count": 1,
@@ -243,7 +279,19 @@
               "level_sy,pogo,sy_green",
               "level_sy,pogo,sy_gemset"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Sand Yego - Lifewater Flasks",
+        "map_locations": [
+          {
+            "map": "keen4_sy",
+            "x": 648,
+            "y": 760
+          }
+        ],
+        "sections": [
           {
             "name": "Lifewater Flasks",
             "item_count": 1,
@@ -269,7 +317,19 @@
             "access_rules": [
               "level_mir,pogo"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Miragia - Lifewater Flasks",
+        "map_locations": [
+          {
+            "map": "keen4_mir",
+            "x": 1240,
+            "y": 1032
+          }
+        ],
+        "sections": [
           {
             "name": "Lifewater Flasks",
             "item_count": 1,
@@ -330,7 +390,19 @@
               "level_potm,potm_yellow",
               "level_potm,potm_gemset"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Pyramid of the Moons - Lifewater Flasks",
+        "map_locations": [
+          {
+            "map": "keen4_potm",
+            "x": 744,
+            "y": 552
+          }
+        ],
+        "sections": [
           {
             "name": "Lifewater Flasks",
             "item_count": 1,
@@ -364,17 +436,60 @@
               "level_pos,stunner,pos_blue",
               "level_pos,stunner,pos_gemset"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Pyramid of Shadows - Lifewater Flask 1",
+        "map_locations": [
           {
-            "name": "Lifewater Flasks (Pogo+Stunner)",
+            "map": "keen4_pos",
+            "x": 984,
+            "y": 888
+          }
+        ],
+        "sections": [
+          {
+            "name": "Lifewater Flask (Pogo+Stunner)",
             "item_count": 1,
             "access_rules": [
               "flasksanity,level_pos,pogo,stunner"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Pyramid of Shadows - Lifewater Flask 2",
+        "map_locations": [
+          {
+            "map": "keen4_pos",
+            "x": 488,
+            "y": 1480
+          }
+        ],
+        "sections": [
+          {
+            "name": "Lifewater Flask (Stunner)",
+            "item_count": 1,
+            "access_rules": [
+              "flasksanity,level_pos,stunner"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pyramid of Shadows - Lifewater Flasks 3-8",
+        "map_locations": [
+          {
+            "map": "keen4_pos",
+            "x": 640,
+            "y": 1512
+          }
+        ],
+        "sections": [
           {
             "name": "Lifewater Flasks (Stunner)",
-            "item_count": 7,
+            "item_count": 6,
             "access_rules": [
               "flasksanity,level_pos,stunner"
             ]
@@ -413,16 +528,59 @@
               "level_potga,pogo,potga_red,potga_green",
               "level_potga,pogo,potga_gemset"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Pyramid of the Gnosticine Ancients - Lifewater Flask 2",
+        "map_locations": [
           {
-            "name": "Lifewater Flasks (Stunner)",
-            "item_count": 2,
+            "map": "keen4_potga",
+            "x": 600,
+            "y": 1480
+          }
+        ],
+        "sections": [
+          {
+            "name": "Lifewater Flask (Stunner)",
+            "item_count": 1,
             "access_rules": [
               "flasksanity,level_potga,stunner"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Pyramid of the Gnosticine Ancients - Lifewater Flask 3",
+        "map_locations": [
           {
-            "name": "Lifewater Flasks (Pogo)",
+            "map": "keen4_potga",
+            "x": 584,
+            "y": 1048
+          }
+        ],
+        "sections": [
+          {
+            "name": "Lifewater Flask (Stunner)",
+            "item_count": 1,
+            "access_rules": [
+              "flasksanity,level_potga,stunner"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pyramid of the Gnosticine Ancients - Lifewater Flask 4",
+        "map_locations": [
+          {
+            "map": "keen4_potga",
+            "x": 600,
+            "y": 1048
+          }
+        ],
+        "sections": [
+          {
+            "name": "Lifewater Flask (Pogo)",
             "item_count": 1,
             "access_rules": [
               "flasksanity,level_potga,pogo"
@@ -470,16 +628,40 @@
               "wetsuit,level_iot,pogo,iot_blue",
               "wetsuit,level_iot,pogo,iot_gemset"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Isle of Tar - Lifewater Flask 1",
+        "map_locations": [
           {
-            "name": "Lifewater Flasks (Pogo)",
+            "map": "keen4_iot",
+            "x": 664,
+            "y": 744
+          }
+        ],
+        "sections": [
+          {
+            "name": "Lifewater Flask (Pogo)",
             "item_count": 1,
             "access_rules": [
               "wetsuit,flasksanity,level_iot,pogo"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Isle of Tar - Lifewater Flask 2",
+        "map_locations": [
           {
-            "name": "Lifewater Flasks (Pogo+Blue)",
+            "map": "keen4_iot",
+            "x": 1624,
+            "y": 888
+          }
+        ],
+        "sections": [
+          {
+            "name": "Lifewater Flask (Pogo+Blue)",
             "item_count": 1,
             "access_rules": [
               "wetsuit,flasksanity,level_iot,pogo,iot_blue",
@@ -520,7 +702,19 @@
               "wetsuit,level_iof,iof_yellow,iof_blue",
               "wetsuit,level_iof,iof_gemset"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Isle of Fire - Lifewater Flasks",
+        "map_locations": [
+          {
+            "map": "keen4_iof",
+            "x": 856,
+            "y": 632
+          }
+        ],
+        "sections": [
           {
             "name": "Lifewater Flasks",
             "item_count": 1,
@@ -546,7 +740,19 @@
             "access_rules": [
               "wetsuit,level_wow"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "name": "Well of Wishes - Lifewater Flasks",
+        "map_locations": [
+          {
+            "map": "keen4_wow",
+            "x": 168,
+            "y": 840
+          }
+        ],
+        "sections": [
           {
             "name": "Lifewater Flasks",
             "item_count": 1,

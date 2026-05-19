@@ -243,46 +243,70 @@ LOCATION_MAP = {
 }
 
 -- Flasksanity (CK4 Lifewater Flasks) and Kegsanity (CK5 Vitalin Kegs).
--- Counts are post-exclusion; the apworld doesn't generate excluded IDs so
--- the server never sends them. The per-level section's AvailableChestCount
--- ticks down once per received ID match.
+-- Each engine idx maps to the extracted "<Level> - Lifewater Flasks" /
+-- "<Level> - Vitalin Kegs" tracker entry where its marker lives. Levels that
+-- have flasks/kegs split across multiple clusters (PoS, POTGA, IoT, SC, DTV)
+-- get one entry per cluster, and each idx is routed to its specific entry +
+-- section so the per-marker status is accurate.
 -- IDs: LOC_FLASK = 60000 + 1*2000 + lvl*100 + idx
 --      LOC_KEG   = 50000 + 2*2000 + lvl*100 + idx
-local FLASKSANITY_CK4 = {
-	[1]  = {count = 7, name = "Border Village"},
-	[3]  = {count = 2, name = "The Perilous Pit"},
-	[5]  = {count = 1, name = "Chasm of Chills"},
-	[7]  = {count = 1, name = "Hilville"},
-	[8]  = {count = 1, name = "Sand Yego"},
-	[9]  = {count = 1, name = "Miragia"},
-	[11] = {count = 1, name = "Pyramid of the Moons"},
-	[12] = {count = 8, name = "Pyramid of Shadows"},
-	[13] = {count = 4, name = "Pyramid of the Gnosticine Ancients"},
-	[15] = {count = 2, name = "Isle of Tar"},
-	[16] = {count = 1, name = "Isle of Fire"},
-	[17] = {count = 1, name = "Well of Wishes"},
+-- The apworld excludes PP flasks 0-1, COTD flasks 0-1, LO flasks 0-4 and
+-- POTGA flask 0; those IDs are never sent and therefore not mapped.
+local CK4_FLASK_LAYOUT = {
+	[1]  = {{lo=0, hi=6, entry="Border Village - Lifewater Flasks",                  section="Lifewater Flasks"}},
+	[5]  = {{lo=0, hi=0, entry="Chasm of Chills - Lifewater Flasks",                 section="Lifewater Flasks"}},
+	[7]  = {{lo=0, hi=0, entry="Hilville - Lifewater Flasks",                        section="Lifewater Flasks"}},
+	[8]  = {{lo=0, hi=0, entry="Sand Yego - Lifewater Flasks",                       section="Lifewater Flasks"}},
+	[9]  = {{lo=0, hi=0, entry="Miragia - Lifewater Flasks",                         section="Lifewater Flasks"}},
+	[11] = {{lo=0, hi=0, entry="Pyramid of the Moons - Lifewater Flasks",            section="Lifewater Flasks"}},
+	[12] = {
+		{lo=0, hi=0, entry="Pyramid of Shadows - Lifewater Flask 1",                 section="Lifewater Flask (Pogo+Stunner)"},
+		{lo=1, hi=1, entry="Pyramid of Shadows - Lifewater Flask 2",                 section="Lifewater Flask (Stunner)"},
+		{lo=2, hi=7, entry="Pyramid of Shadows - Lifewater Flasks 3-8",              section="Lifewater Flasks (Stunner)"},
+	},
+	[13] = {
+		{lo=1, hi=1, entry="Pyramid of the Gnosticine Ancients - Lifewater Flask 2", section="Lifewater Flask (Stunner)"},
+		{lo=2, hi=2, entry="Pyramid of the Gnosticine Ancients - Lifewater Flask 3", section="Lifewater Flask (Stunner)"},
+		{lo=3, hi=3, entry="Pyramid of the Gnosticine Ancients - Lifewater Flask 4", section="Lifewater Flask (Pogo)"},
+	},
+	[15] = {
+		{lo=0, hi=0, entry="Isle of Tar - Lifewater Flask 1",                        section="Lifewater Flask (Pogo)"},
+		{lo=1, hi=1, entry="Isle of Tar - Lifewater Flask 2",                        section="Lifewater Flask (Pogo+Blue)"},
+	},
+	[16] = {{lo=0, hi=0, entry="Isle of Fire - Lifewater Flasks",                    section="Lifewater Flasks"}},
+	[17] = {{lo=0, hi=0, entry="Well of Wishes - Lifewater Flasks",                  section="Lifewater Flasks"}},
 }
-local KEGSANITY_CK5 = {
-	[1]  = {count = 10, name = "Ion Ventilation System"},
-	[2]  = {count = 2,  name = "Security Center"},
-	[3]  = {count = 2,  name = "Defense Tunnel Vlook"},
-	[4]  = {count = 1,  name = "Energy Flow Systems"},
-	[5]  = {count = 2,  name = "Defense Tunnel Burrh"},
-	[9]  = {count = 1,  name = "Defense Tunnel Teln"},
-	[10] = {count = 1,  name = "Brownian Motion Inducer"},
-	[11] = {count = 1,  name = "Gravitational Damping Hub"},
-	[12] = {count = 2,  name = "Quantum Explosion Dynamo"},
+local CK5_KEG_LAYOUT = {
+	[1]  = {{lo=0, hi=9, entry="Ion Ventilation System - Vitalin Kegs",     section="Vitalin Kegs"}},
+	[2]  = {
+		{lo=0, hi=0, entry="Security Center - Vitalin Keg 1",               section="Vitalin Keg (Blue Gem)"},
+		{lo=1, hi=1, entry="Security Center - Vitalin Keg 2",               section="Vitalin Keg"},
+	},
+	[3]  = {
+		{lo=0, hi=0, entry="Defense Tunnel Vlook - Vitalin Keg 1",          section="Vitalin Keg (Yellow Gem+Pogo)"},
+		{lo=1, hi=1, entry="Defense Tunnel Vlook - Vitalin Keg 2",          section="Vitalin Keg"},
+	},
+	[4]  = {{lo=0, hi=0, entry="Energy Flow Systems - Vitalin Kegs",        section="Vitalin Kegs"}},
+	[5]  = {{lo=0, hi=1, entry="Defense Tunnel Burrh - Vitalin Kegs",       section="Vitalin Kegs"}},
+	[9]  = {{lo=0, hi=0, entry="Defense Tunnel Teln - Vitalin Kegs",        section="Vitalin Kegs"}},
+	[10] = {{lo=0, hi=0, entry="Brownian Motion Inducer - Vitalin Kegs",    section="Vitalin Kegs"}},
+	[11] = {{lo=0, hi=0, entry="Gravitational Damping Hub - Vitalin Kegs",  section="Vitalin Kegs"}},
+	[12] = {{lo=0, hi=1, entry="Quantum Explosion Dynamo - Vitalin Kegs",   section="Vitalin Kegs"}},
 }
-for lvl_id, info in pairs(FLASKSANITY_CK4) do
-	for idx = 0, info.count - 1 do
-		LOCATION_MAP[60000 + 1 * 2000 + lvl_id * 100 + idx] =
-			"Keen 4/" .. info.name .. "/Lifewater Flasks"
+for lvl_id, segments in pairs(CK4_FLASK_LAYOUT) do
+	for _, seg in ipairs(segments) do
+		for idx = seg.lo, seg.hi do
+			LOCATION_MAP[60000 + 1 * 2000 + lvl_id * 100 + idx] =
+				"Keen 4/" .. seg.entry .. "/" .. seg.section
+		end
 	end
 end
-for lvl_id, info in pairs(KEGSANITY_CK5) do
-	for idx = 0, info.count - 1 do
-		LOCATION_MAP[50000 + 2 * 2000 + lvl_id * 100 + idx] =
-			"Keen 5/" .. info.name .. "/Vitalin Kegs"
+for lvl_id, segments in pairs(CK5_KEG_LAYOUT) do
+	for _, seg in ipairs(segments) do
+		for idx = seg.lo, seg.hi do
+			LOCATION_MAP[50000 + 2 * 2000 + lvl_id * 100 + idx] =
+				"Keen 5/" .. seg.entry .. "/" .. seg.section
+		end
 	end
 end
 
