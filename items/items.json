@@ -706,5 +706,23 @@
     "max_quantity": 99,
     "increment": 1,
     "initial_quantity": 0
+  },
+  {
+    "name": "Lifewater Flasks Collected",
+    "type": "consumable",
+    "img": "images/life.png",
+    "codes": "flask_count",
+    "max_quantity": 27,
+    "increment": 1,
+    "initial_quantity": 0
+  },
+  {
+    "name": "Vitalin Kegs Collected",
+    "type": "consumable",
+    "img": "images/keg_o_vitalin.png",
+    "codes": "keg_count",
+    "max_quantity": 22,
+    "increment": 1,
+    "initial_quantity": 0
   }
 ]

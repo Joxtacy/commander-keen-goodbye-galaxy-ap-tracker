@@ -421,6 +421,14 @@ function onClear(slot_data)
 		end
 	end
 
+	-- Reset score-item progress counters (bumped from onLocation)
+	for _, code in ipairs({ "flask_count", "keg_count" }) do
+		local obj = Tracker:FindObjectForCode(code)
+		if obj and obj.Type == "consumable" then
+			obj.AcquiredCount = 0
+		end
+	end
+
 	-- Reset all locations
 	for _, loc_path in pairs(LOCATION_MAP) do
 		local loc = Tracker:FindObjectForCode("@" .. loc_path)
@@ -482,6 +490,17 @@ function onLocation(location_id, location_name)
 		if obj then
 			obj.Active = true
 		end
+	end
+
+	-- Score-item counters on the items panel.
+	-- Flask IDs are 60000 + 1*2000 + lvl*100 + idx (range 62100..63707).
+	-- Keg IDs are   50000 + 2*2000 + lvl*100 + idx (range 54100..55209).
+	if location_id >= 62000 and location_id < 64000 then
+		local f = Tracker:FindObjectForCode("flask_count")
+		if f then f.AcquiredCount = f.AcquiredCount + 1 end
+	elseif location_id >= 54000 and location_id < 56000 then
+		local k = Tracker:FindObjectForCode("keg_count")
+		if k then k.AcquiredCount = k.AcquiredCount + 1 end
 	end
 end
 
