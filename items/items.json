@@ -692,7 +692,7 @@
   {
     "name": "Extra Keen",
     "type": "consumable",
-    "img": "images/life.png",
+    "img": "images/keen.png",
     "codes": "extra_keen,keen_900",
     "max_quantity": 99,
     "increment": 1,
