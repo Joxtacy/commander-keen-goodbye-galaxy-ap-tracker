@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "package_version": "0.0.7",
+      "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.7/keen_goodbye_galaxy_ap_tracker_0.0.7.zip",
+      "sha256": "7a0a74c5601b0924433eb541c52f1ba83a425419b477f2794fca1be678ff37f1",
+      "changelog": [
+        "fix: remove duplicate level-map pins from level locations"
+      ]
+    },
+    {
       "package_version": "0.0.6",
       "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.6/keen_goodbye_galaxy_ap_tracker_0.0.6.zip",
       "sha256": "33a4287b4f3299ff2a1517394579a707acebc15e66e42c4358e85f17b3e316e2",
