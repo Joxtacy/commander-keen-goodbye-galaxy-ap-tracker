@@ -9,11 +9,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 840,
             "y": 440
-          },
-          {
-            "map": "keen4_bv",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -55,11 +50,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 777,
             "y": 313
-          },
-          {
-            "map": "keen4_sv",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -79,11 +69,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 730,
             "y": 555
-          },
-          {
-            "map": "keen4_pp",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -118,11 +103,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 312,
             "y": 60
-          },
-          {
-            "map": "keen4_cotd",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -158,11 +138,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 473,
             "y": 43
-          },
-          {
-            "map": "keen4_coc",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -204,11 +179,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 710,
             "y": 110
-          },
-          {
-            "map": "keen4_crys",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -260,11 +230,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 456,
             "y": 426
-          },
-          {
-            "map": "keen4_hil",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -306,11 +271,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 120,
             "y": 410
-          },
-          {
-            "map": "keen4_sy",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -360,11 +320,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 280,
             "y": 330
-          },
-          {
-            "map": "keen4_mir",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -406,11 +361,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 105,
             "y": 201
-          },
-          {
-            "map": "keen4_lo",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -438,11 +388,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 200,
             "y": 617
-          },
-          {
-            "map": "keen4_potm",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -492,11 +437,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 472,
             "y": 697
-          },
-          {
-            "map": "keen4_pos",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -590,11 +530,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 216,
             "y": 793
-          },
-          {
-            "map": "keen4_potga",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -696,11 +631,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 870,
             "y": 700
-          },
-          {
-            "map": "keen4_iot",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -789,11 +719,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 680,
             "y": 810
-          },
-          {
-            "map": "keen4_iof",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -851,11 +776,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 888,
             "y": 810
-          },
-          {
-            "map": "keen4_wow",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -897,11 +817,6 @@
             "map": "Keen 4 - Shadowlands",
             "x": 840,
             "y": 590
-          },
-          {
-            "map": "keen4_bwbm",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [

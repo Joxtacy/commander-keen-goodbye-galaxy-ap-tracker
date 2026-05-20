@@ -9,11 +9,6 @@
             "map": "Keen 5 - Omegamatic",
             "x": 440,
             "y": 1380
-          },
-          {
-            "map": "keen5_ivs",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -55,11 +50,6 @@
             "map": "Keen 5 - Omegamatic",
             "x": 440,
             "y": 1280
-          },
-          {
-            "map": "keen5_sc",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -148,11 +138,6 @@
             "map": "Keen 5 - Omegamatic",
             "x": 200,
             "y": 788
-          },
-          {
-            "map": "keen5_dtv",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -240,11 +225,6 @@
             "map": "Keen 5 - Omegamatic",
             "x": 136,
             "y": 788
-          },
-          {
-            "map": "keen5_efs",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -319,11 +299,6 @@
             "map": "Keen 5 - Omegamatic",
             "x": 440,
             "y": 980
-          },
-          {
-            "map": "keen5_dtb",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -404,11 +379,6 @@
             "map": "Keen 5 - Omegamatic",
             "x": 457,
             "y": 1060
-          },
-          {
-            "map": "keen5_rcc",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -456,11 +426,6 @@
             "map": "Keen 5 - Omegamatic",
             "x": 536,
             "y": 788
-          },
-          {
-            "map": "keen5_dts",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -495,11 +460,6 @@
             "map": "Keen 5 - Omegamatic",
             "x": 600,
             "y": 788
-          },
-          {
-            "map": "keen5_nbi",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -534,11 +494,6 @@
             "map": "Keen 5 - Omegamatic",
             "x": 440,
             "y": 723
-          },
-          {
-            "map": "keen5_dtt",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -621,11 +576,6 @@
             "map": "Keen 5 - Omegamatic",
             "x": 456,
             "y": 660
-          },
-          {
-            "map": "keen5_bmi",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -682,11 +632,6 @@
             "map": "Keen 5 - Omegamatic",
             "x": 440,
             "y": 323
-          },
-          {
-            "map": "keen5_gdh",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
@@ -752,11 +697,6 @@
             "map": "Keen 5 - Omegamatic",
             "x": 296,
             "y": 275
-          },
-          {
-            "map": "keen5_qed",
-            "x": 16,
-            "y": 16
           }
         ],
         "sections": [
