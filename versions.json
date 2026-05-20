@@ -1,6 +1,22 @@
 {
   "versions": [
     {
+      "package_version": "0.0.6",
+      "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.6/keen_goodbye_galaxy_ap_tracker_0.0.6.zip",
+      "sha256": "33a4287b4f3299ff2a1517394579a707acebc15e66e42c4358e85f17b3e316e2",
+      "changelog": [
+        "chore: switch Extra Keen icon to keen.png",
+        "fix: X/N counter widget and overworld flask/keg visibility",
+        "feat: progress counters for Lifewater Flasks and Vitalin Kegs on items panel",
+        "fix: gate QED Complete on every other CK5 level being completable",
+        "feat: per-level interior-map markers for flasks and kegs",
+        "fix: per-pickup access rules for Lifewater Flasks and Vitalin Kegs",
+        "fix: align logic with apworld stunner / pogo gates",
+        "feat: add flasksanity and kegsanity location tracking",
+        "fix(ck5): relax QED completion rules to match game mod logic"
+      ]
+    },
+    {
       "package_version": "0.0.5",
       "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.5/keen_goodbye_galaxy_ap_tracker_0.0.5.zip",
       "sha256": "09b34aa83783c4c59cd49ac7dc1f143c8780bbef23cb560d469b1ce295dc9d8b",
