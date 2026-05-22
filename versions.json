@@ -1,6 +1,14 @@
 {
   "versions": [
     {
+      "package_version": "0.0.8",
+      "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.8/keen_goodbye_galaxy_ap_tracker_0.0.8.zip",
+      "sha256": "f75ca5229618d0c44991c4b728479e01929492b650631eb3a2ed05984b9e56dd",
+      "changelog": [
+        "fix: align flask/keg markers to level images and rework POTGA"
+      ]
+    },
+    {
       "package_version": "0.0.7",
       "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.7/keen_goodbye_galaxy_ap_tracker_0.0.7.zip",
       "sha256": "7a0a74c5601b0924433eb541c52f1ba83a425419b477f2794fca1be678ff37f1",
