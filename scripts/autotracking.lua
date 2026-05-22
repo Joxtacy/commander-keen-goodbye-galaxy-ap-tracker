@@ -261,13 +261,16 @@ local CK4_FLASK_LAYOUT = {
 	[11] = {{lo=0, hi=0, entry="Pyramid of the Moons - Lifewater Flasks",            section="Lifewater Flasks"}},
 	[12] = {
 		{lo=0, hi=0, entry="Pyramid of Shadows - Lifewater Flask 1",                 section="Lifewater Flask (Pogo+Stunner)"},
-		{lo=1, hi=1, entry="Pyramid of Shadows - Lifewater Flask 2",                 section="Lifewater Flask (Stunner)"},
-		{lo=2, hi=7, entry="Pyramid of Shadows - Lifewater Flasks 3-8",              section="Lifewater Flasks (Stunner)"},
+		{lo=1, hi=7, entry="Pyramid of Shadows - Lifewater Flasks 2-8",              section="Lifewater Flasks (Stunner)"},
 	},
+	-- POTGA: apworld's Rules.py labels engine idx 1 (lone at y=92) as "Flask 2"
+	-- requiring stunner, but in-game the lone flask actually needs pogo. The
+	-- two paired flasks at y=65 (idx 2 & 3) both need stunner. We surface the
+	-- markers under the names the player sees (Flasks 2-3 paired stunner,
+	-- Flask 4 lone pogo); see suspected-apworld-bugs memory.
 	[13] = {
-		{lo=1, hi=1, entry="Pyramid of the Gnosticine Ancients - Lifewater Flask 2", section="Lifewater Flask (Stunner)"},
-		{lo=2, hi=2, entry="Pyramid of the Gnosticine Ancients - Lifewater Flask 3", section="Lifewater Flask (Stunner)"},
-		{lo=3, hi=3, entry="Pyramid of the Gnosticine Ancients - Lifewater Flask 4", section="Lifewater Flask (Pogo)"},
+		{lo=1, hi=1, entry="Pyramid of the Gnosticine Ancients - Lifewater Flask 4",   section="Lifewater Flask (Pogo)"},
+		{lo=2, hi=3, entry="Pyramid of the Gnosticine Ancients - Lifewater Flasks 2-3", section="Lifewater Flasks (Stunner)"},
 	},
 	[15] = {
 		{lo=0, hi=0, entry="Isle of Tar - Lifewater Flask 1",                        section="Lifewater Flask (Pogo)"},

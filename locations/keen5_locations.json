@@ -29,8 +29,8 @@
         "map_locations": [
           {
             "map": "keen5_ivs",
-            "x": 854,
-            "y": 1117
+            "x": 822,
+            "y": 1085
           }
         ],
         "sections": [
@@ -97,8 +97,8 @@
         "map_locations": [
           {
             "map": "keen5_sc",
-            "x": 1048,
-            "y": 232
+            "x": 1016,
+            "y": 200
           }
         ],
         "sections": [
@@ -117,8 +117,8 @@
         "map_locations": [
           {
             "map": "keen5_sc",
-            "x": 72,
-            "y": 536
+            "x": 40,
+            "y": 504
           }
         ],
         "sections": [
@@ -184,8 +184,8 @@
         "map_locations": [
           {
             "map": "keen5_dtv",
-            "x": 824,
-            "y": 40
+            "x": 792,
+            "y": 8
           }
         ],
         "sections": [
@@ -204,8 +204,8 @@
         "map_locations": [
           {
             "map": "keen5_dtv",
-            "x": 3000,
-            "y": 56
+            "x": 2968,
+            "y": 24
           }
         ],
         "sections": [
@@ -277,8 +277,8 @@
         "map_locations": [
           {
             "map": "keen5_efs",
-            "x": 520,
-            "y": 1048
+            "x": 488,
+            "y": 1016
           }
         ],
         "sections": [
@@ -358,8 +358,8 @@
         "map_locations": [
           {
             "map": "keen5_dtb",
-            "x": 944,
-            "y": 152
+            "x": 912,
+            "y": 120
           }
         ],
         "sections": [
@@ -554,8 +554,8 @@
         "map_locations": [
           {
             "map": "keen5_dtt",
-            "x": 168,
-            "y": 280
+            "x": 136,
+            "y": 248
           }
         ],
         "sections": [
@@ -611,8 +611,8 @@
         "map_locations": [
           {
             "map": "keen5_bmi",
-            "x": 744,
-            "y": 344
+            "x": 712,
+            "y": 312
           }
         ],
         "sections": [
@@ -675,8 +675,8 @@
         "map_locations": [
           {
             "map": "keen5_gdh",
-            "x": 248,
-            "y": 392
+            "x": 216,
+            "y": 360
           }
         ],
         "sections": [
@@ -746,8 +746,8 @@
         "map_locations": [
           {
             "map": "keen5_qed",
-            "x": 600,
-            "y": 504
+            "x": 568,
+            "y": 472
           }
         ],
         "sections": [
