@@ -522,15 +522,14 @@
             "name": "Green Gem",
             "item_count": 1,
             "access_rules": [
-              "level_potga,pogo,potga_red",
-              "level_potga,pogo,potga_gemset"
+              "level_potga,pogo"
             ]
           },
           {
             "name": "Complete",
             "item_count": 1,
             "access_rules": [
-              "level_potga,pogo,potga_red,potga_green",
+              "level_potga,pogo,potga_green",
               "level_potga,pogo,potga_gemset"
             ]
           },
