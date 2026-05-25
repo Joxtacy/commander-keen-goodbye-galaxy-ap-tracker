@@ -128,6 +128,28 @@
               "level_cotd,pogo,cotd_yellow",
               "level_cotd,pogo,cotd_gemset"
             ]
+          },
+          {
+            "ref": "Keen 4/Cave of the Descendents - Lifewater Flasks/Lifewater Flasks"
+          }
+        ]
+      },
+      {
+        "name": "Cave of the Descendents - Lifewater Flasks",
+        "map_locations": [
+          {
+            "map": "keen4_cotd",
+            "x": 2518,
+            "y": 1100
+          }
+        ],
+        "sections": [
+          {
+            "name": "Lifewater Flasks",
+            "item_count": 2,
+            "access_rules": [
+              "flasksanity,level_cotd"
+            ]
           }
         ]
       },
