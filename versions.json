@@ -1,6 +1,16 @@
 {
   "versions": [
     {
+      "package_version": "0.0.9",
+      "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.9/keen_goodbye_galaxy_ap_tracker_0.0.9.zip",
+      "sha256": "5363366f18ff2a8e90022953cd124f9cd62af002b09577841ab8eb899687481d",
+      "changelog": [
+        "feat: add Cave of the Descendents Lifewater Flasks",
+        "fix: drop Red Gem requirement from POTGA Green Gem and Complete",
+        "ci: bump softprops/action-gh-release to v3"
+      ]
+    },
+    {
       "package_version": "0.0.8",
       "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.8/keen_goodbye_galaxy_ap_tracker_0.0.8.zip",
       "sha256": "f75ca5229618d0c44991c4b728479e01929492b650631eb3a2ed05984b9e56dd",
