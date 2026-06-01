@@ -16,8 +16,9 @@ This script is the guardrail.
 It loads the apworld's Items.py / Locations.py *in isolation* — BaseClasses is
 stubbed so no Archipelago dependencies are needed — then compares:
 
-  1. Items:     every AP item id has a `keen_<id>` code in items.json,
-                and no items.json keen_ code is stale.
+  1. Items:     every AP item id has a `keen_<id>` code in items.json AND a
+                key in autotracking.lua's ITEM_MAP (the reset list), with no
+                stale entries in either.
   2. Locations: every AP level/gem/keycard/flask/keg id is covered by
                 autotracking.lua's LOCATION_MAP (static entries + the
                 CK4_FLASK_LAYOUT / CK5_KEG_LAYOUT loops), and none are stale.
@@ -135,6 +136,14 @@ def parse_item_codes(items_json: Path) -> set[int]:
     return out
 
 
+def parse_item_map_ids(lua: str) -> set[int]:
+    """AP item ids keyed in autotracking.lua's ITEM_MAP (the reset/enumeration
+    list). onClear iterates these to reset items on connect, so a gap here means
+    an item silently fails to reset."""
+    block = _matching_brace_block(lua, "ITEM_MAP = ")
+    return {int(m.group(1)) for m in re.finditer(r"\[(\d+)\]\s*=", block)}
+
+
 def parse_location_ids(lua: str, loc_flask, loc_keg, ep_ck4, ep_ck5) -> set[int]:
     ids: set[int] = set()
 
@@ -208,6 +217,7 @@ def main():
 
     lua = (REPO / "scripts" / "autotracking.lua").read_text()
     tracker_items = parse_item_codes(REPO / "items" / "items.json")
+    item_map_ids = parse_item_map_ids(lua)
     tracker_locs = parse_location_ids(
         lua, Locations.loc_flask, Locations.loc_keg,
         Locations.AP_EPISODE_CK4, Locations.AP_EPISODE_CK5)
@@ -216,8 +226,10 @@ def main():
     problems = 0
     print("=== Items ===")
     apw_item_ids = set(apw["item_ids"])
-    problems += report_set("items", apw_item_ids - tracker_items,
+    problems += report_set("items.json codes", apw_item_ids - tracker_items,
                            tracker_items - apw_item_ids, apw["item_ids"])
+    problems += report_set("autotracking ITEM_MAP", apw_item_ids - item_map_ids,
+                           item_map_ids - apw_item_ids, apw["item_ids"])
 
     print("\n=== Locations (level / gem / keycard / flask / keg) ===")
     tracked_core = {**apw["core"], **apw["flasks"], **apw["kegs"]}
