@@ -67,7 +67,8 @@ jobs:
             layouts/ \
             maps/ \
             images/ \
-            scripts/
+            scripts/ \
+            -x "scripts/map_coords.py"
           echo "ZIP_NAME=$ZIP_NAME" >> "$GITHUB_ENV"
 
       - name: Prepend entry to versions.json
