@@ -299,19 +299,26 @@ local CK5_KEG_LAYOUT = {
 	[11] = {{lo=0, hi=0, entry="Gravitational Damping Hub - Vitalin Kegs",  section="Vitalin Kegs"}},
 	[12] = {{lo=0, hi=1, entry="Quantum Explosion Dynamo - Vitalin Kegs",   section="Vitalin Kegs"}},
 }
+-- Exact flask/keg location-id sets, built alongside LOCATION_MAP from the
+-- layout tables above. onLocation tests membership in these to bump the score
+-- counters, so the counted ids are exactly the tracked ones (no id-range guess).
+FLASK_IDS = {}
+KEG_IDS = {}
 for lvl_id, segments in pairs(CK4_FLASK_LAYOUT) do
 	for _, seg in ipairs(segments) do
 		for idx = seg.lo, seg.hi do
-			LOCATION_MAP[60000 + 1 * 2000 + lvl_id * 100 + idx] =
-				"Keen 4/" .. seg.entry .. "/" .. seg.section
+			local id = 60000 + 1 * 2000 + lvl_id * 100 + idx
+			LOCATION_MAP[id] = "Keen 4/" .. seg.entry .. "/" .. seg.section
+			FLASK_IDS[id] = true
 		end
 	end
 end
 for lvl_id, segments in pairs(CK5_KEG_LAYOUT) do
 	for _, seg in ipairs(segments) do
 		for idx = seg.lo, seg.hi do
-			LOCATION_MAP[50000 + 2 * 2000 + lvl_id * 100 + idx] =
-				"Keen 5/" .. seg.entry .. "/" .. seg.section
+			local id = 50000 + 2 * 2000 + lvl_id * 100 + idx
+			LOCATION_MAP[id] = "Keen 5/" .. seg.entry .. "/" .. seg.section
+			KEG_IDS[id] = true
 		end
 	end
 end
@@ -531,12 +538,11 @@ function onLocation(location_id, location_name)
 		end
 	end
 
-	-- Score-item counters on the items panel.
-	-- Flask IDs are 60000 + 1*2000 + lvl*100 + idx (range 62100..63707).
-	-- Keg IDs are   50000 + 2*2000 + lvl*100 + idx (range 54100..55209).
-	if location_id >= 62000 and location_id < 64000 then
+	-- Score-item counters on the items panel. FLASK_IDS / KEG_IDS are the exact
+	-- id sets derived from the flask/keg layout tables (see where they're built).
+	if FLASK_IDS[location_id] then
 		update_score_overlay("flask_count", (SCORE_COUNT["flask_count"] or 0) + 1)
-	elseif location_id >= 54000 and location_id < 56000 then
+	elseif KEG_IDS[location_id] then
 		update_score_overlay("keg_count", (SCORE_COUNT["keg_count"] or 0) + 1)
 	end
 end
