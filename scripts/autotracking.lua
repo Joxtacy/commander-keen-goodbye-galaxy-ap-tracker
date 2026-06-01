@@ -14,8 +14,10 @@ ENABLE_KEGSANITY = 0
 CK4_VICTORY_LOCATION = 13800 -- Bean-With-Bacon Megarocket Complete
 CK5_VICTORY_LOCATION = 15200 -- Quantum Explosion Dynamo Complete
 
--- Individual gem codes (for initializing progressive stages)
--- Map AP item IDs to PopTracker item codes
+-- AP item id -> readable label. The id is the contract (it matches
+-- worlds/keen/Items.py); both onItem and onClear resolve objects via the
+-- "keen_<id>" code every item declares in items.json, so the labels here are
+-- documentation and the keys serve as the list of items to reset on connect.
 ITEM_MAP = {
 	-- Common items
 	[101] = "pogo",
@@ -444,9 +446,10 @@ function onClear(slot_data)
 		kegsanity_setting.Active = (ENABLE_KEGSANITY == 1)
 	end
 
-	-- Reset all tracked items
-	for _, code in pairs(ITEM_MAP) do
-		local obj = Tracker:FindObjectForCode(code)
+	-- Reset all tracked items. ITEM_MAP's keys are the AP item ids; resolve
+	-- each object by its "keen_<id>" code, same as onItem.
+	for item_id, _ in pairs(ITEM_MAP) do
+		local obj = Tracker:FindObjectForCode("keen_" .. item_id)
 		if obj then
 			if obj.Type == "toggle" or obj.Type == "toggle_badged" then
 				obj.Active = false
@@ -487,15 +490,10 @@ function onClear(slot_data)
 end
 
 function onItem(index, item_id, item_name, player_number)
-	local code = ITEM_MAP[item_id]
-	if not code then
-		-- print("Unknown item ID: " .. tostring(item_id))
-		return
-	end
-
-	local obj = Tracker:FindObjectForCode(code)
+	-- Every AP item declares a "keen_<id>" code in items.json, so resolve the
+	-- object straight from the id. Unknown ids resolve to nil and are ignored.
+	local obj = Tracker:FindObjectForCode("keen_" .. item_id)
 	if not obj then
-		-- print("Could not find object for code: " .. code)
 		return
 	end
 
