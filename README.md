@@ -27,7 +27,9 @@ Click the "AP" button in PopTracker's menu bar, enter your Archipelago server ad
 
 ## Images
 
-The pack ships with placeholder icons. You're welcome to replace the PNGs in `images/` with proper Commander Keen sprites for a nicer look.
+Icons in `images/` are drawn from the game's levels, items, and maps. A few
+setting toggles still use a blank placeholder; you're welcome to swap any of
+the PNGs for nicer art.
 
 ## Credits
 
