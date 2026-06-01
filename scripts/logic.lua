@@ -87,9 +87,15 @@ end
 -- Complete location wraps state.has(QED Gem set) AND state.can_reach() for
 -- every other CK5 level Complete, so the tracker needs the same gate to
 -- avoid showing QED Complete as in-logic before the rest are done.
--- Subsumes ck5_endgame_reachable (EFS/RCC/NBI/BMI completable already
--- implies the End Game region is reachable).
+--
+-- QED Complete also lives inside the End Game region, so it additionally
+-- requires that region's entry gate. We do NOT get that for free: the
+-- per-level checks below treat EFS as completable with just its Green Gem
+-- (matching the EFS Complete location rule), whereas the End Game region
+-- gate needs all four EFS gems. So enforce ck5_endgame_reachable explicitly
+-- here rather than assuming the level checks imply it.
 function ck5_all_completable()
+    if ck5_endgame_reachable() == 0 then return 0 end
     if not level_completable("level_ivs")                                                                                  then return 0 end
     if not level_completable("level_sc",  {"sc_blue"},                  "sc_gemset",  false, false, "sc_keycard")          then return 0 end
     if not level_completable("level_dtv", {"dtv_yellow"},               "dtv_gemset", false, false, "dtv_keycard")         then return 0 end
