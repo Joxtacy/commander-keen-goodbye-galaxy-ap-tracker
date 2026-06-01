@@ -254,6 +254,7 @@ LOCATION_MAP = {
 -- POTGA flask 0; those IDs are never sent and therefore not mapped.
 local CK4_FLASK_LAYOUT = {
 	[1]  = {{lo=0, hi=6, entry="Border Village - Lifewater Flasks",                  section="Lifewater Flasks"}},
+	[4]  = {{lo=0, hi=1, entry="Cave of the Descendents - Lifewater Flasks",         section="Lifewater Flasks"}},
 	[5]  = {{lo=0, hi=0, entry="Chasm of Chills - Lifewater Flasks",                 section="Lifewater Flasks"}},
 	[7]  = {{lo=0, hi=0, entry="Hilville - Lifewater Flasks",                        section="Lifewater Flasks"}},
 	[8]  = {{lo=0, hi=0, entry="Sand Yego - Lifewater Flasks",                       section="Lifewater Flasks"}},
@@ -366,7 +367,7 @@ MAP_KEY = nil
 -- "X/N" only visible at zero. Toggles have no default badge so the text
 -- shows through at every count.
 SCORE_COUNT = { flask_count = 0, keg_count = 0 }
-SCORE_MAX   = { flask_count = 27, keg_count = 22 }
+SCORE_MAX   = { flask_count = 29, keg_count = 22 }
 
 -- Update the items-panel score-item counter widget. If `count` is given,
 -- it replaces the running count for this code; otherwise the existing value
