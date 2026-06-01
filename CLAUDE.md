@@ -29,6 +29,14 @@ tools/check_drift.py --apworld ../Archipelago-Keen   # or set KEEN_APWORLD
 Run it after any apworld change that touches items/locations, and before
 cutting a release.
 
+The access-rule functions in `scripts/logic.lua` have unit tests that stub
+`Tracker` and assert completion logic across ownership scenarios (including a
+regression for the QED Complete / End Game gate):
+
+```bash
+lua tools/test_logic.lua     # exit 0 = all pass
+```
+
 ## Key references
 
 - APWorld: https://github.com/kodbyte/Archipelago-Keen (branch: keen-ap)
