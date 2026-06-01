@@ -54,32 +54,24 @@ function ck4_all_completable()
     return 1
 end
 
+-- Shared CK5 hub-level gem requirements. RCC/NBI/BMI gate identically wherever
+-- they appear (End Game region entry and per-level completion), so define them
+-- once. EFS is deliberately NOT shared: the End Game region gate needs all four
+-- EFS gems, but the EFS Complete location needs only the Green Gem — each call
+-- site spells out its own EFS requirement.
+local RCC_GEMS = {"rcc_red", "rcc_yellow", "rcc_blue"}
+local NBI_GEMS = {"nbi_red", "nbi_blue"}
+local BMI_GEMS = {"bmi_yellow", "bmi_blue"}
+
 -- End Game region gate: EFS, RCC, NBI, BMI must be completable
--- (matches Regions.py K5 Hub → End Game connection)
--- All four levels are requires_pogo=True in Rules.py — without pogo you cannot
--- complete them and therefore cannot reach the End Game region.
+-- (matches Regions.py K5 Hub → End Game connection). All four are
+-- requires_pogo=True in Rules.py, so each completability check passes pogo;
+-- EFS here needs all four gems, matching the region gate.
 function ck5_endgame_reachable()
-    if not has("pogo") then return 0 end
-    -- Energy Flow Systems: level + all 4 gems or gemset
-    if not (has("level_efs") and (
-        (has("efs_red") and has("efs_yellow") and has("efs_blue") and has("efs_green")) or
-        has("efs_gemset")
-    )) then return 0 end
-    -- Regulation Control Center: level + R+Y+B gems or gemset
-    if not (has("level_rcc") and (
-        (has("rcc_red") and has("rcc_yellow") and has("rcc_blue")) or
-        has("rcc_gemset")
-    )) then return 0 end
-    -- Neutrino Burst Injector: level + R+B gems or gemset
-    if not (has("level_nbi") and (
-        (has("nbi_red") and has("nbi_blue")) or
-        has("nbi_gemset")
-    )) then return 0 end
-    -- Brownian Motion Inducer: level + Y+B gems or gemset
-    if not (has("level_bmi") and (
-        (has("bmi_yellow") and has("bmi_blue")) or
-        has("bmi_gemset")
-    )) then return 0 end
+    if not level_completable("level_efs", {"efs_red", "efs_yellow", "efs_blue", "efs_green"}, "efs_gemset", true) then return 0 end
+    if not level_completable("level_rcc", RCC_GEMS, "rcc_gemset", true) then return 0 end
+    if not level_completable("level_nbi", NBI_GEMS, "nbi_gemset", true) then return 0 end
+    if not level_completable("level_bmi", BMI_GEMS, "bmi_gemset", true) then return 0 end
     return 1
 end
 
@@ -89,24 +81,24 @@ end
 -- avoid showing QED Complete as in-logic before the rest are done.
 --
 -- QED Complete also lives inside the End Game region, so it additionally
--- requires that region's entry gate. We do NOT get that for free: the
--- per-level checks below treat EFS as completable with just its Green Gem
--- (matching the EFS Complete location rule), whereas the End Game region
--- gate needs all four EFS gems. So enforce ck5_endgame_reachable explicitly
--- here rather than assuming the level checks imply it.
+-- requires that region's entry gate. We do NOT get that for free: the EFS
+-- check below treats EFS as completable with just its Green Gem (matching the
+-- EFS Complete location rule), whereas the End Game region gate needs all four
+-- EFS gems. So enforce ck5_endgame_reachable explicitly here rather than
+-- assuming the level checks imply it.
 function ck5_all_completable()
     if ck5_endgame_reachable() == 0 then return 0 end
-    if not level_completable("level_ivs")                                                                                  then return 0 end
-    if not level_completable("level_sc",  {"sc_blue"},                  "sc_gemset",  false, false, "sc_keycard")          then return 0 end
-    if not level_completable("level_dtv", {"dtv_yellow"},               "dtv_gemset", false, false, "dtv_keycard")         then return 0 end
-    if not level_completable("level_dtb", {"dtb_red"},                  "dtb_gemset", false, false, "dtb_keycard")         then return 0 end
-    if not level_completable("level_dts", {"dts_yellow"},               "dts_gemset", false, false, "dts_keycard")         then return 0 end
-    if not level_completable("level_dtt", {"dtt_yellow","dtt_blue"},    "dtt_gemset", false, false, "dtt_keycard")         then return 0 end
-    if not level_completable("level_efs", {"efs_green"},                "efs_gemset", true)                                then return 0 end
-    if not level_completable("level_rcc", {"rcc_red","rcc_yellow","rcc_blue"}, "rcc_gemset", true)                         then return 0 end
-    if not level_completable("level_nbi", {"nbi_red","nbi_blue"},       "nbi_gemset", true)                                then return 0 end
-    if not level_completable("level_bmi", {"bmi_yellow","bmi_blue"},    "bmi_gemset", true)                                then return 0 end
-    if not level_completable("level_gdh", {"gdh_green"},                "gdh_gemset", true,  false, "gdh_keycard")         then return 0 end
+    if not level_completable("level_ivs")                                                                  then return 0 end
+    if not level_completable("level_sc",  {"sc_blue"},               "sc_gemset",  false, false, "sc_keycard")  then return 0 end
+    if not level_completable("level_dtv", {"dtv_yellow"},            "dtv_gemset", false, false, "dtv_keycard") then return 0 end
+    if not level_completable("level_dtb", {"dtb_red"},               "dtb_gemset", false, false, "dtb_keycard") then return 0 end
+    if not level_completable("level_dts", {"dts_yellow"},            "dts_gemset", false, false, "dts_keycard") then return 0 end
+    if not level_completable("level_dtt", {"dtt_yellow","dtt_blue"}, "dtt_gemset", false, false, "dtt_keycard") then return 0 end
+    if not level_completable("level_efs", {"efs_green"},             "efs_gemset", true)                        then return 0 end
+    if not level_completable("level_rcc", RCC_GEMS,                  "rcc_gemset", true)                        then return 0 end
+    if not level_completable("level_nbi", NBI_GEMS,                  "nbi_gemset", true)                        then return 0 end
+    if not level_completable("level_bmi", BMI_GEMS,                  "bmi_gemset", true)                        then return 0 end
+    if not level_completable("level_gdh", {"gdh_green"},             "gdh_gemset", true,  false, "gdh_keycard") then return 0 end
     return 1
 end
 
