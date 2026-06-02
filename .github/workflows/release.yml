@@ -37,6 +37,25 @@ jobs:
             exit 1
           fi
 
+      # Gate the release on the same checks CI runs, so a dispatch on an
+      # unvetted ref can't ship a broken pack or one that has drifted from the
+      # apworld. Runs before any manifest/versions mutation so it fails fast.
+      - name: Checkout apworld (Joxtacy/Archipelago-Keen@keen-ap)
+        uses: actions/checkout@v6
+        with:
+          repository: Joxtacy/Archipelago-Keen
+          ref: keen-ap
+          path: _apworld
+
+      - name: Install Lua
+        run: sudo apt-get update && sudo apt-get install -y lua5.4
+
+      - name: Validate (lua syntax + logic tests + apworld drift)
+        run: |
+          for f in scripts/init.lua scripts/logic.lua scripts/autotracking.lua; do luac5.4 -p "$f"; done
+          lua5.4 tools/test_logic.lua
+          python3 tools/check_drift.py --apworld _apworld
+
       - name: Update manifest.json version
         run: |
           jq --arg v "${{ inputs.version }}" '.package_version = $v' manifest.json > manifest.tmp && mv manifest.tmp manifest.json

@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout tracker
+        uses: actions/checkout@v6
+
+      - name: Checkout apworld (Joxtacy/Archipelago-Keen@keen-ap)
+        uses: actions/checkout@v6
+        with:
+          repository: Joxtacy/Archipelago-Keen
+          ref: keen-ap
+          path: _apworld
+
+      - name: Install Lua
+        run: sudo apt-get update && sudo apt-get install -y lua5.4
+
+      - name: Lua syntax check
+        run: |
+          for f in scripts/init.lua scripts/logic.lua scripts/autotracking.lua; do
+            echo "luac -p $f"
+            luac5.4 -p "$f"
+          done
+
+      - name: Logic unit tests
+        run: lua5.4 tools/test_logic.lua
+
+      - name: Drift check (tracker vs apworld)
+        run: python3 tools/check_drift.py --apworld _apworld
