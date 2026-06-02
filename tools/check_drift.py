@@ -95,8 +95,11 @@ def apworld_facts(Items, Locations):
     core = ids(Locations.ck4_locations_by_region, Locations.ck5_locations_by_region)
     flasks = ids(Locations.ck4_flask_locations_by_region)
     kegs = ids(Locations.ck5_keg_locations_by_region)
-    points = ids(Locations.ck4_points5k_locations_by_region,
-                 Locations.ck5_points5k_locations_by_region)
+    # Pointsanity is optional / not on every apworld branch (e.g. keen-ap may
+    # predate it). It's reported but never gates the check, so tolerate its
+    # absence rather than crashing.
+    points = ids(getattr(Locations, "ck4_points5k_locations_by_region", {}),
+                 getattr(Locations, "ck5_points5k_locations_by_region", {}))
     return {
         "item_ids": {i: n for n, i in Items.item_name_to_id.items()},
         "core": core,
