@@ -19,15 +19,13 @@ stubbed so no Archipelago dependencies are needed — then compares:
   1. Items:     every AP item id has a `keen_<id>` code in items.json AND a
                 key in autotracking.lua's ITEM_MAP (the reset list), with no
                 stale entries in either.
-  2. Locations: every AP level/gem/keycard/flask/keg id is covered by
-                autotracking.lua's LOCATION_MAP (static entries + the
-                CK4_FLASK_LAYOUT / CK5_KEG_LAYOUT loops), and none are stale.
-  3. Counters:  SCORE_MAX.flask_count / keg_count match the number of
-                flask / keg locations the apworld actually emits.
-
-Pointsanity (5000-pt Ice Cream Cones / Bags O' Sugar) is intentionally NOT
-tracked by the pack yet; those ids are reported as "known-unimplemented" and
-do NOT fail the check. Remove them from KNOWN_UNIMPLEMENTED once tracked.
+  2. Locations: every AP level/gem/keycard/flask/keg/pointsanity id is covered
+                by autotracking.lua's LOCATION_MAP (static entries + the
+                CK4_FLASK_LAYOUT / CK5_KEG_LAYOUT / CK4_CONE_LAYOUT /
+                CK5_SUGAR_LAYOUT loops), and none are stale.
+  3. Counters:  SCORE_MAX.flask_count / keg_count / cone_count / sugar_count
+                match the number of flask / keg / cone / sugar locations the
+                apworld actually emits.
 
 Usage:
     tools/check_drift.py                         # apworld at ../Archipelago-Keen
@@ -147,7 +145,8 @@ def parse_item_map_ids(lua: str) -> set[int]:
     return {int(m.group(1)) for m in re.finditer(r"\[(\d+)\]\s*=", block)}
 
 
-def parse_location_ids(lua: str, loc_flask, loc_keg, ep_ck4, ep_ck5) -> set[int]:
+def parse_location_ids(lua: str, loc_flask, loc_keg, loc_points, points_cls,
+                       ep_ck4, ep_ck5) -> set[int]:
     ids: set[int] = set()
 
     # 1. Static LOCATION_MAP literal: [12100] = "Keen 4/.../Complete"
@@ -176,16 +175,18 @@ def parse_location_ids(lua: str, loc_flask, loc_keg, ep_ck4, ep_ck5) -> set[int]
         ids.add(loc_flask(ep_ck4, lvl, idx))
     for lvl, idx in layout_pairs("CK5_KEG_LAYOUT = "):
         ids.add(loc_keg(ep_ck5, lvl, idx))
+    # Pointsanity (5000-pt) layouts route through loc_pointsanity with class=5.
+    for lvl, idx in layout_pairs("CK4_CONE_LAYOUT = "):
+        ids.add(loc_points(ep_ck4, lvl, points_cls, idx))
+    for lvl, idx in layout_pairs("CK5_SUGAR_LAYOUT = "):
+        ids.add(loc_points(ep_ck5, lvl, points_cls, idx))
 
     return ids
 
 
 def parse_score_max(lua: str) -> dict[str, int]:
-    m = re.search(r"SCORE_MAX\s*=\s*\{[^}]*flask_count\s*=\s*(\d+)[^}]*"
-                  r"keg_count\s*=\s*(\d+)", lua)
-    if not m:
-        return {}
-    return {"flask_count": int(m.group(1)), "keg_count": int(m.group(2))}
+    block = _matching_brace_block(lua, "SCORE_MAX")
+    return {k: int(v) for k, v in re.findall(r"(\w+)\s*=\s*(\d+)", block)}
 
 
 # --------------------------------------------------------------------------
@@ -223,6 +224,7 @@ def main():
     item_map_ids = parse_item_map_ids(lua)
     tracker_locs = parse_location_ids(
         lua, Locations.loc_flask, Locations.loc_keg,
+        Locations.loc_pointsanity, Locations.POINTS5K_CLASS,
         Locations.AP_EPISODE_CK4, Locations.AP_EPISODE_CK5)
     score_max = parse_score_max(lua)
 
@@ -234,29 +236,24 @@ def main():
     problems += report_set("autotracking ITEM_MAP", apw_item_ids - item_map_ids,
                            item_map_ids - apw_item_ids, apw["item_ids"])
 
-    print("\n=== Locations (level / gem / keycard / flask / keg) ===")
-    tracked_core = {**apw["core"], **apw["flasks"], **apw["kegs"]}
+    print("\n=== Locations (level / gem / keycard / flask / keg / pointsanity) ===")
+    tracked_core = {**apw["core"], **apw["flasks"], **apw["kegs"], **apw["points"]}
     expected = set(tracked_core)
-    # only flag stale ids that aren't pointsanity (those are knowingly absent)
-    stale = (tracker_locs - expected) - set(apw["points"])
+    stale = tracker_locs - expected
     problems += report_set("locations", expected - tracker_locs, stale, tracked_core)
 
     print("\n=== Score counters ===")
     n_flask, n_keg = len(apw["flasks"]), len(apw["kegs"])
-    for code, expected_n in (("flask_count", n_flask), ("keg_count", n_keg)):
+    n_cone = sum("Ice Cream Cone" in n for n in apw["points"].values())
+    n_sugar = sum("Bag O' Sugar" in n for n in apw["points"].values())
+    for code, expected_n in (("flask_count", n_flask), ("keg_count", n_keg),
+                             ("cone_count", n_cone), ("sugar_count", n_sugar)):
         got = score_max.get(code)
         if got == expected_n:
             print(f"  ✓ SCORE_MAX.{code} = {got}")
         else:
             problems += 1
             print(f"  ✗ SCORE_MAX.{code} = {got}, apworld emits {expected_n}")
-
-    print("\n=== Pointsanity (known-unimplemented, not failing) ===")
-    tracked_points = tracker_locs & set(apw["points"])
-    print(f"  ⚠ {len(apw['points'])} pointsanity locations in apworld, "
-          f"{len(tracked_points)} tracked")
-    print("    (5000-pt Ice Cream Cones / Bags O' Sugar — add tracking to "
-          "remove this notice)")
 
     print()
     if problems:

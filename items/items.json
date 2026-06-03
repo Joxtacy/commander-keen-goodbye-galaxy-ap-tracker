@@ -24,6 +24,18 @@
     "codes": "kegsanity"
   },
   {
+    "name": "Conesanity",
+    "type": "toggle",
+    "img": "images/blank.png",
+    "codes": "conesanity"
+  },
+  {
+    "name": "Sugarsanity",
+    "type": "toggle",
+    "img": "images/blank.png",
+    "codes": "sugarsanity"
+  },
+  {
     "name": "Auto Map",
     "type": "toggle",
     "img": "images/automap.png",
@@ -721,6 +733,24 @@
     "type": "toggle",
     "img": "images/keg_o_vitalin.png",
     "codes": "keg_count",
+    "overlay_font_size": 11,
+    "overlay_align": "center",
+    "overlay_background": "#80000000"
+  },
+  {
+    "name": "Ice Cream Cones Collected",
+    "type": "toggle",
+    "img": "images/ice_cream_cone.png",
+    "codes": "cone_count",
+    "overlay_font_size": 11,
+    "overlay_align": "center",
+    "overlay_background": "#80000000"
+  },
+  {
+    "name": "Bags O' Sugar Collected",
+    "type": "toggle",
+    "img": "images/bag_o_sugar.png",
+    "codes": "sugar_count",
     "overlay_font_size": 11,
     "overlay_align": "center",
     "overlay_background": "#80000000"
