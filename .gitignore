@@ -1,1 +1,9 @@
 *.zip
+.DS_Store
+__pycache__/
+*.pyc
+
+# Rendered reference maps — regenerate with tools/render_pointsanity_maps.py.
+# The script and per-folder READMEs are tracked; the PNGs are not.
+/pointsanity_maps/*.png
+/extralife_maps/*.png
