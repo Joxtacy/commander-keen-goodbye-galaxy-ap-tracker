@@ -176,10 +176,13 @@ def parse_location_ids(lua: str, loc_flask, loc_keg, loc_points, points_cls,
     for lvl, idx in layout_pairs("CK5_KEG_LAYOUT = "):
         ids.add(loc_keg(ep_ck5, lvl, idx))
     # Pointsanity (5000-pt) layouts route through loc_pointsanity with class=5.
-    for lvl, idx in layout_pairs("CK4_CONE_LAYOUT = "):
-        ids.add(loc_points(ep_ck4, lvl, points_cls, idx))
-    for lvl, idx in layout_pairs("CK5_SUGAR_LAYOUT = "):
-        ids.add(loc_points(ep_ck5, lvl, points_cls, idx))
+    # Only enumerable when the apworld actually has pointsanity (loc_points is
+    # None on a keen-ap that predates it); skip otherwise so the rest still runs.
+    if loc_points is not None:
+        for lvl, idx in layout_pairs("CK4_CONE_LAYOUT = "):
+            ids.add(loc_points(ep_ck4, lvl, points_cls, idx))
+        for lvl, idx in layout_pairs("CK5_SUGAR_LAYOUT = "):
+            ids.add(loc_points(ep_ck5, lvl, points_cls, idx))
 
     return ids
 
@@ -222,9 +225,16 @@ def main():
     lua = (REPO / "scripts" / "autotracking.lua").read_text()
     tracker_items = parse_item_codes(REPO / "items" / "items.json")
     item_map_ids = parse_item_map_ids(lua)
+    # Pointsanity is optional: a keen-ap that predates it won't define
+    # loc_pointsanity / POINTS5K_CLASS. Tolerate that (the original checker did)
+    # so the rest of the drift check still runs and CI stays green until the
+    # apworld's pointsanity branch lands on keen-ap.
+    has_points = (hasattr(Locations, "loc_pointsanity")
+                  and hasattr(Locations, "POINTS5K_CLASS"))
     tracker_locs = parse_location_ids(
         lua, Locations.loc_flask, Locations.loc_keg,
-        Locations.loc_pointsanity, Locations.POINTS5K_CLASS,
+        getattr(Locations, "loc_pointsanity", None),
+        getattr(Locations, "POINTS5K_CLASS", None),
         Locations.AP_EPISODE_CK4, Locations.AP_EPISODE_CK5)
     score_max = parse_score_max(lua)
 
@@ -236,18 +246,24 @@ def main():
     problems += report_set("autotracking ITEM_MAP", apw_item_ids - item_map_ids,
                            item_map_ids - apw_item_ids, apw["item_ids"])
 
-    print("\n=== Locations (level / gem / keycard / flask / keg / pointsanity) ===")
+    pts_label = "pointsanity" if has_points else "pointsanity N/A"
+    print(f"\n=== Locations (level / gem / keycard / flask / keg / {pts_label}) ===")
     tracked_core = {**apw["core"], **apw["flasks"], **apw["kegs"], **apw["points"]}
     expected = set(tracked_core)
     stale = tracker_locs - expected
     problems += report_set("locations", expected - tracker_locs, stale, tracked_core)
+    if not has_points:
+        print("  ⚠ apworld has no pointsanity (loc_pointsanity absent) — the "
+              "tracker's cone/sugar layouts were skipped, not validated. They'll "
+              "be checked once the pointsanity branch lands on keen-ap.")
 
     print("\n=== Score counters ===")
     n_flask, n_keg = len(apw["flasks"]), len(apw["kegs"])
-    n_cone = sum("Ice Cream Cone" in n for n in apw["points"].values())
-    n_sugar = sum("Bag O' Sugar" in n for n in apw["points"].values())
-    for code, expected_n in (("flask_count", n_flask), ("keg_count", n_keg),
-                             ("cone_count", n_cone), ("sugar_count", n_sugar)):
+    counters = [("flask_count", n_flask), ("keg_count", n_keg)]
+    if has_points:
+        counters.append(("cone_count", sum("Ice Cream Cone" in n for n in apw["points"].values())))
+        counters.append(("sugar_count", sum("Bag O' Sugar" in n for n in apw["points"].values())))
+    for code, expected_n in counters:
         got = score_max.get(code)
         if got == expected_n:
             print(f"  ✓ SCORE_MAX.{code} = {got}")
