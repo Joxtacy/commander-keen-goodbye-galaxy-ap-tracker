@@ -115,12 +115,12 @@
       {
         "name": "Green Gem",
         "sections": [{ "ref": "Keen 4/Sand Yego/Green Gem", "name": "Item" }],
-        "map_locations": [{ "map": "keen4_sy", "x": 1097, "y": 117 }]
+        "map_locations": [{ "map": "keen4_sy", "x": 1096, "y": 808 }]
       },
       {
         "name": "Exit",
         "sections": [{ "ref": "Keen 4/Sand Yego/Complete", "name": "Complete" }],
-        "map_locations": [{ "map": "keen4_sy", "x": 1313, "y": 1090 }]
+        "map_locations": [{ "map": "keen4_sy", "x": 1297, "y": 421 }]
       }
     ]
   },
