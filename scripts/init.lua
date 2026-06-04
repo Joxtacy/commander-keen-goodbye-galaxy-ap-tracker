@@ -35,7 +35,7 @@ else
     Tracker:AddLayouts("layouts/tracker_both.json")
 end
 
--- Load AP autotracking. manifest.json already requires PopTracker >= 0.25.0,
+-- Load AP autotracking. manifest.json already requires PopTracker >= 0.25.4,
 -- which is well past the version that introduced AP support, so load it
 -- unconditionally rather than re-checking PopVersion (a lexicographic string
 -- compare that is both fragile and redundant here).

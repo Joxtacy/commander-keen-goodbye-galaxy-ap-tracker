@@ -39,7 +39,8 @@
     "name": "Auto Map",
     "type": "toggle",
     "img": "images/automap.png",
-    "codes": "automap"
+    "codes": "automap",
+    "initial_active_state": true
   },
   {
     "name": "Pogo Stick",
