@@ -25,8 +25,11 @@ jobs:
 
       - name: Validate version format
         run: |
-          if ! echo "${{ inputs.version }}" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
-            echo "::error::Version must be in semver format (e.g. 0.1.0)"
+          # Allow an optional prerelease suffix (e.g. 0.2.0-rc.1). A suffixed
+          # version is published as a GitHub prerelease (see "Create release"),
+          # so it never becomes releases/latest and is safe to hand out for testing.
+          if ! echo "${{ inputs.version }}" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.]+)?$'; then
+            echo "::error::Version must be semver, optionally with a prerelease suffix (e.g. 0.1.0 or 0.2.0-rc.1)"
             exit 1
           fi
 
@@ -63,7 +66,10 @@ jobs:
       - name: Generate changelog
         id: changelog
         run: |
-          PREV_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          # Exclude prerelease tags (anything with a hyphen, e.g. v0.2.0-rc.1) so a
+          # final release's changelog spans the whole feature set, not just the
+          # commits since the last RC.
+          PREV_TAG=$(git describe --tags --abbrev=0 --exclude='*-*' 2>/dev/null || echo "")
           if [ -z "$PREV_TAG" ]; then
             LOG=$(git log --pretty=format:"- %s" HEAD)
           else
@@ -131,6 +137,10 @@ jobs:
         with:
           tag_name: "v${{ inputs.version }}"
           name: "v${{ inputs.version }}"
+          # A version with a prerelease suffix (e.g. 0.2.0-rc.1) is marked as a
+          # prerelease so releases/latest — and thus the public versions_url that
+          # PopTracker reads — keeps pointing at the last real release.
+          prerelease: ${{ contains(inputs.version, '-') }}
           body: |
             ## Changelog
 
