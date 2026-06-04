@@ -272,7 +272,7 @@
     ]
   },
   {
-    "name": "Brownian Motion Inducer - Bags O' Sugar (Pogo)",
+    "name": "Brownian Motion Inducer - Bags O' Sugar (High)",
     "map_locations": [
       {
         "map": "keen5_bmi",
@@ -282,10 +282,10 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar (Pogo)",
+        "name": "Bags O' Sugar (High)",
         "item_count": 4,
         "access_rules": [
-          "sugarsanity,level_bmi,pogo"
+          "sugarsanity,level_bmi"
         ]
       }
     ]

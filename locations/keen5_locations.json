@@ -641,7 +641,7 @@
             "ref": "Brownian Motion Inducer - Bags O' Sugar/Bags O' Sugar"
           },
           {
-            "ref": "Brownian Motion Inducer - Bags O' Sugar (Pogo)/Bags O' Sugar (Pogo)"
+            "ref": "Brownian Motion Inducer - Bags O' Sugar (High)/Bags O' Sugar (High)"
           }
         ]
       },
@@ -659,7 +659,7 @@
             "name": "Vitalin Kegs",
             "item_count": 1,
             "access_rules": [
-              "kegsanity,level_bmi,pogo"
+              "kegsanity,level_bmi"
             ]
           }
         ]

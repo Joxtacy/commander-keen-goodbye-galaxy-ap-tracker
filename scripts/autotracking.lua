@@ -417,7 +417,7 @@ local CK5_SUGAR_LAYOUT = {
 	},
 	[10] = {
 		{lo=0, hi=3, entry="Brownian Motion Inducer - Bags O' Sugar", section="Bags O' Sugar"},
-		{lo=4, hi=7, entry="Brownian Motion Inducer - Bags O' Sugar (Pogo)", section="Bags O' Sugar (Pogo)"},
+		{lo=4, hi=7, entry="Brownian Motion Inducer - Bags O' Sugar (High)", section="Bags O' Sugar (High)"},
 	},
 	[11] = {
 		{lo=0, hi=9, entry="Gravitational Damping Hub - Bags O' Sugar (Green Gem, Pogo)", section="Bags O' Sugar (Green Gem, Pogo)"},
