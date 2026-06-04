@@ -314,11 +314,11 @@
     ],
     "sections": [
       {
-        "name": "Ice Cream Cones (Blue Gem, Pogo)",
+        "name": "Ice Cream Cones (Blue Gem)",
         "item_count": 1,
         "access_rules": [
-          "conesanity,level_crys,pogo,crys_blue",
-          "conesanity,level_crys,pogo,crys_gemset"
+          "conesanity,level_crys,crys_blue",
+          "conesanity,level_crys,crys_gemset"
         ]
       }
     ]

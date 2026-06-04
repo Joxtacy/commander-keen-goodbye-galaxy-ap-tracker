@@ -366,7 +366,7 @@ local CK4_CONE_LAYOUT = {
 	},
 	[6] = {
 		{lo=0, hi=1, entry="Crystalus - Ice Cream Cones 1-2", section="Ice Cream Cones (Pogo)"},
-		{lo=2, hi=2, entry="Crystalus - Ice Cream Cone 3", section="Ice Cream Cones (Blue Gem, Pogo)"},
+		{lo=2, hi=2, entry="Crystalus - Ice Cream Cone 3", section="Ice Cream Cones (Blue Gem)"},
 	},
 	[7] = {
 		{lo=0, hi=0, entry="Hilville - Ice Cream Cone 1", section="Ice Cream Cones (Pogo)"},
