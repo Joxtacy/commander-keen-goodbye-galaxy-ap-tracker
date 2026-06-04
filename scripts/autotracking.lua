@@ -390,7 +390,8 @@ local CK4_CONE_LAYOUT = {
 }
 local CK5_SUGAR_LAYOUT = {
 	[2] = {
-		{lo=0, hi=13, entry="Security Center - Bags O' Sugar (Blue Gem)", section="Bags O' Sugar (Blue Gem)"},
+		{lo=0, hi=7, entry="Security Center - Bags O' Sugar (Blue Gem)", section="Bags O' Sugar (Blue Gem)"},
+		{lo=10, hi=13, entry="Security Center - Bags O' Sugar (Blue Gem)", section="Bags O' Sugar (Blue Gem)"},
 		{lo=14, hi=19, entry="Security Center - Bags O' Sugar (Pogo)", section="Bags O' Sugar (Pogo)"},
 		{lo=20, hi=27, entry="Security Center - Bags O' Sugar", section="Bags O' Sugar"},
 	},
@@ -505,7 +506,7 @@ MAP_KEY = nil
 -- "X/N" only visible at zero. Toggles have no default badge so the text
 -- shows through at every count.
 SCORE_COUNT = { flask_count = 0, keg_count = 0, cone_count = 0, sugar_count = 0 }
-SCORE_MAX   = { flask_count = 29, keg_count = 22, cone_count = 50, sugar_count = 108 }
+SCORE_MAX   = { flask_count = 29, keg_count = 22, cone_count = 50, sugar_count = 106 }
 
 -- Update the items-panel score-item counter widget. If `count` is given,
 -- it replaces the running count for this code; otherwise the existing value
