@@ -113,7 +113,15 @@ jobs:
             echo "No changes to manifest.json / versions.json, skipping commit"
           else
             git commit -m "chore: release v${{ inputs.version }}"
-            git push origin "HEAD:${{ github.ref_name }}"
+            # Persisting the bump back to a branch is bookkeeping only — PopTracker
+            # reads versions.json from the latest release asset, not from a branch.
+            # When dispatched on a tag there is no branch to push to (and an
+            # unqualified HEAD:<tag> push would create a stray branch), so skip it.
+            if [ "${{ github.ref_type }}" = "branch" ]; then
+              git push origin "HEAD:${{ github.ref_name }}"
+            else
+              echo "Dispatched on a ${{ github.ref_type }} (${{ github.ref_name }}); skipping branch push."
+            fi
           fi
           git tag "v${{ inputs.version }}"
           git push origin "v${{ inputs.version }}"
