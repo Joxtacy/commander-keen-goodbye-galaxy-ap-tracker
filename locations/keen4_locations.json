@@ -59,6 +59,12 @@
             "access_rules": [
               "level_sv"
             ]
+          },
+          {
+            "ref": "Slug Village - Ice Cream Cones (Pogo)/Ice Cream Cones (Pogo)"
+          },
+          {
+            "ref": "Slug Village - Ice Cream Cones/Ice Cream Cones"
           }
         ]
       },
@@ -93,6 +99,9 @@
               "level_pp,pp_red,pp_blue",
               "level_pp,pp_gemset"
             ]
+          },
+          {
+            "ref": "The Perilous Pit - Ice Cream Cones (Pogo)/Ice Cream Cones (Pogo)"
           }
         ]
       },
@@ -131,6 +140,12 @@
           },
           {
             "ref": "Keen 4/Cave of the Descendents - Lifewater Flasks/Lifewater Flasks"
+          },
+          {
+            "ref": "Cave of the Descendents - Ice Cream Cones/Ice Cream Cones"
+          },
+          {
+            "ref": "Cave of the Descendents - Ice Cream Cones (Pogo)/Ice Cream Cones (Pogo)"
           }
         ]
       },
@@ -172,6 +187,12 @@
           },
           {
             "ref": "Keen 4/Chasm of Chills - Lifewater Flasks/Lifewater Flasks"
+          },
+          {
+            "ref": "Chasm of Chills - Ice Cream Cones/Ice Cream Cones"
+          },
+          {
+            "ref": "Chasm of Chills - Ice Cream Cones (Pogo)/Ice Cream Cones (Pogo)"
           }
         ]
       },
@@ -242,6 +263,12 @@
               "level_crys,crys_blue",
               "level_crys,crys_gemset"
             ]
+          },
+          {
+            "ref": "Crystalus - Ice Cream Cones (Pogo)/Ice Cream Cones (Pogo)"
+          },
+          {
+            "ref": "Crystalus - Ice Cream Cones (Blue Gem)/Ice Cream Cones (Blue Gem)"
           }
         ]
       },
@@ -264,6 +291,9 @@
           },
           {
             "ref": "Keen 4/Hilville - Lifewater Flasks/Lifewater Flasks"
+          },
+          {
+            "ref": "Hilville - Ice Cream Cones (Pogo)/Ice Cream Cones (Pogo)"
           }
         ]
       },
@@ -313,6 +343,12 @@
           },
           {
             "ref": "Keen 4/Sand Yego - Lifewater Flasks/Lifewater Flasks"
+          },
+          {
+            "ref": "Sand Yego - Ice Cream Cones/Ice Cream Cones"
+          },
+          {
+            "ref": "Sand Yego - Ice Cream Cones (Pogo)/Ice Cream Cones (Pogo)"
           }
         ]
       },
@@ -354,6 +390,12 @@
           },
           {
             "ref": "Keen 4/Miragia - Lifewater Flasks/Lifewater Flasks"
+          },
+          {
+            "ref": "Miragia - Ice Cream Cones (Pogo)/Ice Cream Cones (Pogo)"
+          },
+          {
+            "ref": "Miragia - Ice Cream Cones/Ice Cream Cones"
           }
         ]
       },
@@ -430,6 +472,9 @@
           },
           {
             "ref": "Keen 4/Pyramid of the Moons - Lifewater Flasks/Lifewater Flasks"
+          },
+          {
+            "ref": "Pyramid of the Moons - Ice Cream Cones (Pogo)/Ice Cream Cones (Pogo)"
           }
         ]
       },
@@ -482,6 +527,9 @@
           },
           {
             "ref": "Keen 4/Pyramid of Shadows - Lifewater Flasks 2-8/Lifewater Flasks (Stunner)"
+          },
+          {
+            "ref": "Pyramid of Shadows - Ice Cream Cones/Ice Cream Cones"
           }
         ]
       },
@@ -560,6 +608,9 @@
           },
           {
             "ref": "Keen 4/Pyramid of the Gnosticine Ancients - Lifewater Flask 4/Lifewater Flask (Pogo)"
+          },
+          {
+            "ref": "Pyramid of the Gnosticine Ancients - Ice Cream Cones (Pogo)/Ice Cream Cones (Pogo)"
           }
         ]
       },
@@ -647,6 +698,12 @@
           },
           {
             "ref": "Keen 4/Isle of Tar - Lifewater Flask 2/Lifewater Flask (Pogo+Blue)"
+          },
+          {
+            "ref": "Isle of Tar - Ice Cream Cones (Pogo)/Ice Cream Cones (Pogo)"
+          },
+          {
+            "ref": "Isle of Tar - Ice Cream Cones/Ice Cream Cones"
           }
         ]
       },
@@ -724,6 +781,9 @@
           },
           {
             "ref": "Keen 4/Isle of Fire - Lifewater Flasks/Lifewater Flasks"
+          },
+          {
+            "ref": "Isle of Fire - Ice Cream Cones (Pogo)/Ice Cream Cones (Pogo)"
           }
         ]
       },

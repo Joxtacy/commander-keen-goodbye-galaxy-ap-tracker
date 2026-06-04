@@ -12,6 +12,10 @@ apworld's pointsanity counts / rules change.
 Outputs (written in place):
   - locations/keen4_cone_locations.json
   - locations/keen5_sugar_locations.json
+  - locations/keen4_locations.json, locations/keen5_locations.json
+      (overworld level pins get a `ref` per cone/sugar section so the pin
+      reflects remaining pickups, mirroring the flask/keg roll-up; previous
+      pointsanity refs are replaced, hand-authored flask/keg refs are kept)
   - images/ice_cream_cone.png, images/bag_o_sugar.png   (counter icons)
 And prints, for pasting into scripts/autotracking.lua:
   - CK4_CONE_LAYOUT / CK5_SUGAR_LAYOUT tables
@@ -52,10 +56,12 @@ ABBR = {
 EP_CFG = {
     1: {"tracker_ep": "Keen 4", "map_prefix": "keen4_",
         "singular": "Ice Cream Cone", "plural": "Ice Cream Cones",
-        "toggle": "conesanity", "counter": "cone_count", "out": "keen4_cone_locations.json"},
+        "toggle": "conesanity", "counter": "cone_count", "out": "keen4_cone_locations.json",
+        "overworld": "keen4_locations.json"},
     2: {"tracker_ep": "Keen 5", "map_prefix": "keen5_",
         "singular": "Bag O' Sugar", "plural": "Bags O' Sugar",
-        "toggle": "sugarsanity", "counter": "sugar_count", "out": "keen5_sugar_locations.json"},
+        "toggle": "sugarsanity", "counter": "sugar_count", "out": "keen5_sugar_locations.json",
+        "overworld": "keen5_locations.json"},
 }
 TOKEN_CODE = {"pogo": "pogo", "stunner": "stunner", "wetsuit": "wetsuit"}
 
@@ -210,15 +216,6 @@ def cluster(items, thresh):
     return list(groups.values())
 
 
-def range_label(nums: list[int]) -> str:
-    nums = sorted(nums)
-    if len(nums) == 1:
-        return str(nums[0])
-    if nums == list(range(nums[0], nums[-1] + 1)):
-        return f"{nums[0]}-{nums[-1]}"
-    return ", ".join(str(n) for n in nums)
-
-
 def _runs(nums: list[int]):
     """Yield (lo, hi) contiguous runs over a sorted int list."""
     lo = prev = nums[0]
@@ -267,6 +264,7 @@ def main():
         names = name_by_ep[ap_ep]
         entries = []          # locations JSON
         layout_lines = []     # lua layout, grouped per level
+        refs_by_level = {}    # overworld node name -> ["<node>/<section>", ...]
         total = 0
 
         for lvl in sorted(counts):
@@ -278,7 +276,8 @@ def main():
             map_name = cfg["map_prefix"] + abbr
             level_px = coords.get((ap_ep, lvl), {})
 
-            # per-inst signature / display-number / pixel for non-excluded pickups
+            # per-inst signature + pixel for non-excluded pickups (the display
+            # number only feeds the rule-dict lookup; nodes are named by label)
             info = {}
             for inst in range(count):
                 if (lvl, inst) in excluded:
@@ -287,49 +286,53 @@ def main():
                 loc_name = f"{level_name} - {cfg['singular']} {disp}"
                 info[inst] = {
                     "sig": signature(rules.get(loc_name, {})),
-                    "disp": disp,
                     "px": level_px.get(inst, (24 + 18 * inst, 24)),
                 }
             if not info:
                 continue
             total += len(info)
 
-            # group nearby pickups into one pin (one map node per cluster)
-            clusters = cluster([(i, info[i]["px"]) for i in info], CLUSTER_PX)
-            clusters.sort(key=lambda c: min(c))  # stable, low-inst first
+            # One tracker node per access signature, so each label folds into a
+            # single counter on both the overworld pin and the level map (the
+            # flask/keg roll-up: same label -> one entry + count, not one entry
+            # per pickup). Within a signature, proximity-cluster the pickups so
+            # every pickup still gets a map pin at its real in-game position;
+            # all of a signature's pins share the one counter.
+            by_sig, sig_order = {}, []
+            for inst in sorted(info):
+                sig = info[inst]["sig"]
+                if sig not in by_sig:
+                    by_sig[sig] = []
+                    sig_order.append(sig)
+                by_sig[sig].append(inst)
+
             level_layout = []
-            for members in clusters:
-                members.sort()
-                disps = [info[i]["disp"] for i in members]
-                plural = len(members) > 1
-                node = (f"{level_name} - {cfg['plural' if plural else 'singular']} "
-                        f"{range_label(disps)}")
-                cx = round(sum(info[i]["px"][0] for i in members) / len(members))
-                cy = round(sum(info[i]["px"][1] for i in members) / len(members))
-                # one section per distinct access signature in this cluster
-                sig_order, by_sig = [], {}
-                for i in members:
-                    sig = info[i]["sig"]
-                    if sig not in by_sig:
-                        by_sig[sig] = []
-                        sig_order.append(sig)
-                    by_sig[sig].append(i)
-                sections = []
-                for sig in sig_order:
-                    sec = section_label(cfg["plural"], sig)
-                    sections.append({
-                        "name": sec,
-                        "item_count": len(by_sig[sig]),
-                        "access_rules": access_rules(cfg["toggle"], abbr, sig),
-                    })
-                    for lo, hi in _runs(sorted(by_sig[sig])):
-                        level_layout.append(
-                            f'\t\t{{lo={lo}, hi={hi}, entry="{node}", section="{sec}"}},')
+            for sig in sig_order:
+                members = by_sig[sig]
+                sec = section_label(cfg["plural"], sig)
+                node = f"{level_name} - {sec}"
+                clusters = cluster([(i, info[i]["px"]) for i in members], CLUSTER_PX)
+                clusters.sort(key=lambda c: min(c))  # stable, low-inst first
+                map_locations = []
+                for cl in clusters:
+                    cx = round(sum(info[i]["px"][0] for i in cl) / len(cl))
+                    cy = round(sum(info[i]["px"][1] for i in cl) / len(cl))
+                    map_locations.append({"map": map_name, "x": cx, "y": cy})
                 entries.append({
                     "name": node,
-                    "map_locations": [{"map": map_name, "x": cx, "y": cy}],
-                    "sections": sections,
+                    "map_locations": map_locations,
+                    "sections": [{
+                        "name": sec,
+                        "item_count": len(members),
+                        "access_rules": access_rules(cfg["toggle"], abbr, sig),
+                    }],
                 })
+                # roll the section up into the level's overworld pin (mirrors
+                # the flask/keg ref). Top-level node => no "Keen N/" prefix.
+                refs_by_level.setdefault(level_name, []).append(f"{node}/{sec}")
+                for lo, hi in _runs(sorted(members)):
+                    level_layout.append(
+                        f'\t\t{{lo={lo}, hi={hi}, entry="{node}", section="{sec}"}},')
             layout_lines.extend(level_layout)
             layout_lines.append(f"@LEVEL {lvl}")
 
@@ -337,6 +340,28 @@ def main():
         out_path = REPO / "locations" / cfg["out"]
         out_path.write_text(json.dumps(entries, indent=2) + "\n")
         print(f"\nwrote {out_path.relative_to(REPO)}  ({len(entries)} pins, {total} pickups)")
+
+        # inject overworld roll-up refs so each level's overworld pin reflects
+        # remaining cone/sugar checks. Pointsanity refs are the only refs that
+        # lack the "<Keen 4|Keen 5>/" prefix (flask/keg refs always carry it),
+        # which makes stripping the previous round's refs unambiguous.
+        ow_path = REPO / "locations" / cfg["overworld"]
+        ow = json.loads(ow_path.read_text())
+        prefix = cfg["tracker_ep"] + "/"
+        injected = 0
+        for root in ow:
+            for child in root.get("children", []):
+                secs = child.get("sections")
+                if secs is None:
+                    continue
+                kept = [s for s in secs
+                        if not ("ref" in s and not s["ref"].startswith(prefix))]
+                new_refs = [{"ref": r} for r in refs_by_level.get(child["name"], [])]
+                child["sections"] = kept + new_refs
+                injected += len(new_refs)
+        ow_path.write_text(json.dumps(ow, indent=2) + "\n")
+        print(f"injected {injected} pointsanity refs into "
+              f"{ow_path.relative_to(REPO)}")
 
         # emit lua layout grouped by level
         var = "CK4_CONE_LAYOUT" if ap_ep == 1 else "CK5_SUGAR_LAYOUT"

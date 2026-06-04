@@ -89,6 +89,15 @@
           },
           {
             "ref": "Keen 5/Security Center - Vitalin Keg 2/Vitalin Keg"
+          },
+          {
+            "ref": "Security Center - Bags O' Sugar (Blue Gem)/Bags O' Sugar (Blue Gem)"
+          },
+          {
+            "ref": "Security Center - Bags O' Sugar (Pogo)/Bags O' Sugar (Pogo)"
+          },
+          {
+            "ref": "Security Center - Bags O' Sugar/Bags O' Sugar"
           }
         ]
       },
@@ -176,6 +185,9 @@
           },
           {
             "ref": "Keen 5/Defense Tunnel Vlook - Vitalin Keg 2/Vitalin Keg"
+          },
+          {
+            "ref": "Defense Tunnel Vlook - Bags O' Sugar/Bags O' Sugar"
           }
         ]
       },
@@ -269,6 +281,9 @@
           },
           {
             "ref": "Keen 5/Energy Flow Systems - Vitalin Kegs/Vitalin Kegs"
+          },
+          {
+            "ref": "Energy Flow Systems - Bags O' Sugar/Bags O' Sugar"
           }
         ]
       },
@@ -350,6 +365,9 @@
           },
           {
             "ref": "Keen 5/Defense Tunnel Burrh - Vitalin Kegs/Vitalin Kegs"
+          },
+          {
+            "ref": "Defense Tunnel Burrh - Bags O' Sugar (Red Gem, Pogo)/Bags O' Sugar (Red Gem, Pogo)"
           }
         ]
       },
@@ -450,6 +468,9 @@
               "level_dts,dts_keycard,dts_yellow",
               "level_dts,dts_keycard,dts_gemset"
             ]
+          },
+          {
+            "ref": "Defense Tunnel Sorra - Bags O' Sugar/Bags O' Sugar"
           }
         ]
       },
@@ -484,6 +505,12 @@
               "level_nbi,pogo,nbi_red,nbi_blue",
               "level_nbi,pogo,nbi_gemset"
             ]
+          },
+          {
+            "ref": "Neutrino Burst Injector - Bags O' Sugar (Pogo)/Bags O' Sugar (Pogo)"
+          },
+          {
+            "ref": "Neutrino Burst Injector - Bags O' Sugar/Bags O' Sugar"
           }
         ]
       },
@@ -546,6 +573,12 @@
           },
           {
             "ref": "Keen 5/Defense Tunnel Teln - Vitalin Kegs/Vitalin Kegs"
+          },
+          {
+            "ref": "Defense Tunnel Teln - Bags O' Sugar (Yellow Gem, Blue Gem)/Bags O' Sugar (Yellow Gem, Blue Gem)"
+          },
+          {
+            "ref": "Defense Tunnel Teln - Bags O' Sugar (Yellow Gem)/Bags O' Sugar (Yellow Gem)"
           }
         ]
       },
@@ -603,6 +636,12 @@
           },
           {
             "ref": "Keen 5/Brownian Motion Inducer - Vitalin Kegs/Vitalin Kegs"
+          },
+          {
+            "ref": "Brownian Motion Inducer - Bags O' Sugar/Bags O' Sugar"
+          },
+          {
+            "ref": "Brownian Motion Inducer - Bags O' Sugar (Pogo)/Bags O' Sugar (Pogo)"
           }
         ]
       },
@@ -667,6 +706,15 @@
           },
           {
             "ref": "Keen 5/Gravitational Damping Hub - Vitalin Kegs/Vitalin Kegs"
+          },
+          {
+            "ref": "Gravitational Damping Hub - Bags O' Sugar (Green Gem, Pogo)/Bags O' Sugar (Green Gem, Pogo)"
+          },
+          {
+            "ref": "Gravitational Damping Hub - Bags O' Sugar (Pogo)/Bags O' Sugar (Pogo)"
+          },
+          {
+            "ref": "Gravitational Damping Hub - Bags O' Sugar/Bags O' Sugar"
           }
         ]
       },
@@ -738,6 +786,12 @@
           },
           {
             "ref": "Keen 5/Quantum Explosion Dynamo - Vitalin Kegs/Vitalin Kegs"
+          },
+          {
+            "ref": "Quantum Explosion Dynamo - Bags O' Sugar (Red Gem, Yellow Gem, Blue Gem, Green Gem, Pogo)/Bags O' Sugar (Red Gem, Yellow Gem, Blue Gem, Green Gem, Pogo)"
+          },
+          {
+            "ref": "Quantum Explosion Dynamo - Bags O' Sugar (Pogo)/Bags O' Sugar (Pogo)"
           }
         ]
       },
