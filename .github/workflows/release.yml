@@ -7,6 +7,10 @@ on:
         description: "Release version (e.g. 0.1.0)"
         required: true
         type: string
+      highlights:
+        description: "Optional one-line summary shown at the top of the notes"
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -65,20 +69,46 @@ jobs:
 
       - name: Generate changelog
         id: changelog
+        env:
+          HIGHLIGHTS: ${{ inputs.highlights }}
         run: |
           # Exclude prerelease tags (anything with a hyphen, e.g. v0.2.0-rc.1) so a
           # final release's changelog spans the whole feature set, not just the
           # commits since the last RC.
           PREV_TAG=$(git describe --tags --abbrev=0 --exclude='*-*' 2>/dev/null || echo "")
-          if [ -z "$PREV_TAG" ]; then
-            LOG=$(git log --pretty=format:"- %s" HEAD)
-          else
-            LOG=$(git log --pretty=format:"- %s" "${PREV_TAG}..HEAD")
-          fi
+          if [ -z "$PREV_TAG" ]; then RANGE="HEAD"; else RANGE="${PREV_TAG}..HEAD"; fi
+          # Drop the self-referential "chore: release vX" bump commits.
+          RAW=$(git log --pretty=format:"%s" "$RANGE" | grep -vE '^chore(\([^)]*\))?: release ' || true)
+
+          # Output 1: `changelog` — raw "- <subject>" list. Consumed by the
+          # versions.json step below (PopTracker reads that array verbatim), so
+          # keep the flat format it already expects.
           {
-            echo "changelog<<EOF"
-            echo "$LOG"
-            echo "EOF"
+            echo "changelog<<CHANGELOG_EOF"
+            printf '%s\n' "$RAW" | sed 's/^/- /'
+            echo "CHANGELOG_EOF"
+          } >> "$GITHUB_OUTPUT"
+
+          # Output 2: `notes` — grouped, prefix-stripped markdown for the GitHub
+          # release body. Anything that isn't feat/fix lands under Maintenance.
+          # `|| true` keeps `set -e` happy when a bucket is empty.
+          strip='s/^[a-z]+(\([^)]*\))?!?: //'
+          NEW=$(printf '%s\n' "$RAW"   | grep -E '^feat(\([^)]*\))?!?:'        | sed -E "$strip" || true)
+          FIX=$(printf '%s\n' "$RAW"   | grep -E '^fix(\([^)]*\))?!?:'         | sed -E "$strip" || true)
+          OTHER=$(printf '%s\n' "$RAW" | grep -vE '^(feat|fix)(\([^)]*\))?!?:' | sed -E "$strip" || true)
+          {
+            echo "notes<<NOTES_EOF"
+            [ -n "$HIGHLIGHTS" ] && printf '%s\n\n' "$HIGHLIGHTS"
+            [ -n "$NEW" ]   && { echo "### ✨ New";         echo; printf '%s\n' "$NEW"   | sed 's/^/- /'; echo; }
+            [ -n "$FIX" ]   && { echo "### 🐛 Fixed";       echo; printf '%s\n' "$FIX"   | sed 's/^/- /'; echo; }
+            [ -n "$OTHER" ] && { echo "### 🔧 Maintenance"; echo; printf '%s\n' "$OTHER" | sed 's/^/- /'; echo; }
+            echo "<details>"
+            echo "<summary>Full commit changelog</summary>"
+            echo
+            printf '%s\n' "$RAW" | sed 's/^/- /'
+            echo
+            echo "</details>"
+            echo "NOTES_EOF"
           } >> "$GITHUB_OUTPUT"
 
       - name: Build zip
@@ -142,9 +172,23 @@ jobs:
           # PopTracker reads — keeps pointing at the last real release.
           prerelease: ${{ contains(inputs.version, '-') }}
           body: |
-            ## Changelog
+            ## 🗺️ Commander Keen Goodbye Galaxy — PopTracker pack v${{ inputs.version }}
 
-            ${{ steps.changelog.outputs.changelog }}
+            The [PopTracker](https://github.com/black-sliver/PopTracker) pack for tracking items, locations, and maps in Commander Keen: Goodbye Galaxy Archipelago.
+
+            ${{ steps.changelog.outputs.notes }}
+
+            ---
+
+            ## 🎮 Part of the Commander Keen: Goodbye Galaxy Archipelago set
+
+            Use matching versions of all three pieces together:
+
+            - 🌍 [APWorld — latest](https://github.com/Joxtacy/Archipelago-Keen/releases/latest) — generates the randomized game for Archipelago
+            - 🕹️ [Game client (omnispeak-ap) — latest](https://github.com/Joxtacy/omnispeak-ap/releases/latest) — plays the game and talks to Archipelago
+            - 🗺️ **PopTracker pack** — *this release* — tracks your items, locations & maps
+
+            New here? Start with the **[Setup Guide](https://github.com/Joxtacy/Archipelago-Keen/blob/keen-ap/worlds/keen/docs/setup_en.md)**.
           files: |
             ${{ env.ZIP_NAME }}
             versions.json
