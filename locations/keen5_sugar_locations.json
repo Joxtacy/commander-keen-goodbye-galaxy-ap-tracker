@@ -23,8 +23,11 @@
         "name": "Bags O' Sugar (Blue Gem)",
         "item_count": 12,
         "access_rules": [
-          "sugarsanity,level_sc,sc_blue",
-          "sugarsanity,level_sc,sc_gemset"
+          "level_sc,sc_blue",
+          "level_sc,sc_gemset"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -43,7 +46,10 @@
         "name": "Bags O' Sugar (Pogo)",
         "item_count": 6,
         "access_rules": [
-          "sugarsanity,level_sc,pogo"
+          "level_sc,pogo"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -67,7 +73,10 @@
         "name": "Bags O' Sugar",
         "item_count": 8,
         "access_rules": [
-          "sugarsanity,level_sc"
+          "level_sc"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -91,7 +100,10 @@
         "name": "Bags O' Sugar",
         "item_count": 7,
         "access_rules": [
-          "sugarsanity,level_dtv"
+          "level_dtv"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -120,7 +132,10 @@
         "name": "Bags O' Sugar",
         "item_count": 10,
         "access_rules": [
-          "sugarsanity,level_efs"
+          "level_efs"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -139,8 +154,11 @@
         "name": "Bags O' Sugar (Red Gem, Pogo)",
         "item_count": 4,
         "access_rules": [
-          "sugarsanity,level_dtb,pogo,dtb_red",
-          "sugarsanity,level_dtb,pogo,dtb_gemset"
+          "level_dtb,pogo,dtb_red",
+          "level_dtb,pogo,dtb_gemset"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -164,7 +182,10 @@
         "name": "Bags O' Sugar",
         "item_count": 13,
         "access_rules": [
-          "sugarsanity,level_dts"
+          "level_dts"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -183,7 +204,10 @@
         "name": "Bags O' Sugar (Pogo)",
         "item_count": 2,
         "access_rules": [
-          "sugarsanity,level_nbi,pogo"
+          "level_nbi,pogo"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -202,7 +226,10 @@
         "name": "Bags O' Sugar",
         "item_count": 2,
         "access_rules": [
-          "sugarsanity,level_nbi"
+          "level_nbi"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -226,8 +253,11 @@
         "name": "Bags O' Sugar (Yellow Gem, Blue Gem)",
         "item_count": 6,
         "access_rules": [
-          "sugarsanity,level_dtt,dtt_yellow,dtt_blue",
-          "sugarsanity,level_dtt,dtt_gemset"
+          "level_dtt,dtt_yellow,dtt_blue",
+          "level_dtt,dtt_gemset"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -246,8 +276,11 @@
         "name": "Bags O' Sugar (Yellow Gem)",
         "item_count": 4,
         "access_rules": [
-          "sugarsanity,level_dtt,dtt_yellow",
-          "sugarsanity,level_dtt,dtt_gemset"
+          "level_dtt,dtt_yellow",
+          "level_dtt,dtt_gemset"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -266,7 +299,10 @@
         "name": "Bags O' Sugar",
         "item_count": 4,
         "access_rules": [
-          "sugarsanity,level_bmi"
+          "level_bmi"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -285,7 +321,10 @@
         "name": "Bags O' Sugar (High)",
         "item_count": 4,
         "access_rules": [
-          "sugarsanity,level_bmi"
+          "level_bmi"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -309,8 +348,11 @@
         "name": "Bags O' Sugar (Green Gem, Pogo)",
         "item_count": 10,
         "access_rules": [
-          "sugarsanity,level_gdh,pogo,gdh_green",
-          "sugarsanity,level_gdh,pogo,gdh_gemset"
+          "level_gdh,pogo,gdh_green",
+          "level_gdh,pogo,gdh_gemset"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -329,7 +371,10 @@
         "name": "Bags O' Sugar (Pogo)",
         "item_count": 3,
         "access_rules": [
-          "sugarsanity,level_gdh,pogo"
+          "level_gdh,pogo"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -348,7 +393,10 @@
         "name": "Bags O' Sugar",
         "item_count": 2,
         "access_rules": [
-          "sugarsanity,level_gdh"
+          "level_gdh"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -367,8 +415,11 @@
         "name": "Bags O' Sugar (Red Gem, Yellow Gem, Blue Gem, Green Gem, Pogo)",
         "item_count": 6,
         "access_rules": [
-          "sugarsanity,level_qed,pogo,qed_red,qed_yellow,qed_blue,qed_green",
-          "sugarsanity,level_qed,pogo,qed_gemset"
+          "level_qed,pogo,qed_red,qed_yellow,qed_blue,qed_green",
+          "level_qed,pogo,qed_gemset"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -387,7 +438,10 @@
         "name": "Bags O' Sugar (Pogo)",
         "item_count": 3,
         "access_rules": [
-          "sugarsanity,level_qed,pogo"
+          "level_qed,pogo"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]

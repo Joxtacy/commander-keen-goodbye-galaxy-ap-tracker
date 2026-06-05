@@ -13,7 +13,10 @@
         "name": "Ice Cream Cones (Pogo)",
         "item_count": 1,
         "access_rules": [
-          "conesanity,level_sv,pogo"
+          "level_sv,pogo"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -37,7 +40,10 @@
         "name": "Ice Cream Cones",
         "item_count": 2,
         "access_rules": [
-          "conesanity,level_sv"
+          "level_sv"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -56,7 +62,10 @@
         "name": "Ice Cream Cones (Pogo)",
         "item_count": 1,
         "access_rules": [
-          "conesanity,level_pp,pogo"
+          "level_pp,pogo"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -95,7 +104,10 @@
         "name": "Ice Cream Cones",
         "item_count": 10,
         "access_rules": [
-          "conesanity,level_cotd"
+          "level_cotd"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -114,7 +126,10 @@
         "name": "Ice Cream Cones (Pogo)",
         "item_count": 1,
         "access_rules": [
-          "conesanity,level_cotd,pogo"
+          "level_cotd,pogo"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -148,7 +163,10 @@
         "name": "Ice Cream Cones",
         "item_count": 6,
         "access_rules": [
-          "conesanity,level_coc"
+          "level_coc"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -167,7 +185,10 @@
         "name": "Ice Cream Cones (Pogo)",
         "item_count": 1,
         "access_rules": [
-          "conesanity,level_coc,pogo"
+          "level_coc,pogo"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -186,7 +207,10 @@
         "name": "Ice Cream Cones (Pogo)",
         "item_count": 2,
         "access_rules": [
-          "conesanity,level_crys,pogo"
+          "level_crys,pogo"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -205,8 +229,11 @@
         "name": "Ice Cream Cones (Blue Gem)",
         "item_count": 1,
         "access_rules": [
-          "conesanity,level_crys,crys_blue",
-          "conesanity,level_crys,crys_gemset"
+          "level_crys,crys_blue",
+          "level_crys,crys_gemset"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -225,7 +252,10 @@
         "name": "Ice Cream Cones (Pogo)",
         "item_count": 1,
         "access_rules": [
-          "conesanity,level_hil,pogo"
+          "level_hil,pogo"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -249,7 +279,10 @@
         "name": "Ice Cream Cones",
         "item_count": 2,
         "access_rules": [
-          "conesanity,level_sy"
+          "level_sy"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -268,7 +301,10 @@
         "name": "Ice Cream Cones (Pogo)",
         "item_count": 1,
         "access_rules": [
-          "conesanity,level_sy,pogo"
+          "level_sy,pogo"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -287,7 +323,10 @@
         "name": "Ice Cream Cones (Pogo)",
         "item_count": 2,
         "access_rules": [
-          "conesanity,level_mir,pogo"
+          "level_mir,pogo"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -306,7 +345,10 @@
         "name": "Ice Cream Cones",
         "item_count": 3,
         "access_rules": [
-          "conesanity,level_mir"
+          "level_mir"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -325,7 +367,10 @@
         "name": "Ice Cream Cones (Pogo)",
         "item_count": 6,
         "access_rules": [
-          "conesanity,level_potm,pogo"
+          "level_potm,pogo"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -344,7 +389,10 @@
         "name": "Ice Cream Cones",
         "item_count": 1,
         "access_rules": [
-          "conesanity,level_pos"
+          "level_pos"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -363,7 +411,10 @@
         "name": "Ice Cream Cones (Pogo)",
         "item_count": 1,
         "access_rules": [
-          "conesanity,level_potga,pogo"
+          "level_potga,pogo"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -382,7 +433,10 @@
         "name": "Ice Cream Cones (Pogo)",
         "item_count": 1,
         "access_rules": [
-          "conesanity,level_iot,pogo"
+          "level_iot,pogo"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -406,7 +460,10 @@
         "name": "Ice Cream Cones",
         "item_count": 2,
         "access_rules": [
-          "conesanity,level_iot"
+          "level_iot"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]
@@ -425,7 +482,10 @@
         "name": "Ice Cream Cones (Pogo)",
         "item_count": 5,
         "access_rules": [
-          "conesanity,level_iof,pogo"
+          "level_iof,pogo"
+        ],
+        "visibility_rules": [
+          "conesanity"
         ]
       }
     ]

@@ -38,7 +38,10 @@
             "name": "Lifewater Flasks",
             "item_count": 7,
             "access_rules": [
-              "flasksanity,level_bv,pogo"
+              "level_bv,pogo"
+            ],
+            "visibility_rules": [
+              "flasksanity"
             ]
           }
         ]
@@ -163,7 +166,10 @@
             "name": "Lifewater Flasks",
             "item_count": 2,
             "access_rules": [
-              "flasksanity,level_cotd"
+              "level_cotd"
+            ],
+            "visibility_rules": [
+              "flasksanity"
             ]
           }
         ]
@@ -210,7 +216,10 @@
             "name": "Lifewater Flasks",
             "item_count": 1,
             "access_rules": [
-              "flasksanity,level_coc"
+              "level_coc"
+            ],
+            "visibility_rules": [
+              "flasksanity"
             ]
           }
         ]
@@ -311,7 +320,10 @@
             "name": "Lifewater Flasks",
             "item_count": 1,
             "access_rules": [
-              "flasksanity,level_hil,pogo"
+              "level_hil,pogo"
+            ],
+            "visibility_rules": [
+              "flasksanity"
             ]
           }
         ]
@@ -366,7 +378,10 @@
             "name": "Lifewater Flasks",
             "item_count": 1,
             "access_rules": [
-              "flasksanity,level_sy,pogo"
+              "level_sy,pogo"
+            ],
+            "visibility_rules": [
+              "flasksanity"
             ]
           }
         ]
@@ -413,7 +428,10 @@
             "name": "Lifewater Flasks",
             "item_count": 1,
             "access_rules": [
-              "flasksanity,level_mir,pogo"
+              "level_mir,pogo"
+            ],
+            "visibility_rules": [
+              "flasksanity"
             ]
           }
         ]
@@ -492,7 +510,10 @@
             "name": "Lifewater Flasks",
             "item_count": 1,
             "access_rules": [
-              "flasksanity,level_potm,pogo"
+              "level_potm,pogo"
+            ],
+            "visibility_rules": [
+              "flasksanity"
             ]
           }
         ]
@@ -547,7 +568,10 @@
             "name": "Lifewater Flask (Pogo+Stunner)",
             "item_count": 1,
             "access_rules": [
-              "flasksanity,level_pos,pogo,stunner"
+              "level_pos,pogo,stunner"
+            ],
+            "visibility_rules": [
+              "flasksanity"
             ]
           }
         ]
@@ -566,7 +590,10 @@
             "name": "Lifewater Flasks (Stunner)",
             "item_count": 7,
             "access_rules": [
-              "flasksanity,level_pos,stunner"
+              "level_pos,stunner"
+            ],
+            "visibility_rules": [
+              "flasksanity"
             ]
           }
         ]
@@ -628,7 +655,10 @@
             "name": "Lifewater Flasks (Stunner)",
             "item_count": 2,
             "access_rules": [
-              "flasksanity,level_potga,stunner"
+              "level_potga,stunner"
+            ],
+            "visibility_rules": [
+              "flasksanity"
             ]
           }
         ]
@@ -647,7 +677,10 @@
             "name": "Lifewater Flask (Pogo)",
             "item_count": 1,
             "access_rules": [
-              "flasksanity,level_potga,pogo"
+              "level_potga,pogo"
+            ],
+            "visibility_rules": [
+              "flasksanity"
             ]
           }
         ]
@@ -721,7 +754,10 @@
             "name": "Lifewater Flask (Pogo)",
             "item_count": 1,
             "access_rules": [
-              "wetsuit,flasksanity,level_iot,pogo"
+              "wetsuit,level_iot,pogo"
+            ],
+            "visibility_rules": [
+              "flasksanity"
             ]
           }
         ]
@@ -740,8 +776,11 @@
             "name": "Lifewater Flask (Pogo+Blue)",
             "item_count": 1,
             "access_rules": [
-              "wetsuit,flasksanity,level_iot,pogo,iot_blue",
-              "wetsuit,flasksanity,level_iot,pogo,iot_gemset"
+              "wetsuit,level_iot,pogo,iot_blue",
+              "wetsuit,level_iot,pogo,iot_gemset"
+            ],
+            "visibility_rules": [
+              "flasksanity"
             ]
           }
         ]
@@ -801,7 +840,10 @@
             "name": "Lifewater Flasks",
             "item_count": 1,
             "access_rules": [
-              "wetsuit,flasksanity,level_iof"
+              "wetsuit,level_iof"
+            ],
+            "visibility_rules": [
+              "flasksanity"
             ]
           }
         ]
@@ -842,7 +884,10 @@
             "name": "Lifewater Flasks",
             "item_count": 1,
             "access_rules": [
-              "wetsuit,flasksanity,level_wow"
+              "wetsuit,level_wow"
+            ],
+            "visibility_rules": [
+              "flasksanity"
             ]
           }
         ]
