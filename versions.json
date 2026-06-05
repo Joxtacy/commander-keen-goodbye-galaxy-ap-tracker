@@ -1,6 +1,38 @@
 {
   "versions": [
     {
+      "package_version": "0.0.10",
+      "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.10/keen_goodbye_galaxy_ap_tracker_0.0.10.zip",
+      "sha256": "c734604896e0d3debf726e14b9ab7ba61a4730a2c4f8b98dc354d88f383211f2",
+      "changelog": [
+        "fix(tracker): gate disabled sanity sections with visibility_rules",
+        "feat(tracker): default Auto Map toggle on",
+        "fix(tracker): drop pogo gate on Brownian Motion Inducer sugar & keg",
+        "fix(tracker): drop unreachable Security Center sugars #9/#10",
+        "feat(tracker): roll pointsanity up into overworld pins, fold by label",
+        "fix(tracker): drop pogo from Crystalus Ice Cream Cone 3",
+        "feat(release): support RC prereleases",
+        "fix(release): support dispatching release on a tag",
+        "fix(tooling): don't crash drift check when apworld lacks pointsanity",
+        "fix(tracker): correct Sand Yego level map",
+        "feat(tracker): pointsanity (cone/sugar) autotracking",
+        "feat(maps): render pointsanity & extra-life reference maps from game data",
+        "fix(tooling): tolerate apworld without pointsanity in drift checker",
+        "ci: run lua syntax, logic tests, and apworld drift check",
+        "test: add Lua unit tests for logic.lua access rules",
+        "refactor: derive flask/keg counter id sets instead of magic ranges",
+        "refactor: share CK5 hub gem requirements, route endgame through helper",
+        "tooling: validate ITEM_MAP coverage in drift checker",
+        "refactor: resolve autotracked items by keen_<id> code",
+        "chore: drop dead version gate, refresh README images note",
+        "fix: wire Cave of the Descendents Lifewater Flasks into autotracking",
+        "tooling: add apworld drift checker",
+        "ci: exclude dev-only map_coords.py from release zip",
+        "fix: gate QED Complete on End Game region reachability",
+        "fix: require pogo for Security Center Vitalin Keg 2"
+      ]
+    },
+    {
       "package_version": "0.0.9",
       "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.9/keen_goodbye_galaxy_ap_tracker_0.0.9.zip",
       "sha256": "5363366f18ff2a8e90022953cd124f9cd62af002b09577841ab8eb899687481d",
