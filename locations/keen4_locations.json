@@ -245,8 +245,7 @@
             "name": "Yellow Gem",
             "item_count": 1,
             "access_rules": [
-              "level_crys,pogo,crys_green",
-              "level_crys,pogo,crys_gemset"
+              "level_crys,pogo"
             ]
           },
           {
