@@ -3,10 +3,10 @@
 --
 -- logic.lua only depends on the global Tracker:ProviderCountForCode(code), so
 -- we stub Tracker with a settable owned-items set, load logic.lua, and assert
--- ck4_all_completable / ck5_endgame_reachable / ck5_all_completable across
--- realistic ownership scenarios — including a regression for the QED Complete
--- bug (all-completable must enforce the End Game region's all-four-EFS-gems
--- gate, not just per-level completion that needs only the EFS Green Gem).
+-- ck4_all_completable / ck5_endgame_reachable across realistic ownership
+-- scenarios. QED Complete gates on ck5_endgame_reachable (NOT on completing
+-- every other CK5 level — the apworld's QED rule has no such chain), so the
+-- endgame tests below also cover the QED Complete gate.
 --
 -- Run:  lua tools/test_logic.lua   (exit 0 = all pass)
 
@@ -64,28 +64,6 @@ local CK5_ENDGAME_GEMSET = {
     "efs_gemset", "rcc_gemset", "nbi_gemset", "bmi_gemset",
 }
 
--- Every CK5 level (except QED) completable, individual gems.
-local CK5_FULL = {
-    "pogo",
-    "level_ivs", "level_sc", "level_dtv", "level_dtb", "level_dts",
-    "level_dtt", "level_efs", "level_rcc", "level_nbi", "level_bmi", "level_gdh",
-    "sc_keycard", "dtv_keycard", "dtb_keycard", "dts_keycard",
-    "dtt_keycard", "gdh_keycard",
-    "sc_blue", "dtv_yellow", "dtb_red", "dts_yellow", "dtt_yellow", "dtt_blue",
-    "efs_red", "efs_yellow", "efs_blue", "efs_green",
-    "rcc_red", "rcc_yellow", "rcc_blue", "nbi_red", "nbi_blue",
-    "bmi_yellow", "bmi_blue", "gdh_green",
-}
-local CK5_FULL_GEMSET = {
-    "pogo",
-    "level_ivs", "level_sc", "level_dtv", "level_dtb", "level_dts",
-    "level_dtt", "level_efs", "level_rcc", "level_nbi", "level_bmi", "level_gdh",
-    "sc_keycard", "dtv_keycard", "dtb_keycard", "dts_keycard",
-    "dtt_keycard", "gdh_keycard",
-    "sc_gemset", "dtv_gemset", "dtb_gemset", "dts_gemset", "dtt_gemset",
-    "efs_gemset", "rcc_gemset", "nbi_gemset", "bmi_gemset", "gdh_gemset",
-}
-
 -- Every CK4 level (except BWBM) completable, individual gems.
 local CK4_FULL = {
     "pogo", "wetsuit", "stunner",
@@ -119,22 +97,14 @@ check("endgame: missing a hub level", ck5_endgame_reachable(), 0)
 own({})
 check("endgame: nothing owned", ck5_endgame_reachable(), 0)
 
--- --- ck5_all_completable -----------------------------------------------
-own(CK5_FULL)
-check("ck5 all: full", ck5_all_completable(), 1)
-own(CK5_FULL_GEMSET)
-check("ck5 all: gemsets", ck5_all_completable(), 1)
--- Regression: EFS Green alone satisfies per-level completion, but the End Game
--- region gate still needs all four EFS gems. Pre-fix this returned 1.
-own(without(CK5_FULL, "efs_red", "efs_yellow", "efs_blue"))
-check("ck5 all: REGRESSION endgame gate (EFS green only)",
-    ck5_all_completable(), 0)
-own(without(CK5_FULL, "sc_keycard"))
-check("ck5 all: missing a keycard", ck5_all_completable(), 0)
-own(without(CK5_FULL, "gdh_green"))
-check("ck5 all: missing a gem", ck5_all_completable(), 0)
-own({})
-check("ck5 all: nothing owned", ck5_all_completable(), 0)
+-- Regression: QED Complete must NOT require the other CK5 levels' keycards/
+-- gems. With End Game reachable + QED gems + pogo the player can beat QED, so
+-- its gate (ck5_endgame_reachable) must pass even when, e.g., a Defense Tunnel
+-- keycard is missing. Pre-fix QED Complete used ck5_all_completable and showed
+-- red in exactly this scenario.
+own(CK5_ENDGAME)
+check("endgame: REGRESSION QED Complete needs no other-level keycards",
+    ck5_endgame_reachable(), 1)
 
 -- --- ck4_all_completable -----------------------------------------------
 own(CK4_FULL)
