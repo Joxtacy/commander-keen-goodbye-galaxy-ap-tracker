@@ -4,8 +4,8 @@
     "map_locations": [
       {
         "map": "keen4_sv",
-        "x": 712,
-        "y": 72
+        "x": 696,
+        "y": 8
       }
     ],
     "sections": [
@@ -23,8 +23,8 @@
     "map_locations": [
       {
         "map": "keen4_sv",
-        "x": 2248,
-        "y": 488
+        "x": 2232,
+        "y": 424
       }
     ],
     "sections": [
@@ -42,8 +42,8 @@
     "map_locations": [
       {
         "map": "keen4_sv",
-        "x": 680,
-        "y": 552
+        "x": 664,
+        "y": 488
       }
     ],
     "sections": [
