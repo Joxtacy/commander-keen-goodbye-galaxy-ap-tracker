@@ -118,16 +118,26 @@ def signature(rule: dict) -> tuple:
     return reqs, gems
 
 
-def section_label(plural: str, sig: tuple) -> str:
+def _req_suffix(sig: tuple) -> str:
+    """' (Green Gem, Pogo)' style suffix for an access signature, or '' if the
+    pickup has no requirements."""
     reqs, gems = sig
-    bits = []
-    if gems:
-        bits.extend(gems)
+    bits = list(gems)
     if "pogo" in reqs:
         bits.append("Pogo")
     if "stunner" in reqs:
         bits.append("Stunner")
-    return f"{plural} ({', '.join(bits)})" if bits else plural
+    return f" ({', '.join(bits)})" if bits else ""
+
+
+def cluster_label(singular: str, plural: str, disps: list[int], sig: tuple) -> str:
+    """Per-cluster node label, e.g. "Bags O' Sugar 7-10 (Pogo)" — the pickup
+    display-number range plus the access-requirement suffix. Singular noun for a
+    lone pickup; comma-joined runs for the (rare) non-contiguous cluster."""
+    noun = singular if len(disps) == 1 else plural
+    runs = ", ".join(f"{lo}" if lo == hi else f"{lo}-{hi}"
+                     for lo, hi in _runs(sorted(disps)))
+    return f"{noun} {runs}{_req_suffix(sig)}"
 
 
 def access_rules(toggle: str, abbr: str, sig: tuple) -> list[str]:
@@ -276,8 +286,9 @@ def main():
             map_name = cfg["map_prefix"] + abbr
             level_px = coords.get((ap_ep, lvl), {})
 
-            # per-inst signature + pixel for non-excluded pickups (the display
-            # number only feeds the rule-dict lookup; nodes are named by label)
+            # per-inst signature + display number + pixel for non-excluded
+            # pickups. The display number feeds the rule-dict lookup AND the
+            # per-cluster node label (e.g. "Bags O' Sugar 7-10").
             info = {}
             for inst in range(count):
                 if (lvl, inst) in excluded:
@@ -286,18 +297,21 @@ def main():
                 loc_name = f"{level_name} - {cfg['singular']} {disp}"
                 info[inst] = {
                     "sig": signature(rules.get(loc_name, {})),
+                    "disp": disp,
                     "px": level_px.get(inst, (24 + 18 * inst, 24)),
                 }
             if not info:
                 continue
             total += len(info)
 
-            # One tracker node per access signature, so each label folds into a
-            # single counter on both the overworld pin and the level map (the
-            # flask/keg roll-up: same label -> one entry + count, not one entry
-            # per pickup). Within a signature, proximity-cluster the pickups so
-            # every pickup still gets a map pin at its real in-game position;
-            # all of a signature's pins share the one counter.
+            # One tracker node per *physical cluster*: within an access
+            # signature, proximity-cluster the pickups, then emit a separate
+            # node (own counter + single map pin) for each cluster. So every
+            # map pin flips to "done" independently of pins elsewhere in the
+            # level that share its access rule — collecting the bags by one
+            # door no longer leaves a distant pin stuck. Nodes are named by the
+            # pickup display-number range so the names stay unique and tell the
+            # player exactly which bags ("Bags O' Sugar 7-10 (Pogo)").
             by_sig, sig_order = {}, []
             for inst in sorted(info):
                 sig = info[inst]["sig"]
@@ -309,30 +323,30 @@ def main():
             level_layout = []
             for sig in sig_order:
                 members = by_sig[sig]
-                sec = section_label(cfg["plural"], sig)
-                node = f"{level_name} - {sec}"
                 clusters = cluster([(i, info[i]["px"]) for i in members], CLUSTER_PX)
                 clusters.sort(key=lambda c: min(c))  # stable, low-inst first
-                map_locations = []
                 for cl in clusters:
+                    cl = sorted(cl)
+                    sec = cluster_label(cfg["singular"], cfg["plural"],
+                                        [info[i]["disp"] for i in cl], sig)
+                    node = f"{level_name} - {sec}"
                     cx = round(sum(info[i]["px"][0] for i in cl) / len(cl))
                     cy = round(sum(info[i]["px"][1] for i in cl) / len(cl))
-                    map_locations.append({"map": map_name, "x": cx, "y": cy})
-                entries.append({
-                    "name": node,
-                    "map_locations": map_locations,
-                    "sections": [{
-                        "name": sec,
-                        "item_count": len(members),
-                        "access_rules": access_rules(cfg["toggle"], abbr, sig),
-                    }],
-                })
-                # roll the section up into the level's overworld pin (mirrors
-                # the flask/keg ref). Top-level node => no "Keen N/" prefix.
-                refs_by_level.setdefault(level_name, []).append(f"{node}/{sec}")
-                for lo, hi in _runs(sorted(members)):
-                    level_layout.append(
-                        f'\t\t{{lo={lo}, hi={hi}, entry="{node}", section="{sec}"}},')
+                    entries.append({
+                        "name": node,
+                        "map_locations": [{"map": map_name, "x": cx, "y": cy}],
+                        "sections": [{
+                            "name": sec,
+                            "item_count": len(cl),
+                            "access_rules": access_rules(cfg["toggle"], abbr, sig),
+                        }],
+                    })
+                    # roll the section up into the level's overworld pin (mirrors
+                    # the flask/keg ref). Top-level node => no "Keen N/" prefix.
+                    refs_by_level.setdefault(level_name, []).append(f"{node}/{sec}")
+                    for lo, hi in _runs(cl):
+                        level_layout.append(
+                            f'\t\t{{lo={lo}, hi={hi}, entry="{node}", section="{sec}"}},')
             layout_lines.extend(level_layout)
             layout_lines.append(f"@LEVEL {lvl}")
 

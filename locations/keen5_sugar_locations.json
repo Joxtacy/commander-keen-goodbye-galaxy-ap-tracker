@@ -1,17 +1,47 @@
 [
   {
-    "name": "Security Center - Bags O' Sugar (Blue Gem)",
+    "name": "Security Center - Bags O' Sugar 1-2, 5-6 (Blue Gem)",
     "map_locations": [
       {
         "map": "keen5_sc",
         "x": 704,
         "y": 48
-      },
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bags O' Sugar 1-2, 5-6 (Blue Gem)",
+        "item_count": 4,
+        "access_rules": [
+          "sugarsanity,level_sc,sc_blue",
+          "sugarsanity,level_sc,sc_gemset"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Security Center - Bags O' Sugar 3-4, 7-8 (Blue Gem)",
+    "map_locations": [
       {
         "map": "keen5_sc",
         "x": 1076,
         "y": 48
-      },
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bags O' Sugar 3-4, 7-8 (Blue Gem)",
+        "item_count": 4,
+        "access_rules": [
+          "sugarsanity,level_sc,sc_blue",
+          "sugarsanity,level_sc,sc_gemset"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Security Center - Bags O' Sugar 11-14 (Blue Gem)",
+    "map_locations": [
       {
         "map": "keen5_sc",
         "x": 1008,
@@ -20,20 +50,17 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar (Blue Gem)",
-        "item_count": 12,
+        "name": "Bags O' Sugar 11-14 (Blue Gem)",
+        "item_count": 4,
         "access_rules": [
-          "level_sc,sc_blue",
-          "level_sc,sc_gemset"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_sc,sc_blue",
+          "sugarsanity,level_sc,sc_gemset"
         ]
       }
     ]
   },
   {
-    "name": "Security Center - Bags O' Sugar (Pogo)",
+    "name": "Security Center - Bags O' Sugar 15-20 (Pogo)",
     "map_locations": [
       {
         "map": "keen5_sc",
@@ -43,25 +70,36 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar (Pogo)",
+        "name": "Bags O' Sugar 15-20 (Pogo)",
         "item_count": 6,
         "access_rules": [
-          "level_sc,pogo"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_sc,pogo"
         ]
       }
     ]
   },
   {
-    "name": "Security Center - Bags O' Sugar",
+    "name": "Security Center - Bags O' Sugar 21-24",
     "map_locations": [
       {
         "map": "keen5_sc",
         "x": 432,
         "y": 896
-      },
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bags O' Sugar 21-24",
+        "item_count": 4,
+        "access_rules": [
+          "sugarsanity,level_sc"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Security Center - Bags O' Sugar 25-28",
+    "map_locations": [
       {
         "map": "keen5_sc",
         "x": 880,
@@ -70,25 +108,36 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar",
-        "item_count": 8,
+        "name": "Bags O' Sugar 25-28",
+        "item_count": 4,
         "access_rules": [
-          "level_sc"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_sc"
         ]
       }
     ]
   },
   {
-    "name": "Defense Tunnel Vlook - Bags O' Sugar",
+    "name": "Defense Tunnel Vlook - Bags O' Sugar 1-2, 4-5",
     "map_locations": [
       {
         "map": "keen5_dtv",
         "x": 2896,
         "y": 32
-      },
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bags O' Sugar 1-2, 4-5",
+        "item_count": 4,
+        "access_rules": [
+          "sugarsanity,level_dtv"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Defense Tunnel Vlook - Bags O' Sugar 3, 6-7",
+    "map_locations": [
       {
         "map": "keen5_dtv",
         "x": 2973,
@@ -97,30 +146,55 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar",
-        "item_count": 7,
+        "name": "Bags O' Sugar 3, 6-7",
+        "item_count": 3,
         "access_rules": [
-          "level_dtv"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_dtv"
         ]
       }
     ]
   },
   {
-    "name": "Energy Flow Systems - Bags O' Sugar",
+    "name": "Energy Flow Systems - Bags O' Sugar 1-4",
     "map_locations": [
       {
         "map": "keen5_efs",
         "x": 576,
         "y": 864
-      },
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bags O' Sugar 1-4",
+        "item_count": 4,
+        "access_rules": [
+          "sugarsanity,level_efs"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Energy Flow Systems - Bags O' Sugar 5-6",
+    "map_locations": [
       {
         "map": "keen5_efs",
         "x": 472,
         "y": 240
-      },
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bags O' Sugar 5-6",
+        "item_count": 2,
+        "access_rules": [
+          "sugarsanity,level_efs"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Energy Flow Systems - Bags O' Sugar 7-10",
+    "map_locations": [
       {
         "map": "keen5_efs",
         "x": 288,
@@ -129,19 +203,16 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar",
-        "item_count": 10,
+        "name": "Bags O' Sugar 7-10",
+        "item_count": 4,
         "access_rules": [
-          "level_efs"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_efs"
         ]
       }
     ]
   },
   {
-    "name": "Defense Tunnel Burrh - Bags O' Sugar (Red Gem, Pogo)",
+    "name": "Defense Tunnel Burrh - Bags O' Sugar 1-4 (Red Gem, Pogo)",
     "map_locations": [
       {
         "map": "keen5_dtb",
@@ -151,26 +222,37 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar (Red Gem, Pogo)",
+        "name": "Bags O' Sugar 1-4 (Red Gem, Pogo)",
         "item_count": 4,
         "access_rules": [
-          "level_dtb,pogo,dtb_red",
-          "level_dtb,pogo,dtb_gemset"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_dtb,pogo,dtb_red",
+          "sugarsanity,level_dtb,pogo,dtb_gemset"
         ]
       }
     ]
   },
   {
-    "name": "Defense Tunnel Sorra - Bags O' Sugar",
+    "name": "Defense Tunnel Sorra - Bags O' Sugar 1-3",
     "map_locations": [
       {
         "map": "keen5_dts",
         "x": 1224,
         "y": 72
-      },
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bags O' Sugar 1-3",
+        "item_count": 3,
+        "access_rules": [
+          "sugarsanity,level_dts"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Defense Tunnel Sorra - Bags O' Sugar 4-13",
+    "map_locations": [
       {
         "map": "keen5_dts",
         "x": 1096,
@@ -179,19 +261,16 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar",
-        "item_count": 13,
+        "name": "Bags O' Sugar 4-13",
+        "item_count": 10,
         "access_rules": [
-          "level_dts"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_dts"
         ]
       }
     ]
   },
   {
-    "name": "Neutrino Burst Injector - Bags O' Sugar (Pogo)",
+    "name": "Neutrino Burst Injector - Bags O' Sugar 1-2 (Pogo)",
     "map_locations": [
       {
         "map": "keen5_nbi",
@@ -201,19 +280,16 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar (Pogo)",
+        "name": "Bags O' Sugar 1-2 (Pogo)",
         "item_count": 2,
         "access_rules": [
-          "level_nbi,pogo"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_nbi,pogo"
         ]
       }
     ]
   },
   {
-    "name": "Neutrino Burst Injector - Bags O' Sugar",
+    "name": "Neutrino Burst Injector - Bags O' Sugar 3-4",
     "map_locations": [
       {
         "map": "keen5_nbi",
@@ -223,25 +299,37 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar",
+        "name": "Bags O' Sugar 3-4",
         "item_count": 2,
         "access_rules": [
-          "level_nbi"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_nbi"
         ]
       }
     ]
   },
   {
-    "name": "Defense Tunnel Teln - Bags O' Sugar (Yellow Gem, Blue Gem)",
+    "name": "Defense Tunnel Teln - Bags O' Sugar 1-2 (Yellow Gem, Blue Gem)",
     "map_locations": [
       {
         "map": "keen5_dtt",
         "x": 264,
         "y": 18
-      },
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bags O' Sugar 1-2 (Yellow Gem, Blue Gem)",
+        "item_count": 2,
+        "access_rules": [
+          "sugarsanity,level_dtt,dtt_yellow,dtt_blue",
+          "sugarsanity,level_dtt,dtt_gemset"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Defense Tunnel Teln - Bags O' Sugar 3-6 (Yellow Gem, Blue Gem)",
+    "map_locations": [
       {
         "map": "keen5_dtt",
         "x": 760,
@@ -250,20 +338,17 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar (Yellow Gem, Blue Gem)",
-        "item_count": 6,
+        "name": "Bags O' Sugar 3-6 (Yellow Gem, Blue Gem)",
+        "item_count": 4,
         "access_rules": [
-          "level_dtt,dtt_yellow,dtt_blue",
-          "level_dtt,dtt_gemset"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_dtt,dtt_yellow,dtt_blue",
+          "sugarsanity,level_dtt,dtt_gemset"
         ]
       }
     ]
   },
   {
-    "name": "Defense Tunnel Teln - Bags O' Sugar (Yellow Gem)",
+    "name": "Defense Tunnel Teln - Bags O' Sugar 7-10 (Yellow Gem)",
     "map_locations": [
       {
         "map": "keen5_dtt",
@@ -273,20 +358,17 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar (Yellow Gem)",
+        "name": "Bags O' Sugar 7-10 (Yellow Gem)",
         "item_count": 4,
         "access_rules": [
-          "level_dtt,dtt_yellow",
-          "level_dtt,dtt_gemset"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_dtt,dtt_yellow",
+          "sugarsanity,level_dtt,dtt_gemset"
         ]
       }
     ]
   },
   {
-    "name": "Brownian Motion Inducer - Bags O' Sugar",
+    "name": "Brownian Motion Inducer - Bags O' Sugar 1-4",
     "map_locations": [
       {
         "map": "keen5_bmi",
@@ -296,19 +378,16 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar",
+        "name": "Bags O' Sugar 1-4",
         "item_count": 4,
         "access_rules": [
-          "level_bmi"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_bmi"
         ]
       }
     ]
   },
   {
-    "name": "Brownian Motion Inducer - Bags O' Sugar (High)",
+    "name": "Brownian Motion Inducer - Bags O' Sugar 5-8",
     "map_locations": [
       {
         "map": "keen5_bmi",
@@ -318,25 +397,37 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar (High)",
+        "name": "Bags O' Sugar 5-8",
         "item_count": 4,
         "access_rules": [
-          "level_bmi"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_bmi"
         ]
       }
     ]
   },
   {
-    "name": "Gravitational Damping Hub - Bags O' Sugar (Green Gem, Pogo)",
+    "name": "Gravitational Damping Hub - Bags O' Sugar 1-6 (Green Gem, Pogo)",
     "map_locations": [
       {
         "map": "keen5_gdh",
         "x": 504,
         "y": 32
-      },
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bags O' Sugar 1-6 (Green Gem, Pogo)",
+        "item_count": 6,
+        "access_rules": [
+          "sugarsanity,level_gdh,pogo,gdh_green",
+          "sugarsanity,level_gdh,pogo,gdh_gemset"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Gravitational Damping Hub - Bags O' Sugar 7-10 (Pogo)",
+    "map_locations": [
       {
         "map": "keen5_gdh",
         "x": 400,
@@ -345,20 +436,16 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar (Green Gem, Pogo)",
-        "item_count": 10,
+        "name": "Bags O' Sugar 7-10 (Pogo)",
+        "item_count": 4,
         "access_rules": [
-          "level_gdh,pogo,gdh_green",
-          "level_gdh,pogo,gdh_gemset"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_gdh,pogo"
         ]
       }
     ]
   },
   {
-    "name": "Gravitational Damping Hub - Bags O' Sugar (Pogo)",
+    "name": "Gravitational Damping Hub - Bags O' Sugar 11-13 (Pogo)",
     "map_locations": [
       {
         "map": "keen5_gdh",
@@ -368,19 +455,16 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar (Pogo)",
+        "name": "Bags O' Sugar 11-13 (Pogo)",
         "item_count": 3,
         "access_rules": [
-          "level_gdh,pogo"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_gdh,pogo"
         ]
       }
     ]
   },
   {
-    "name": "Gravitational Damping Hub - Bags O' Sugar",
+    "name": "Gravitational Damping Hub - Bags O' Sugar 14-15",
     "map_locations": [
       {
         "map": "keen5_gdh",
@@ -390,19 +474,16 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar",
+        "name": "Bags O' Sugar 14-15",
         "item_count": 2,
         "access_rules": [
-          "level_gdh"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_gdh"
         ]
       }
     ]
   },
   {
-    "name": "Quantum Explosion Dynamo - Bags O' Sugar (Red Gem, Yellow Gem, Blue Gem, Green Gem, Pogo)",
+    "name": "Quantum Explosion Dynamo - Bags O' Sugar 1-6 (Red Gem, Yellow Gem, Blue Gem, Green Gem, Pogo)",
     "map_locations": [
       {
         "map": "keen5_qed",
@@ -412,20 +493,17 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar (Red Gem, Yellow Gem, Blue Gem, Green Gem, Pogo)",
+        "name": "Bags O' Sugar 1-6 (Red Gem, Yellow Gem, Blue Gem, Green Gem, Pogo)",
         "item_count": 6,
         "access_rules": [
-          "level_qed,pogo,qed_red,qed_yellow,qed_blue,qed_green",
-          "level_qed,pogo,qed_gemset"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_qed,pogo,qed_red,qed_yellow,qed_blue,qed_green",
+          "sugarsanity,level_qed,pogo,qed_gemset"
         ]
       }
     ]
   },
   {
-    "name": "Quantum Explosion Dynamo - Bags O' Sugar (Pogo)",
+    "name": "Quantum Explosion Dynamo - Bags O' Sugar 7-9 (Pogo)",
     "map_locations": [
       {
         "map": "keen5_qed",
@@ -435,13 +513,10 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar (Pogo)",
+        "name": "Bags O' Sugar 7-9 (Pogo)",
         "item_count": 3,
         "access_rules": [
-          "level_qed,pogo"
-        ],
-        "visibility_rules": [
-          "sugarsanity"
+          "sugarsanity,level_qed,pogo"
         ]
       }
     ]
