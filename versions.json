@@ -1,6 +1,17 @@
 {
   "versions": [
     {
+      "package_version": "0.0.11-rc.2",
+      "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.11-rc.2/keen_goodbye_galaxy_ap_tracker_0.0.11-rc.2.zip",
+      "sha256": "1e0928a20a2af393d7bc5a6fac0c8f4f101d2ecf3e7164c9a8c0a5b6b433a8ad",
+      "changelog": [
+        "fix(logic): QED Complete gates on End Game reach, not all CK5 levels",
+        "fix(sugar/cones): per-cluster pointsanity nodes + GDH 7-10 green-gem drop",
+        "fix(logic): drop Green Gem gate on Crystalus Yellow Gem",
+        "ci(release): group notes by type, add highlights input + cross-links"
+      ]
+    },
+    {
       "package_version": "0.0.11-rc.1",
       "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.11-rc.1/keen_goodbye_galaxy_ap_tracker_0.0.11-rc.1.zip",
       "sha256": "7f7dd9380af47c3288f920d01c3c92cb73310a9d9ab64514a763b40babd8fdc9",
