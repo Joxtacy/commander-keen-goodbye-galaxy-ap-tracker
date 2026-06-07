@@ -139,6 +139,10 @@ ITEM_MAP = {
 	[201201] = "qed_yellow",
 	[201202] = "qed_blue",
 	[201203] = "qed_green",
+	[201301] = "korath_yellow",
+	[201302] = "korath_blue1",
+	[201312] = "korath_blue2",
+	[201303] = "korath_green",
 
 	-- CK5 keycard items
 	[200204] = "sc_keycard",
@@ -147,6 +151,7 @@ ITEM_MAP = {
 	[200704] = "dts_keycard",
 	[200904] = "dtt_keycard",
 	[201104] = "gdh_keycard",
+	[201304] = "korath_keycard",
 
 	-- CK5 gemset items
 	[200299] = "sc_gemset",
@@ -160,6 +165,7 @@ ITEM_MAP = {
 	[201099] = "bmi_gemset",
 	[201199] = "gdh_gemset",
 	[201299] = "qed_gemset",
+	[201399] = "korath_gemset",
 
 	-- Filler
 	[900] = "extra_keen",

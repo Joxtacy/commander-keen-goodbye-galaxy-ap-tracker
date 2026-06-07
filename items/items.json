@@ -469,6 +469,42 @@
     "codes": "level_korath,keen_2013"
   },
   {
+    "name": "Korath III Base - Yellow Gem",
+    "type": "toggle",
+    "img": "images/gem_yellow.png",
+    "codes": "korath_yellow,keen_201301"
+  },
+  {
+    "name": "Korath III Base - Blue Gem 1",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "korath_blue1,keen_201302"
+  },
+  {
+    "name": "Korath III Base - Blue Gem 2",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "korath_blue2,keen_201312"
+  },
+  {
+    "name": "Korath III Base - Green Gem",
+    "type": "toggle",
+    "img": "images/gem_green.png",
+    "codes": "korath_green,keen_201303"
+  },
+  {
+    "name": "Korath III Base - Keycard",
+    "type": "toggle",
+    "img": "images/keycard.png",
+    "codes": "korath_keycard,keen_201304"
+  },
+  {
+    "name": "Korath III Base Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "korath_gemset,keen_201399"
+  },
+  {
     "name": "Security Center - Red Gem",
     "type": "toggle",
     "img": "images/gem_red.png",

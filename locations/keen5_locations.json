@@ -783,10 +783,51 @@
         ],
         "sections": [
           {
-            "name": "Complete",
+            "name": "Yellow Gem",
             "item_count": 1,
             "access_rules": [
               "$ck5_endgame_reachable,level_korath,pogo,stunner"
+            ],
+            "visibility_rules": [
+              "ck5_secret_level"
+            ]
+          },
+          {
+            "name": "Blue Gem",
+            "item_count": 1,
+            "access_rules": [
+              "$ck5_endgame_reachable,level_korath,pogo,stunner"
+            ],
+            "visibility_rules": [
+              "ck5_secret_level"
+            ]
+          },
+          {
+            "name": "Green Gem",
+            "item_count": 1,
+            "access_rules": [
+              "$ck5_endgame_reachable,level_korath,pogo,stunner"
+            ],
+            "visibility_rules": [
+              "ck5_secret_level"
+            ]
+          },
+          {
+            "name": "Keycard",
+            "item_count": 1,
+            "access_rules": [
+              "$ck5_endgame_reachable,level_korath,pogo,stunner"
+            ],
+            "visibility_rules": [
+              "ck5_secret_level"
+            ]
+          },
+          {
+            "name": "Complete",
+            "item_count": 1,
+            "access_rules": [
+              "$ck5_endgame_reachable,level_korath,pogo,stunner,korath_keycard,korath_yellow,korath_blue1,korath_blue2,korath_green",
+              "$ck5_endgame_reachable,level_korath,pogo,stunner,korath_keycard,korath_gemset"
             ],
             "visibility_rules": [
               "ck5_secret_level"
