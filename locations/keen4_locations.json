@@ -672,6 +672,69 @@
         ]
       },
       {
+        "name": "Pyramid of the Forbidden",
+        "map_locations": [
+          {
+            "map": "Keen 4 - Shadowlands",
+            "x": 144,
+            "y": 672
+          }
+        ],
+        "sections": [
+          {
+            "name": "Red Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_potf,pogo"
+            ],
+            "visibility_rules": [
+              "ck4_secret_level"
+            ]
+          },
+          {
+            "name": "Yellow Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_potf,pogo"
+            ],
+            "visibility_rules": [
+              "ck4_secret_level"
+            ]
+          },
+          {
+            "name": "Blue Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_potf,pogo"
+            ],
+            "visibility_rules": [
+              "ck4_secret_level"
+            ]
+          },
+          {
+            "name": "Green Gem",
+            "item_count": 1,
+            "access_rules": [
+              "level_potf,pogo"
+            ],
+            "visibility_rules": [
+              "ck4_secret_level"
+            ]
+          },
+          {
+            "name": "Complete",
+            "item_count": 1,
+            "access_rules": [
+              "level_potf,pogo,potf_red1,potf_red2,potf_yellow,potf_blue,potf_green",
+              "level_potf,pogo,potf_gemset"
+            ],
+            "visibility_rules": [
+              "ck4_secret_level"
+            ]
+          }
+        ]
+      },
+      {
         "name": "Pyramid of the Gnosticine Ancients - Lifewater Flasks 2-3",
         "map_locations": [
           {

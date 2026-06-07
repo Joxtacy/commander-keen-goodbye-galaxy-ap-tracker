@@ -773,6 +773,28 @@
         ]
       },
       {
+        "name": "Korath III Base",
+        "map_locations": [
+          {
+            "map": "Keen 5 - Omegamatic",
+            "x": 320,
+            "y": 328
+          }
+        ],
+        "sections": [
+          {
+            "name": "Complete",
+            "item_count": 1,
+            "access_rules": [
+              "$ck5_endgame_reachable,level_korath,pogo,stunner"
+            ],
+            "visibility_rules": [
+              "ck5_secret_level"
+            ]
+          }
+        ]
+      },
+      {
         "name": "Gravitational Damping Hub - Vitalin Kegs",
         "map_locations": [
           {

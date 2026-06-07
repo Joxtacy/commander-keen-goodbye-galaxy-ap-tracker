@@ -13,6 +13,10 @@ ENABLE_KEGSANITY = 0
 ENABLE_CONESANITY = 0
 -- Sugarsanity (CK5 Bag O' Sugar 5000-pt pickups) toggle from slot_data
 ENABLE_SUGARSANITY = 0
+-- Secret-level toggles from slot_data (CK4 = Pyramid of the Forbidden,
+-- CK5 = Korath III Base; 0=off, 1=on)
+ENABLE_CK4_SECRET_LEVEL = 0
+ENABLE_CK5_SECRET_LEVEL = 0
 
 -- Final level location IDs for victory tracking
 CK4_VICTORY_LOCATION = 13800 -- Bean-With-Bacon Megarocket Complete
@@ -44,6 +48,7 @@ ITEM_MAP = {
 	[1011] = "level_potm",
 	[1012] = "level_pos",
 	[1013] = "level_potga",
+	[1014] = "level_potf",
 	[1015] = "level_iot",
 	[1016] = "level_iof",
 	[1017] = "level_wow",
@@ -64,6 +69,11 @@ ITEM_MAP = {
 	[101202] = "pos_blue",
 	[101300] = "potga_red",
 	[101303] = "potga_green",
+	[101400] = "potf_red1",
+	[101410] = "potf_red2",
+	[101401] = "potf_yellow",
+	[101402] = "potf_blue",
+	[101403] = "potf_green",
 	[101500] = "iot_red",
 	[101501] = "iot_yellow",
 	[101502] = "iot_blue",
@@ -79,6 +89,7 @@ ITEM_MAP = {
 	[101199] = "potm_gemset",
 	[101299] = "pos_gemset",
 	[101399] = "potga_gemset",
+	[101499] = "potf_gemset",
 	[101599] = "iot_gemset",
 	[101699] = "iof_gemset",
 
@@ -95,6 +106,7 @@ ITEM_MAP = {
 	[2010] = "level_bmi",
 	[2011] = "level_gdh",
 	[2012] = "level_qed",
+	[2013] = "level_korath",
 
 	-- CK5 gem items
 	[200200] = "sc_red",
@@ -605,6 +617,18 @@ function onClear(slot_data)
 		ENABLE_SUGARSANITY = 0
 	end
 
+	if slot_data and slot_data["enable_ck4_secret_level"] ~= nil then
+		ENABLE_CK4_SECRET_LEVEL = slot_data["enable_ck4_secret_level"]
+	else
+		ENABLE_CK4_SECRET_LEVEL = 0
+	end
+
+	if slot_data and slot_data["enable_ck5_secret_level"] ~= nil then
+		ENABLE_CK5_SECRET_LEVEL = slot_data["enable_ck5_secret_level"]
+	else
+		ENABLE_CK5_SECRET_LEVEL = 0
+	end
+
 	-- Set the gemsets setting toggle
 	local gemsets_setting = Tracker:FindObjectForCode("gemsets")
 	if gemsets_setting then
@@ -628,6 +652,17 @@ function onClear(slot_data)
 	local sugarsanity_setting = Tracker:FindObjectForCode("sugarsanity")
 	if sugarsanity_setting then
 		sugarsanity_setting.Active = (ENABLE_SUGARSANITY == 1)
+	end
+
+	-- Secret-level toggles (gate the Pyramid of the Forbidden / Korath III
+	-- Base section visibility_rules).
+	local ck4_secret_setting = Tracker:FindObjectForCode("ck4_secret_level")
+	if ck4_secret_setting then
+		ck4_secret_setting.Active = (ENABLE_CK4_SECRET_LEVEL == 1)
+	end
+	local ck5_secret_setting = Tracker:FindObjectForCode("ck5_secret_level")
+	if ck5_secret_setting then
+		ck5_secret_setting.Active = (ENABLE_CK5_SECRET_LEVEL == 1)
 	end
 
 	-- Reset all tracked items. ITEM_MAP's keys are the AP item ids; resolve

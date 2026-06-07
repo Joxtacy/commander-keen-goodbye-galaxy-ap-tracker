@@ -36,6 +36,18 @@
     "codes": "sugarsanity"
   },
   {
+    "name": "Keen 4 Secret Level",
+    "type": "toggle",
+    "img": "images/blank.png",
+    "codes": "ck4_secret_level"
+  },
+  {
+    "name": "Keen 5 Secret Level",
+    "type": "toggle",
+    "img": "images/blank.png",
+    "codes": "ck5_secret_level"
+  },
+  {
     "name": "Auto Map",
     "type": "toggle",
     "img": "images/automap.png",
@@ -137,6 +149,12 @@
     "type": "toggle",
     "img": "images/pyramid_of_the_gnosticene_ancients.png",
     "codes": "level_potga,keen_1013"
+  },
+  {
+    "name": "Pyramid of the Forbidden",
+    "type": "toggle",
+    "img": "images/pyramid_of_the_forbidden.png",
+    "codes": "level_potf,keen_1014"
   },
   {
     "name": "Isle of Tar",
@@ -295,6 +313,42 @@
     "codes": "potga_gemset,keen_101399"
   },
   {
+    "name": "Pyramid of the Forbidden - Red Gem 1",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "potf_red1,keen_101400"
+  },
+  {
+    "name": "Pyramid of the Forbidden - Red Gem 2",
+    "type": "toggle",
+    "img": "images/gem_red.png",
+    "codes": "potf_red2,keen_101410"
+  },
+  {
+    "name": "Pyramid of the Forbidden - Yellow Gem",
+    "type": "toggle",
+    "img": "images/gem_yellow.png",
+    "codes": "potf_yellow,keen_101401"
+  },
+  {
+    "name": "Pyramid of the Forbidden - Blue Gem",
+    "type": "toggle",
+    "img": "images/gem_blue.png",
+    "codes": "potf_blue,keen_101402"
+  },
+  {
+    "name": "Pyramid of the Forbidden - Green Gem",
+    "type": "toggle",
+    "img": "images/gem_green.png",
+    "codes": "potf_green,keen_101403"
+  },
+  {
+    "name": "Pyramid of the Forbidden Gemset",
+    "type": "toggle",
+    "img": "images/gemset.png",
+    "codes": "potf_gemset,keen_101499"
+  },
+  {
     "name": "Isle of Tar - Red Gem",
     "type": "toggle",
     "img": "images/gem_red.png",
@@ -407,6 +461,12 @@
     "type": "toggle",
     "img": "images/quantum_explosion_dynamo.png",
     "codes": "level_qed,keen_2012"
+  },
+  {
+    "name": "Korath III Base",
+    "type": "toggle",
+    "img": "images/korath_iii_base.png",
+    "codes": "level_korath,keen_2013"
   },
   {
     "name": "Security Center - Red Gem",
