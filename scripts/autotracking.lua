@@ -372,9 +372,10 @@ local CK4_CONE_LAYOUT = {
 		{lo=0, hi=0, entry="Hilville - Ice Cream Cone 1 (Pogo)", section="Ice Cream Cone 1 (Pogo)"},
 	},
 	[8] = {
+		{lo=0, hi=0, entry="Sand Yego - Ice Cream Cone 1 (Pogo)", section="Ice Cream Cone 1 (Pogo)"},
+		{lo=2, hi=2, entry="Sand Yego - Ice Cream Cone 3 (Pogo)", section="Ice Cream Cone 3 (Pogo)"},
 		{lo=1, hi=1, entry="Sand Yego - Ice Cream Cone 2", section="Ice Cream Cone 2"},
 		{lo=3, hi=3, entry="Sand Yego - Ice Cream Cone 4", section="Ice Cream Cone 4"},
-		{lo=2, hi=2, entry="Sand Yego - Ice Cream Cone 3 (Pogo)", section="Ice Cream Cone 3 (Pogo)"},
 	},
 	[9] = {
 		{lo=0, hi=1, entry="Miragia - Ice Cream Cones 1-2 (Pogo)", section="Ice Cream Cones 1-2 (Pogo)"},
@@ -528,7 +529,7 @@ MAP_KEY = nil
 -- "X/N" only visible at zero. Toggles have no default badge so the text
 -- shows through at every count.
 SCORE_COUNT = { flask_count = 0, keg_count = 0, cone_count = 0, sugar_count = 0 }
-SCORE_MAX   = { flask_count = 29, keg_count = 22, cone_count = 50, sugar_count = 106 }
+SCORE_MAX   = { flask_count = 29, keg_count = 22, cone_count = 51, sugar_count = 106 }
 
 -- Update the items-panel score-item counter widget. If `count` is given,
 -- it replaces the running count for this code; otherwise the existing value

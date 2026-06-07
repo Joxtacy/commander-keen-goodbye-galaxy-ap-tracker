@@ -343,6 +343,44 @@
     ]
   },
   {
+    "name": "Sand Yego - Ice Cream Cone 1 (Pogo)",
+    "map_locations": [
+      {
+        "map": "keen4_sy",
+        "x": 472,
+        "y": 696
+      }
+    ],
+    "sections": [
+      {
+        "name": "Ice Cream Cone 1 (Pogo)",
+        "item_count": 1,
+        "access_rules": [
+          "conesanity,level_sy,pogo"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sand Yego - Ice Cream Cone 3 (Pogo)",
+    "map_locations": [
+      {
+        "map": "keen4_sy",
+        "x": 120,
+        "y": 1016
+      }
+    ],
+    "sections": [
+      {
+        "name": "Ice Cream Cone 3 (Pogo)",
+        "item_count": 1,
+        "access_rules": [
+          "conesanity,level_sy,pogo"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Sand Yego - Ice Cream Cone 2",
     "map_locations": [
       {
@@ -376,25 +414,6 @@
         "item_count": 1,
         "access_rules": [
           "conesanity,level_sy"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Sand Yego - Ice Cream Cone 3 (Pogo)",
-    "map_locations": [
-      {
-        "map": "keen4_sy",
-        "x": 120,
-        "y": 1016
-      }
-    ],
-    "sections": [
-      {
-        "name": "Ice Cream Cone 3 (Pogo)",
-        "item_count": 1,
-        "access_rules": [
-          "conesanity,level_sy,pogo"
         ]
       }
     ]
