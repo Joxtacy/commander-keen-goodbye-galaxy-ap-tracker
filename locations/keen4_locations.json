@@ -739,20 +739,41 @@
             "ref": "Pyramid of the Forbidden - Ice Cream Cones 11-14/Ice Cream Cones 11-14"
           },
           {
-            "ref": "Keen 4/Pyramid of the Forbidden - Lifewater Flasks/Lifewater Flasks"
+            "ref": "Keen 4/Pyramid of the Forbidden - Lifewater Flask 1/Lifewater Flask"
+          },
+          {
+            "ref": "Keen 4/Pyramid of the Forbidden - Lifewater Flask 2/Lifewater Flask"
           }
         ]
       },
       {
-        "name": "Pyramid of the Forbidden - Lifewater Flasks",
+        "name": "Pyramid of the Forbidden - Lifewater Flask 1",
         "map_locations": [
-          { "map": "keen4_potf", "x": 888, "y": 312 },
+          { "map": "keen4_potf", "x": 888, "y": 312 }
+        ],
+        "sections": [
+          {
+            "name": "Lifewater Flask",
+            "item_count": 1,
+            "access_rules": [
+              "level_potf"
+            ],
+            "visibility_rules": [
+              "flasksanity",
+              "ck4_secret_level"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pyramid of the Forbidden - Lifewater Flask 2",
+        "map_locations": [
           { "map": "keen4_potf", "x": 648, "y": 216 }
         ],
         "sections": [
           {
-            "name": "Lifewater Flasks",
-            "item_count": 2,
+            "name": "Lifewater Flask",
+            "item_count": 1,
             "access_rules": [
               "level_potf"
             ],

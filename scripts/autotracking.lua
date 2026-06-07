@@ -307,7 +307,10 @@ local CK4_FLASK_LAYOUT = {
 		{lo=1, hi=1, entry="Pyramid of the Gnosticine Ancients - Lifewater Flask 4",   section="Lifewater Flask (Pogo)"},
 		{lo=2, hi=3, entry="Pyramid of the Gnosticine Ancients - Lifewater Flasks 2-3", section="Lifewater Flasks (Stunner)"},
 	},
-	[14] = {{lo=0, hi=1, entry="Pyramid of the Forbidden - Lifewater Flasks",         section="Lifewater Flasks"}},
+	[14] = {
+		{lo=0, hi=0, entry="Pyramid of the Forbidden - Lifewater Flask 1",            section="Lifewater Flask"},
+		{lo=1, hi=1, entry="Pyramid of the Forbidden - Lifewater Flask 2",            section="Lifewater Flask"},
+	},
 	[15] = {
 		{lo=0, hi=0, entry="Isle of Tar - Lifewater Flask 1",                        section="Lifewater Flask (Pogo)"},
 		{lo=1, hi=1, entry="Isle of Tar - Lifewater Flask 2",                        section="Lifewater Flask (Pogo)"},
