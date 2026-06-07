@@ -39,11 +39,12 @@ APWORLD = Path("/Users/joxtacy/PrivateProjects/Archipelago-Keen")
 
 POINTS5K_CLASS = 5
 TILE = 16
-BORDER = 2  # most level images trim a 2-tile border off the top-left
-# Per-level (left, top) border-trim override where the level image isn't the
-# usual 2 tiles. Sand Yego's image (Ck4lv08, re-rendered faithfully) trims 3
-# columns on the left and 0 on the right; the rest stay at 2.
-BORDER_OVERRIDE = {(1, 8): (3, 2)}
+BORDER = 3  # fallback only; real per-level crops come from render_level_maps.CROP
+# The level images are cropped by render_level_maps.py using its per-level CROP
+# table (left=3 for every level; top is usually 2 but a few trim more empty sky,
+# e.g. keen4_sv=6, keen5_ivs=4). A pin's pixel = ((tile-left)*16+8, (tile-top)*16+8)
+# MUST use that same crop or the pin drifts off the sprite stamped on the image.
+# CROP is the single source of truth — looked up per map in pickup_px() below.
 
 # level id -> tracker code abbreviation (matches autotracking.lua level_* codes)
 ABBR = {
@@ -169,6 +170,7 @@ def pickup_px():
     5000-pt pickup, clamped to the level image. {} if game data is unavailable."""
     try:
         import render_pointsanity_maps as R
+        from render_level_maps import CROP
         from PIL import Image
     except Exception as e:  # pragma: no cover
         print(f"  (skipping pin coords: {e})", file=sys.stderr)
@@ -188,10 +190,13 @@ def pickup_px():
             if not picks:
                 continue
             iw = ih = None
-            img_path = maps_cfg.get(EP_CFG[ap_ep]["map_prefix"] + ABBR[ap_ep][idx])
+            map_name = EP_CFG[ap_ep]["map_prefix"] + ABBR[ap_ep][idx]
+            img_path = maps_cfg.get(map_name)
             if img_path:
                 iw, ih = Image.open(REPO / img_path).size
-            left, top = BORDER_OVERRIDE.get((ap_ep, idx), (BORDER, BORDER))
+            # Use the same per-level crop the renderer applied to the image, so
+            # pins land on the stamped sprites (CROP = (left, top, right, bottom)).
+            left, top = CROP.get(map_name, (BORDER, BORDER, 1, 2))[:2]
             per = {}
             for inst, p in enumerate(picks):
                 px, py = tile_to_px(p["x"], p["y"], left, top)
