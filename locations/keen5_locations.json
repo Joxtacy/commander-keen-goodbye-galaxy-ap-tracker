@@ -786,7 +786,7 @@
             "name": "Yellow Gem",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,level_korath,pogo"
+              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo"
             ],
             "visibility_rules": [
               "ck5_secret_level"
@@ -796,7 +796,7 @@
             "name": "Blue Gem",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,level_korath,pogo,stunner"
+              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo,stunner"
             ],
             "visibility_rules": [
               "ck5_secret_level"
@@ -806,8 +806,8 @@
             "name": "Green Gem",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,level_korath,pogo,stunner,korath_yellow",
-              "$ck5_endgame_reachable,level_korath,pogo,stunner,korath_gemset"
+              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo,stunner,korath_yellow",
+              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo,stunner,korath_gemset"
             ],
             "visibility_rules": [
               "ck5_secret_level"
@@ -817,8 +817,8 @@
             "name": "Keycard",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,level_korath,pogo,stunner,korath_blue1,korath_blue2",
-              "$ck5_endgame_reachable,level_korath,pogo,stunner,korath_gemset"
+              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo,stunner,korath_blue1,korath_blue2",
+              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo,stunner,korath_gemset"
             ],
             "visibility_rules": [
               "ck5_secret_level"
@@ -828,8 +828,8 @@
             "name": "Complete",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,level_korath,pogo,korath_green",
-              "$ck5_endgame_reachable,level_korath,pogo,korath_gemset"
+              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo,korath_green",
+              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo,korath_gemset"
             ],
             "visibility_rules": [
               "ck5_secret_level"
@@ -863,8 +863,8 @@
             "name": "Vitalin Keg",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,level_korath,pogo,korath_green",
-              "$ck5_endgame_reachable,level_korath,pogo,korath_gemset"
+              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo,korath_green",
+              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo,korath_gemset"
             ],
             "visibility_rules": [
               "kegsanity",
@@ -887,8 +887,8 @@
             "name": "Vitalin Keg",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,level_korath,pogo,korath_yellow",
-              "$ck5_endgame_reachable,level_korath,pogo,korath_gemset"
+              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo,korath_yellow",
+              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo,korath_gemset"
             ],
             "visibility_rules": [
               "kegsanity",

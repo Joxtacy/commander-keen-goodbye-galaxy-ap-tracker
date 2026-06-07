@@ -85,4 +85,24 @@ function ck5_endgame_reachable()
     return 1
 end
 
+-- Secret-level entry gates (cross-level prerequisites; match Rules.py
+-- potf_gate / korath_gate). A secret level is only physically reachable by
+-- traversing another level, so its locations need that level's progress too.
+
+-- Pyramid of the Forbidden: its entrance only opens after gathering the
+-- inchworms in the Pyramid of the Moons, behind POM's yellow-gem door — i.e.
+-- POM unlocked + its Yellow Gem (== being able to complete POM).
+function potf_reachable()
+    if level_completable("level_potm", {"potm_yellow"}, "potm_gemset") then return 1 end
+    return 0
+end
+
+-- Korath III Base: reached via the hidden teleporter deep in the Gravitational
+-- Damping Hub, past the Hub's green + red doors — GDH unlocked + its Green and
+-- Red gems + pogo (the GDH Vitalin Keg's reach, plus the red gem).
+function korath_reachable()
+    if level_completable("level_gdh", {"gdh_green", "gdh_red"}, "gdh_gemset", true) then return 1 end
+    return 0
+end
+
 

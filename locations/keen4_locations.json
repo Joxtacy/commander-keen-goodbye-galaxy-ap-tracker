@@ -685,7 +685,7 @@
             "name": "Red Gem",
             "item_count": 1,
             "access_rules": [
-              "level_potf,stunner"
+              "$potf_reachable,level_potf,stunner"
             ],
             "visibility_rules": [
               "ck4_secret_level"
@@ -695,8 +695,8 @@
             "name": "Yellow Gem",
             "item_count": 1,
             "access_rules": [
-              "level_potf,stunner,potf_red1,potf_red2",
-              "level_potf,stunner,potf_gemset"
+              "$potf_reachable,level_potf,stunner,potf_red1,potf_red2",
+              "$potf_reachable,level_potf,stunner,potf_gemset"
             ],
             "visibility_rules": [
               "ck4_secret_level"
@@ -706,8 +706,8 @@
             "name": "Blue Gem",
             "item_count": 1,
             "access_rules": [
-              "level_potf,pogo,stunner,potf_red1,potf_red2,potf_yellow",
-              "level_potf,pogo,stunner,potf_gemset"
+              "$potf_reachable,level_potf,pogo,stunner,potf_red1,potf_red2,potf_yellow",
+              "$potf_reachable,level_potf,pogo,stunner,potf_gemset"
             ],
             "visibility_rules": [
               "ck4_secret_level"
@@ -717,8 +717,8 @@
             "name": "Green Gem",
             "item_count": 1,
             "access_rules": [
-              "level_potf,pogo,stunner,potf_red1,potf_red2,potf_yellow",
-              "level_potf,pogo,stunner,potf_gemset"
+              "$potf_reachable,level_potf,pogo,stunner,potf_red1,potf_red2,potf_yellow",
+              "$potf_reachable,level_potf,pogo,stunner,potf_gemset"
             ],
             "visibility_rules": [
               "ck4_secret_level"
@@ -728,8 +728,8 @@
             "name": "Complete",
             "item_count": 1,
             "access_rules": [
-              "level_potf,pogo,stunner,potf_red1,potf_red2,potf_yellow,potf_blue",
-              "level_potf,pogo,stunner,potf_gemset"
+              "$potf_reachable,level_potf,pogo,stunner,potf_red1,potf_red2,potf_yellow,potf_blue",
+              "$potf_reachable,level_potf,pogo,stunner,potf_gemset"
             ],
             "visibility_rules": [
               "ck4_secret_level"
@@ -763,7 +763,7 @@
             "name": "Lifewater Flask",
             "item_count": 1,
             "access_rules": [
-              "level_potf"
+              "$potf_reachable,level_potf"
             ],
             "visibility_rules": [
               "flasksanity",
@@ -786,7 +786,7 @@
             "name": "Lifewater Flask",
             "item_count": 1,
             "access_rules": [
-              "level_potf,stunner"
+              "$potf_reachable,level_potf,stunner"
             ],
             "visibility_rules": [
               "flasksanity",

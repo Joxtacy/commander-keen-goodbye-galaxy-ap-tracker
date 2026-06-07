@@ -58,6 +58,10 @@ ABBR = {
 # Secret-level abbreviations whose pointsanity is double-gated by an extra
 # enable_<ep>_secret_level toggle on top of cone/sugar-sanity.
 SECRET_GATE = {"potf": "ck4_secret_level", "korath": "ck5_secret_level"}
+# Secret levels are also reached only by traversing another level (POM inchworms
+# / the GDH teleporter); a $logic function encodes that cross-level prerequisite
+# (see scripts/logic.lua, mirrors Rules.py potf_gate / korath_gate).
+SECRET_REACHABLE = {"potf": "$potf_reachable", "korath": "$korath_reachable"}
 EP_CFG = {
     1: {"tracker_ep": "Keen 4", "map_prefix": "keen4_",
         "singular": "Ice Cream Cone", "plural": "Ice Cream Cones",
@@ -161,6 +165,8 @@ def access_rules(toggle: str, abbr: str, sig: tuple) -> list[str]:
     base = [toggle]
     if abbr in SECRET_GATE:  # secret levels need their enable toggle too
         base.append(SECRET_GATE[abbr])
+    if abbr in SECRET_REACHABLE:  # ...plus the cross-level entry prerequisite
+        base.append(SECRET_REACHABLE[abbr])
     base.append(f"level_{abbr}")
     for tok in reqs:
         base.append(TOKEN_CODE[tok])
