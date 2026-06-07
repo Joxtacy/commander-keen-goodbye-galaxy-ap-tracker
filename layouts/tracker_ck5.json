@@ -124,6 +124,11 @@
                 "title": "QED",
                 "icon": "images/quantum_explosion_dynamo.png",
                 "content": { "type": "map", "maps": ["keen5_qed"] }
+              },
+              {
+                "title": "Korath III",
+                "icon": "images/korath_iii_base.png",
+                "content": { "type": "map", "maps": ["keen5_korath"] }
               }
             ]
           }

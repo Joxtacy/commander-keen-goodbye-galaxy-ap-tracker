@@ -505,6 +505,7 @@ CK4_MAP_TABS = {
 	[11] = "Pyr. of Moons",
 	[12] = "Pyr. of Shadows",
 	[13] = "Pyr. of Gnost.",
+	[14] = "Pyr. Forbidden",
 	[15] = "Isle of Tar",
 	[16] = "Isle of Fire",
 	[17] = "Well of Wishes",
@@ -525,6 +526,7 @@ CK5_MAP_TABS = {
 	[10] = "Brownian Mot.",
 	[11] = "Grav. Damp.",
 	[12] = "QED",
+	[13] = "Korath III",
 }
 
 -- DataStorage key for current level (set after connecting)

@@ -49,17 +49,18 @@ _spec.loader.exec_module(R)
 
 TILE = 16
 
-# tracker map-id -> Gamemaps level index (matches maps/keen{4,5}_maps.json order;
-# untracked levels — Pyramid of the Forbidden (CK4 14), Korath III (CK5 13) —
-# have no tracker map and are intentionally absent).
+# tracker map-id -> Gamemaps level index (matches maps/keen{4,5}_maps.json order).
+# The secret levels — Pyramid of the Forbidden (CK4 14), Korath III Base (CK5 13)
+# — are included; their tracker maps/tabs are gated by the enable_ck4/ck5_secret_level
+# options, but the rendered images are unconditional.
 MAPID_TO_IDX = {
     "keen4_bv": 1, "keen4_sv": 2, "keen4_pp": 3, "keen4_cotd": 4, "keen4_coc": 5,
     "keen4_crys": 6, "keen4_hil": 7, "keen4_sy": 8, "keen4_mir": 9, "keen4_lo": 10,
-    "keen4_potm": 11, "keen4_pos": 12, "keen4_potga": 13, "keen4_iot": 15,
-    "keen4_iof": 16, "keen4_wow": 17, "keen4_bwbm": 18,
+    "keen4_potm": 11, "keen4_pos": 12, "keen4_potga": 13, "keen4_potf": 14,
+    "keen4_iot": 15, "keen4_iof": 16, "keen4_wow": 17, "keen4_bwbm": 18,
     "keen5_ivs": 1, "keen5_sc": 2, "keen5_dtv": 3, "keen5_efs": 4, "keen5_dtb": 5,
     "keen5_rcc": 6, "keen5_dts": 7, "keen5_nbi": 8, "keen5_dtt": 9, "keen5_bmi": 10,
-    "keen5_gdh": 11, "keen5_qed": 12,
+    "keen5_gdh": 11, "keen5_qed": 12, "keen5_korath": 13,
 }
 
 # Per-level crop in tiles (left, top, right, bottom). Left is always 3; top/bottom
@@ -74,12 +75,14 @@ CROP = {
     "keen4_lo": (3, 2, 1, 3), "keen4_potm": (3, 2, 1, 2),
     "keen4_pos": (3, 2, 1, 2),  # bottom was 4, but that clipped 2 rows of real
     # cave geometry above the "EDGE OF MAP" border (rows 97-98); 2 matches the norm
-    "keen4_potga": (3, 2, 1, 2), "keen4_iot": (3, 2, 1, 2), "keen4_iof": (3, 2, 1, 2),
+    "keen4_potga": (3, 2, 1, 2), "keen4_potf": (3, 2, 1, 2),
+    "keen4_iot": (3, 2, 1, 2), "keen4_iof": (3, 2, 1, 2),
     "keen4_wow": (3, 2, 1, 2), "keen4_bwbm": (3, 2, 1, 2),
     "keen5_ivs": (3, 4, 1, 2), "keen5_sc": (3, 2, 1, 2), "keen5_dtv": (3, 2, 1, 2),
     "keen5_efs": (3, 2, 1, 2), "keen5_dtb": (3, 2, 1, 2), "keen5_rcc": (3, 2, 1, 2),
     "keen5_dts": (3, 2, 1, 2), "keen5_nbi": (3, 2, 1, 2), "keen5_dtt": (3, 2, 1, 2),
     "keen5_bmi": (3, 2, 1, 2), "keen5_gdh": (3, 2, 1, 2), "keen5_qed": (3, 2, 1, 2),
+    "keen5_korath": (3, 2, 1, 2),
 }
 
 # Trackable collectibles. "item" is the info-plane item number (spawns at

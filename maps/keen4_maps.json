@@ -84,6 +84,12 @@
     "location_border_thickness": 2
   },
   {
+    "name": "keen4_potf",
+    "img": "images/Ck4lv14.png",
+    "location_size": 24,
+    "location_border_thickness": 2
+  },
+  {
     "name": "keen4_iot",
     "img": "images/Ck4lv15.png",
     "location_size": 24,

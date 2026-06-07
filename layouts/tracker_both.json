@@ -136,6 +136,11 @@
                       "content": { "type": "map", "maps": ["keen4_potga"] }
                     },
                     {
+                      "title": "Pyr. Forbidden",
+                      "icon": "images/pyramid_of_the_forbidden.png",
+                      "content": { "type": "map", "maps": ["keen4_potf"] }
+                    },
+                    {
                       "title": "Isle of Tar",
                       "icon": "images/isle_of_tar.png",
                       "content": { "type": "map", "maps": ["keen4_iot"] }
@@ -289,6 +294,11 @@
                       "title": "QED",
                       "icon": "images/quantum_explosion_dynamo.png",
                       "content": { "type": "map", "maps": ["keen5_qed"] }
+                    },
+                    {
+                      "title": "Korath III",
+                      "icon": "images/korath_iii_base.png",
+                      "content": { "type": "map", "maps": ["keen5_korath"] }
                     }
                   ]
                 }

@@ -76,5 +76,11 @@
     "img": "images/Ck5lv12.png",
     "location_size": 24,
     "location_border_thickness": 2
+  },
+  {
+    "name": "keen5_korath",
+    "img": "images/Ck5lv13.png",
+    "location_size": 24,
+    "location_border_thickness": 2
   }
 ]
