@@ -320,6 +320,10 @@ local CK5_KEG_LAYOUT = {
 	[10] = {{lo=0, hi=0, entry="Brownian Motion Inducer - Vitalin Kegs",    section="Vitalin Kegs"}},
 	[11] = {{lo=0, hi=0, entry="Gravitational Damping Hub - Vitalin Kegs",  section="Vitalin Kegs"}},
 	[12] = {{lo=0, hi=1, entry="Quantum Explosion Dynamo - Vitalin Kegs",   section="Vitalin Kegs"}},
+	[13] = {
+		{lo=0, hi=0, entry="Korath III Base - Vitalin Keg 1",             section="Vitalin Keg"},
+		{lo=1, hi=1, entry="Korath III Base - Vitalin Keg 2",             section="Vitalin Keg"},
+	},
 }
 -- Exact flask/keg location-id sets, built alongside LOCATION_MAP from the
 -- layout tables above. onLocation tests membership in these to bump the score
@@ -469,6 +473,10 @@ local CK5_SUGAR_LAYOUT = {
 		{lo=0, hi=5, entry="Quantum Explosion Dynamo - Bags O' Sugar 1-6 (Red Gem, Yellow Gem, Blue Gem, Green Gem, Pogo)", section="Bags O' Sugar 1-6 (Red Gem, Yellow Gem, Blue Gem, Green Gem, Pogo)"},
 		{lo=6, hi=8, entry="Quantum Explosion Dynamo - Bags O' Sugar 7-9 (Pogo)", section="Bags O' Sugar 7-9 (Pogo)"},
 	},
+	[13] = {
+		{lo=0, hi=3, entry="Korath III Base - Bags O' Sugar 1-4", section="Bags O' Sugar 1-4"},
+		{lo=4, hi=19, entry="Korath III Base - Bags O' Sugar 5-20", section="Bags O' Sugar 5-20"},
+	},
 }
 CONE_IDS = {}
 SUGAR_IDS = {}
@@ -549,7 +557,7 @@ MAP_KEY = nil
 -- "X/N" only visible at zero. Toggles have no default badge so the text
 -- shows through at every count.
 SCORE_COUNT = { flask_count = 0, keg_count = 0, cone_count = 0, sugar_count = 0 }
-SCORE_MAX   = { flask_count = 29, keg_count = 22, cone_count = 51, sugar_count = 106 }
+SCORE_MAX   = { flask_count = 29, keg_count = 24, cone_count = 51, sugar_count = 126 }
 
 -- Update the items-panel score-item counter widget. If `count` is given,
 -- it replaces the running count for this code; otherwise the existing value

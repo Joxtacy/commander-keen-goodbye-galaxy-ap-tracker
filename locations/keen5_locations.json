@@ -832,6 +832,64 @@
             "visibility_rules": [
               "ck5_secret_level"
             ]
+          },
+          {
+            "ref": "Korath III Base - Bags O' Sugar 1-4/Bags O' Sugar 1-4"
+          },
+          {
+            "ref": "Korath III Base - Bags O' Sugar 5-20/Bags O' Sugar 5-20"
+          },
+          {
+            "ref": "Keen 5/Korath III Base - Vitalin Keg 1/Vitalin Keg"
+          },
+          {
+            "ref": "Keen 5/Korath III Base - Vitalin Keg 2/Vitalin Keg"
+          }
+        ]
+      },
+      {
+        "name": "Korath III Base - Vitalin Keg 1",
+        "map_locations": [
+          {
+            "map": "keen5_korath",
+            "x": 472,
+            "y": 24
+          }
+        ],
+        "sections": [
+          {
+            "name": "Vitalin Keg",
+            "item_count": 1,
+            "access_rules": [
+              "$ck5_endgame_reachable,level_korath,pogo,stunner"
+            ],
+            "visibility_rules": [
+              "kegsanity",
+              "ck5_secret_level"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Korath III Base - Vitalin Keg 2",
+        "map_locations": [
+          {
+            "map": "keen5_korath",
+            "x": 24,
+            "y": 2088
+          }
+        ],
+        "sections": [
+          {
+            "name": "Vitalin Keg",
+            "item_count": 1,
+            "access_rules": [
+              "$ck5_endgame_reachable,level_korath,pogo,stunner"
+            ],
+            "visibility_rules": [
+              "kegsanity",
+              "ck5_secret_level"
+            ]
           }
         ]
       },

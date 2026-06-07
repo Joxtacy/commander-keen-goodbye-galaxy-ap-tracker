@@ -601,5 +601,43 @@
         ]
       }
     ]
+  },
+  {
+    "name": "Korath III Base - Bags O' Sugar 1-4",
+    "map_locations": [
+      {
+        "map": "keen5_korath",
+        "x": 32,
+        "y": 48
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bags O' Sugar 1-4",
+        "item_count": 4,
+        "access_rules": [
+          "sugarsanity,ck5_secret_level,level_korath"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Korath III Base - Bags O' Sugar 5-20",
+    "map_locations": [
+      {
+        "map": "keen5_korath",
+        "x": 174,
+        "y": 111
+      }
+    ],
+    "sections": [
+      {
+        "name": "Bags O' Sugar 5-20",
+        "item_count": 16,
+        "access_rules": [
+          "sugarsanity,ck5_secret_level,level_korath"
+        ]
+      }
+    ]
   }
 ]

@@ -52,8 +52,12 @@ ABBR = {
         8: "sy", 9: "mir", 10: "lo", 11: "potm", 12: "pos", 13: "potga",
         14: "potf", 15: "iot", 16: "iof", 17: "wow", 18: "bwbm"},
     2: {1: "ivs", 2: "sc", 3: "dtv", 4: "efs", 5: "dtb", 6: "rcc", 7: "dts",
-        8: "nbi", 9: "dtt", 10: "bmi", 11: "gdh", 12: "qed"},
+        8: "nbi", 9: "dtt", 10: "bmi", 11: "gdh", 12: "qed", 13: "korath"},
 }
+
+# Secret-level abbreviations whose pointsanity is double-gated by an extra
+# enable_<ep>_secret_level toggle on top of cone/sugar-sanity.
+SECRET_GATE = {"potf": "ck4_secret_level", "korath": "ck5_secret_level"}
 EP_CFG = {
     1: {"tracker_ep": "Keen 4", "map_prefix": "keen4_",
         "singular": "Ice Cream Cone", "plural": "Ice Cream Cones",
@@ -143,7 +147,10 @@ def cluster_label(singular: str, plural: str, disps: list[int], sig: tuple) -> s
 
 def access_rules(toggle: str, abbr: str, sig: tuple) -> list[str]:
     reqs, gems = sig
-    base = [toggle, f"level_{abbr}"]
+    base = [toggle]
+    if abbr in SECRET_GATE:  # secret levels need their enable toggle too
+        base.append(SECRET_GATE[abbr])
+    base.append(f"level_{abbr}")
     for tok in reqs:
         base.append(TOKEN_CODE[tok])
     if not gems:
