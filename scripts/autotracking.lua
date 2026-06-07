@@ -189,6 +189,7 @@ LOCATION_MAP = {
 	[13100] = "Keen 4/Pyramid of the Moons/Complete",
 	[13200] = "Keen 4/Pyramid of Shadows/Complete",
 	[13300] = "Keen 4/Pyramid of the Gnosticine Ancients/Complete",
+	[13400] = "Keen 4/Pyramid of the Forbidden/Complete",
 	[13500] = "Keen 4/Isle of Tar/Complete",
 	[13600] = "Keen 4/Isle of Fire/Complete",
 	[13700] = "Keen 4/Well of Wishes/Complete",
@@ -208,6 +209,10 @@ LOCATION_MAP = {
 	[23202] = "Keen 4/Pyramid of Shadows/Blue Gem",
 	[23300] = "Keen 4/Pyramid of the Gnosticine Ancients/Red Gem",
 	[23303] = "Keen 4/Pyramid of the Gnosticine Ancients/Green Gem",
+	[23400] = "Keen 4/Pyramid of the Forbidden/Red Gem",
+	[23401] = "Keen 4/Pyramid of the Forbidden/Yellow Gem",
+	[23402] = "Keen 4/Pyramid of the Forbidden/Blue Gem",
+	[23403] = "Keen 4/Pyramid of the Forbidden/Green Gem",
 	[23500] = "Keen 4/Isle of Tar/Red Gem",
 	[23501] = "Keen 4/Isle of Tar/Yellow Gem",
 	[23502] = "Keen 4/Isle of Tar/Blue Gem",
@@ -226,6 +231,7 @@ LOCATION_MAP = {
 	[15000] = "Keen 5/Brownian Motion Inducer/Complete",
 	[15100] = "Keen 5/Gravitational Damping Hub/Complete",
 	[15200] = "Keen 5/Quantum Explosion Dynamo/Complete",
+	[15300] = "Keen 5/Korath III Base/Complete",
 	-- CK5 gems
 	[24200] = "Keen 5/Security Center/Red Gem",
 	[24202] = "Keen 5/Security Center/Blue Gem",
@@ -257,6 +263,9 @@ LOCATION_MAP = {
 	[25201] = "Keen 5/Quantum Explosion Dynamo/Yellow Gem",
 	[25202] = "Keen 5/Quantum Explosion Dynamo/Blue Gem",
 	[25203] = "Keen 5/Quantum Explosion Dynamo/Green Gem",
+	[25301] = "Keen 5/Korath III Base/Yellow Gem",
+	[25302] = "Keen 5/Korath III Base/Blue Gem",
+	[25303] = "Keen 5/Korath III Base/Green Gem",
 	-- CK5 keycards
 	[34200] = "Keen 5/Security Center/Keycard",
 	[34300] = "Keen 5/Defense Tunnel Vlook/Keycard",
@@ -264,6 +273,7 @@ LOCATION_MAP = {
 	[34700] = "Keen 5/Defense Tunnel Sorra/Keycard",
 	[34900] = "Keen 5/Defense Tunnel Teln/Keycard",
 	[35100] = "Keen 5/Gravitational Damping Hub/Keycard",
+	[35300] = "Keen 5/Korath III Base/Keycard",
 }
 
 -- Flasksanity (CK4 Lifewater Flasks) and Kegsanity (CK5 Vitalin Kegs).

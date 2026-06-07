@@ -90,7 +90,12 @@ def apworld_facts(Items, Locations):
                 out.update(region)  # {name: id}
         return {i: n for n, i in out.items()}  # {id: name}
 
-    core = ids(Locations.ck4_locations_by_region, Locations.ck5_locations_by_region)
+    # Secret-level (Pyramid of the Forbidden / Korath III Base) gem/keycard/
+    # complete checks live in their own dicts; include them so drift catches a
+    # stale LOCATION_MAP. getattr-guarded for apworld branches that predate them.
+    core = ids(Locations.ck4_locations_by_region, Locations.ck5_locations_by_region,
+               getattr(Locations, "ck4_secret_locations_by_region", {}),
+               getattr(Locations, "ck5_secret_locations_by_region", {}))
     flasks = ids(Locations.ck4_flask_locations_by_region)
     kegs = ids(Locations.ck5_keg_locations_by_region)
     # Pointsanity is optional / not on every apworld branch (e.g. keen-ap may
