@@ -307,6 +307,7 @@ local CK4_FLASK_LAYOUT = {
 		{lo=1, hi=1, entry="Pyramid of the Gnosticine Ancients - Lifewater Flask 4",   section="Lifewater Flask (Pogo)"},
 		{lo=2, hi=3, entry="Pyramid of the Gnosticine Ancients - Lifewater Flasks 2-3", section="Lifewater Flasks (Stunner)"},
 	},
+	[14] = {{lo=0, hi=1, entry="Pyramid of the Forbidden - Lifewater Flasks",         section="Lifewater Flasks"}},
 	[15] = {
 		{lo=0, hi=0, entry="Isle of Tar - Lifewater Flask 1",                        section="Lifewater Flask (Pogo)"},
 		{lo=1, hi=1, entry="Isle of Tar - Lifewater Flask 2",                        section="Lifewater Flask (Pogo)"},
@@ -421,6 +422,10 @@ local CK4_CONE_LAYOUT = {
 	},
 	[13] = {
 		{lo=0, hi=0, entry="Pyramid of the Gnosticine Ancients - Ice Cream Cone 1 (Pogo)", section="Ice Cream Cone 1 (Pogo)"},
+	},
+	[14] = {
+		{lo=0, hi=9, entry="Pyramid of the Forbidden - Ice Cream Cones 1-10", section="Ice Cream Cones 1-10"},
+		{lo=10, hi=13, entry="Pyramid of the Forbidden - Ice Cream Cones 11-14", section="Ice Cream Cones 11-14"},
 	},
 	[15] = {
 		{lo=0, hi=0, entry="Isle of Tar - Ice Cream Cone 1 (Pogo)", section="Ice Cream Cone 1 (Pogo)"},
@@ -567,7 +572,7 @@ MAP_KEY = nil
 -- "X/N" only visible at zero. Toggles have no default badge so the text
 -- shows through at every count.
 SCORE_COUNT = { flask_count = 0, keg_count = 0, cone_count = 0, sugar_count = 0 }
-SCORE_MAX   = { flask_count = 29, keg_count = 24, cone_count = 51, sugar_count = 126 }
+SCORE_MAX   = { flask_count = 31, keg_count = 24, cone_count = 65, sugar_count = 126 }
 
 -- Update the items-panel score-item counter widget. If `count` is given,
 -- it replaces the running count for this code; otherwise the existing value

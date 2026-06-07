@@ -595,6 +595,44 @@
     ]
   },
   {
+    "name": "Pyramid of the Forbidden - Ice Cream Cones 1-10",
+    "map_locations": [
+      {
+        "map": "keen4_potf",
+        "x": 1112,
+        "y": 456
+      }
+    ],
+    "sections": [
+      {
+        "name": "Ice Cream Cones 1-10",
+        "item_count": 10,
+        "access_rules": [
+          "conesanity,ck4_secret_level,level_potf"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Pyramid of the Forbidden - Ice Cream Cones 11-14",
+    "map_locations": [
+      {
+        "map": "keen4_potf",
+        "x": 80,
+        "y": 728
+      }
+    ],
+    "sections": [
+      {
+        "name": "Ice Cream Cones 11-14",
+        "item_count": 4,
+        "access_rules": [
+          "conesanity,ck4_secret_level,level_potf"
+        ]
+      }
+    ]
+  },
+  {
     "name": "Isle of Tar - Ice Cream Cone 1 (Pogo)",
     "map_locations": [
       {
