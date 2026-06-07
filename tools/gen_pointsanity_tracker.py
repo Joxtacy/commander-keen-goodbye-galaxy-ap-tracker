@@ -95,12 +95,14 @@ def load_locations():
 
 def load_rules_dicts():
     """Eval just the two pointsanity rule dicts out of Rules.py (importing the
-    module would pull in worlds.generic.Rules)."""
+    module would pull in worlds.generic.Rules). Captures both the base literal
+    `name = {...}` and any later `name.update({...})` blocks (the secret levels'
+    cone/sugar rules are appended as dict comprehensions via .update())."""
     text = (APWORLD / "worlds" / "keen" / "Rules.py").read_text()
+    env = {"dict": dict, "range": range}
 
-    def block(name):
-        i = text.index(f"{name} = ")
-        open_i = text.index("{", i)
+    def _brace_expr(open_i):
+        """Eval the {...} expression starting at the '{' index open_i."""
         depth = 0
         for j in range(open_i, len(text)):
             if text[j] == "{":
@@ -108,8 +110,17 @@ def load_rules_dicts():
             elif text[j] == "}":
                 depth -= 1
                 if depth == 0:
-                    return eval(text[open_i:j + 1], {"dict": dict})  # noqa: S307
-        raise ValueError(name)
+                    return eval(text[open_i:j + 1], env)  # noqa: S307
+        raise ValueError("unbalanced braces")
+
+    def block(name):
+        result = _brace_expr(text.index("{", text.index(f"{name} = ")))
+        marker = f"{name}.update("
+        pos = 0
+        while (i := text.find(marker, pos)) != -1:
+            result.update(_brace_expr(text.index("{", i)))
+            pos = i + len(marker)
+        return result
 
     return block("ck4_points5k_rules"), block("ck5_points5k_rules")
 
@@ -155,7 +166,15 @@ def access_rules(toggle: str, abbr: str, sig: tuple) -> list[str]:
         base.append(TOKEN_CODE[tok])
     if not gems:
         return [",".join(base)]
-    gem_codes = [f"{abbr}_{g.split()[0].lower()}" for g in gems]
+
+    def gem_code(g):
+        # "Red Gem" -> red; "Red Gem 1" -> red1 (POTF's two reds / Korath's two
+        # blues each have a trailing index that's part of the tracker item code).
+        parts = g.split()
+        num = parts[2] if len(parts) > 2 else ""
+        return f"{abbr}_{parts[0].lower()}{num}"
+
+    gem_codes = [gem_code(g) for g in gems]
     return [",".join(base + gem_codes), ",".join(base + [f"{abbr}_gemset"])]
 
 

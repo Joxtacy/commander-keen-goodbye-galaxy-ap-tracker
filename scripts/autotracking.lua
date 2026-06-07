@@ -427,8 +427,8 @@ local CK4_CONE_LAYOUT = {
 		{lo=0, hi=0, entry="Pyramid of the Gnosticine Ancients - Ice Cream Cone 1 (Pogo)", section="Ice Cream Cone 1 (Pogo)"},
 	},
 	[14] = {
-		{lo=0, hi=9, entry="Pyramid of the Forbidden - Ice Cream Cones 1-10", section="Ice Cream Cones 1-10"},
-		{lo=10, hi=13, entry="Pyramid of the Forbidden - Ice Cream Cones 11-14", section="Ice Cream Cones 11-14"},
+		{lo=0, hi=9, entry="Pyramid of the Forbidden - Ice Cream Cones 1-10 (Red Gem 1, Red Gem 2, Yellow Gem, Blue Gem, Pogo, Stunner)", section="Ice Cream Cones 1-10 (Red Gem 1, Red Gem 2, Yellow Gem, Blue Gem, Pogo, Stunner)"},
+		{lo=10, hi=13, entry="Pyramid of the Forbidden - Ice Cream Cones 11-14 (Red Gem 1, Red Gem 2, Yellow Gem, Pogo, Stunner)", section="Ice Cream Cones 11-14 (Red Gem 1, Red Gem 2, Yellow Gem, Pogo, Stunner)"},
 	},
 	[15] = {
 		{lo=0, hi=0, entry="Isle of Tar - Ice Cream Cone 1 (Pogo)", section="Ice Cream Cone 1 (Pogo)"},
@@ -492,8 +492,8 @@ local CK5_SUGAR_LAYOUT = {
 		{lo=6, hi=8, entry="Quantum Explosion Dynamo - Bags O' Sugar 7-9 (Pogo)", section="Bags O' Sugar 7-9 (Pogo)"},
 	},
 	[13] = {
-		{lo=0, hi=3, entry="Korath III Base - Bags O' Sugar 1-4", section="Bags O' Sugar 1-4"},
-		{lo=4, hi=19, entry="Korath III Base - Bags O' Sugar 5-20", section="Bags O' Sugar 5-20"},
+		{lo=0, hi=3, entry="Korath III Base - Bags O' Sugar 1-4 (Pogo)", section="Bags O' Sugar 1-4 (Pogo)"},
+		{lo=4, hi=19, entry="Korath III Base - Bags O' Sugar 5-20 (Pogo)", section="Bags O' Sugar 5-20 (Pogo)"},
 	},
 }
 CONE_IDS = {}

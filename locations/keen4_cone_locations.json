@@ -595,7 +595,7 @@
     ]
   },
   {
-    "name": "Pyramid of the Forbidden - Ice Cream Cones 1-10",
+    "name": "Pyramid of the Forbidden - Ice Cream Cones 1-10 (Red Gem 1, Red Gem 2, Yellow Gem, Blue Gem, Pogo, Stunner)",
     "map_locations": [
       {
         "map": "keen4_potf",
@@ -605,16 +605,17 @@
     ],
     "sections": [
       {
-        "name": "Ice Cream Cones 1-10",
+        "name": "Ice Cream Cones 1-10 (Red Gem 1, Red Gem 2, Yellow Gem, Blue Gem, Pogo, Stunner)",
         "item_count": 10,
         "access_rules": [
-          "conesanity,ck4_secret_level,level_potf"
+          "conesanity,ck4_secret_level,level_potf,pogo,stunner,potf_red1,potf_red2,potf_yellow,potf_blue",
+          "conesanity,ck4_secret_level,level_potf,pogo,stunner,potf_gemset"
         ]
       }
     ]
   },
   {
-    "name": "Pyramid of the Forbidden - Ice Cream Cones 11-14",
+    "name": "Pyramid of the Forbidden - Ice Cream Cones 11-14 (Red Gem 1, Red Gem 2, Yellow Gem, Pogo, Stunner)",
     "map_locations": [
       {
         "map": "keen4_potf",
@@ -624,10 +625,11 @@
     ],
     "sections": [
       {
-        "name": "Ice Cream Cones 11-14",
+        "name": "Ice Cream Cones 11-14 (Red Gem 1, Red Gem 2, Yellow Gem, Pogo, Stunner)",
         "item_count": 4,
         "access_rules": [
-          "conesanity,ck4_secret_level,level_potf"
+          "conesanity,ck4_secret_level,level_potf,pogo,stunner,potf_red1,potf_red2,potf_yellow",
+          "conesanity,ck4_secret_level,level_potf,pogo,stunner,potf_gemset"
         ]
       }
     ]

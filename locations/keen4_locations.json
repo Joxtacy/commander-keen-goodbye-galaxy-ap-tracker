@@ -685,7 +685,7 @@
             "name": "Red Gem",
             "item_count": 1,
             "access_rules": [
-              "level_potf,pogo"
+              "level_potf,stunner"
             ],
             "visibility_rules": [
               "ck4_secret_level"
@@ -695,7 +695,8 @@
             "name": "Yellow Gem",
             "item_count": 1,
             "access_rules": [
-              "level_potf,pogo"
+              "level_potf,stunner,potf_red1,potf_red2",
+              "level_potf,stunner,potf_gemset"
             ],
             "visibility_rules": [
               "ck4_secret_level"
@@ -705,7 +706,8 @@
             "name": "Blue Gem",
             "item_count": 1,
             "access_rules": [
-              "level_potf,pogo"
+              "level_potf,pogo,stunner,potf_red1,potf_red2,potf_yellow",
+              "level_potf,pogo,stunner,potf_gemset"
             ],
             "visibility_rules": [
               "ck4_secret_level"
@@ -715,7 +717,8 @@
             "name": "Green Gem",
             "item_count": 1,
             "access_rules": [
-              "level_potf,pogo"
+              "level_potf,pogo,stunner,potf_red1,potf_red2,potf_yellow",
+              "level_potf,pogo,stunner,potf_gemset"
             ],
             "visibility_rules": [
               "ck4_secret_level"
@@ -725,31 +728,35 @@
             "name": "Complete",
             "item_count": 1,
             "access_rules": [
-              "level_potf,pogo,potf_red1,potf_red2,potf_yellow,potf_blue,potf_green",
-              "level_potf,pogo,potf_gemset"
+              "level_potf,pogo,stunner,potf_red1,potf_red2,potf_yellow,potf_blue",
+              "level_potf,pogo,stunner,potf_gemset"
             ],
             "visibility_rules": [
               "ck4_secret_level"
             ]
           },
           {
-            "ref": "Pyramid of the Forbidden - Ice Cream Cones 1-10/Ice Cream Cones 1-10"
-          },
-          {
-            "ref": "Pyramid of the Forbidden - Ice Cream Cones 11-14/Ice Cream Cones 11-14"
-          },
-          {
             "ref": "Keen 4/Pyramid of the Forbidden - Lifewater Flask 1/Lifewater Flask"
           },
           {
             "ref": "Keen 4/Pyramid of the Forbidden - Lifewater Flask 2/Lifewater Flask"
+          },
+          {
+            "ref": "Pyramid of the Forbidden - Ice Cream Cones 1-10 (Red Gem 1, Red Gem 2, Yellow Gem, Blue Gem, Pogo, Stunner)/Ice Cream Cones 1-10 (Red Gem 1, Red Gem 2, Yellow Gem, Blue Gem, Pogo, Stunner)"
+          },
+          {
+            "ref": "Pyramid of the Forbidden - Ice Cream Cones 11-14 (Red Gem 1, Red Gem 2, Yellow Gem, Pogo, Stunner)/Ice Cream Cones 11-14 (Red Gem 1, Red Gem 2, Yellow Gem, Pogo, Stunner)"
           }
         ]
       },
       {
         "name": "Pyramid of the Forbidden - Lifewater Flask 1",
         "map_locations": [
-          { "map": "keen4_potf", "x": 888, "y": 312 }
+          {
+            "map": "keen4_potf",
+            "x": 888,
+            "y": 312
+          }
         ],
         "sections": [
           {
@@ -768,14 +775,18 @@
       {
         "name": "Pyramid of the Forbidden - Lifewater Flask 2",
         "map_locations": [
-          { "map": "keen4_potf", "x": 648, "y": 216 }
+          {
+            "map": "keen4_potf",
+            "x": 648,
+            "y": 216
+          }
         ],
         "sections": [
           {
             "name": "Lifewater Flask",
             "item_count": 1,
             "access_rules": [
-              "level_potf"
+              "level_potf,stunner"
             ],
             "visibility_rules": [
               "flasksanity",

@@ -786,7 +786,7 @@
             "name": "Yellow Gem",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,level_korath,pogo,stunner"
+              "$ck5_endgame_reachable,level_korath,pogo"
             ],
             "visibility_rules": [
               "ck5_secret_level"
@@ -806,7 +806,8 @@
             "name": "Green Gem",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,level_korath,pogo,stunner"
+              "$ck5_endgame_reachable,level_korath,pogo,stunner,korath_yellow",
+              "$ck5_endgame_reachable,level_korath,pogo,stunner,korath_gemset"
             ],
             "visibility_rules": [
               "ck5_secret_level"
@@ -816,7 +817,8 @@
             "name": "Keycard",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,level_korath,pogo,stunner"
+              "$ck5_endgame_reachable,level_korath,pogo,stunner,korath_blue1,korath_blue2",
+              "$ck5_endgame_reachable,level_korath,pogo,stunner,korath_gemset"
             ],
             "visibility_rules": [
               "ck5_secret_level"
@@ -826,8 +828,8 @@
             "name": "Complete",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,level_korath,pogo,stunner,korath_keycard,korath_yellow,korath_blue1,korath_blue2,korath_green",
-              "$ck5_endgame_reachable,level_korath,pogo,stunner,korath_keycard,korath_gemset"
+              "$ck5_endgame_reachable,level_korath,pogo,korath_green",
+              "$ck5_endgame_reachable,level_korath,pogo,korath_gemset"
             ],
             "visibility_rules": [
               "ck5_secret_level"
@@ -840,10 +842,10 @@
             "ref": "Keen 5/Korath III Base - Vitalin Keg 2/Vitalin Keg"
           },
           {
-            "ref": "Korath III Base - Bags O' Sugar 1-4/Bags O' Sugar 1-4"
+            "ref": "Korath III Base - Bags O' Sugar 1-4 (Pogo)/Bags O' Sugar 1-4 (Pogo)"
           },
           {
-            "ref": "Korath III Base - Bags O' Sugar 5-20/Bags O' Sugar 5-20"
+            "ref": "Korath III Base - Bags O' Sugar 5-20 (Pogo)/Bags O' Sugar 5-20 (Pogo)"
           }
         ]
       },
@@ -861,7 +863,8 @@
             "name": "Vitalin Keg",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,level_korath,pogo,stunner"
+              "$ck5_endgame_reachable,level_korath,pogo,korath_green",
+              "$ck5_endgame_reachable,level_korath,pogo,korath_gemset"
             ],
             "visibility_rules": [
               "kegsanity",
@@ -884,7 +887,8 @@
             "name": "Vitalin Keg",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,level_korath,pogo,stunner"
+              "$ck5_endgame_reachable,level_korath,pogo,korath_yellow",
+              "$ck5_endgame_reachable,level_korath,pogo,korath_gemset"
             ],
             "visibility_rules": [
               "kegsanity",

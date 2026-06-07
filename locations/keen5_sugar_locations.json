@@ -603,7 +603,7 @@
     ]
   },
   {
-    "name": "Korath III Base - Bags O' Sugar 1-4",
+    "name": "Korath III Base - Bags O' Sugar 1-4 (Pogo)",
     "map_locations": [
       {
         "map": "keen5_korath",
@@ -613,16 +613,16 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar 1-4",
+        "name": "Bags O' Sugar 1-4 (Pogo)",
         "item_count": 4,
         "access_rules": [
-          "sugarsanity,ck5_secret_level,level_korath"
+          "sugarsanity,ck5_secret_level,level_korath,pogo"
         ]
       }
     ]
   },
   {
-    "name": "Korath III Base - Bags O' Sugar 5-20",
+    "name": "Korath III Base - Bags O' Sugar 5-20 (Pogo)",
     "map_locations": [
       {
         "map": "keen5_korath",
@@ -632,10 +632,10 @@
     ],
     "sections": [
       {
-        "name": "Bags O' Sugar 5-20",
+        "name": "Bags O' Sugar 5-20 (Pogo)",
         "item_count": 16,
         "access_rules": [
-          "sugarsanity,ck5_secret_level,level_korath"
+          "sugarsanity,ck5_secret_level,level_korath,pogo"
         ]
       }
     ]
