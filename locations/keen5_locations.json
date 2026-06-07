@@ -7,8 +7,8 @@
         "map_locations": [
           {
             "map": "Keen 5 - Omegamatic",
-            "x": 440,
-            "y": 1380
+            "x": 368,
+            "y": 1376
           }
         ],
         "sections": [
@@ -51,7 +51,7 @@
         "map_locations": [
           {
             "map": "Keen 5 - Omegamatic",
-            "x": 440,
+            "x": 368,
             "y": 1280
           }
         ],
@@ -164,7 +164,7 @@
           {
             "map": "Keen 5 - Omegamatic",
             "x": 200,
-            "y": 788
+            "y": 856
           }
         ],
         "sections": [
@@ -262,8 +262,8 @@
         "map_locations": [
           {
             "map": "Keen 5 - Omegamatic",
-            "x": 136,
-            "y": 788
+            "x": 128,
+            "y": 856
           }
         ],
         "sections": [
@@ -348,8 +348,8 @@
         "map_locations": [
           {
             "map": "Keen 5 - Omegamatic",
-            "x": 440,
-            "y": 980
+            "x": 368,
+            "y": 984
           }
         ],
         "sections": [
@@ -434,8 +434,8 @@
         "map_locations": [
           {
             "map": "Keen 5 - Omegamatic",
-            "x": 457,
-            "y": 1060
+            "x": 368,
+            "y": 1056
           }
         ],
         "sections": [
@@ -482,7 +482,7 @@
           {
             "map": "Keen 5 - Omegamatic",
             "x": 536,
-            "y": 788
+            "y": 856
           }
         ],
         "sections": [
@@ -521,8 +521,8 @@
         "map_locations": [
           {
             "map": "Keen 5 - Omegamatic",
-            "x": 600,
-            "y": 788
+            "x": 608,
+            "y": 856
           }
         ],
         "sections": [
@@ -561,8 +561,8 @@
         "map_locations": [
           {
             "map": "Keen 5 - Omegamatic",
-            "x": 440,
-            "y": 723
+            "x": 368,
+            "y": 728
           }
         ],
         "sections": [
@@ -655,8 +655,8 @@
         "map_locations": [
           {
             "map": "Keen 5 - Omegamatic",
-            "x": 456,
-            "y": 660
+            "x": 368,
+            "y": 640
           }
         ],
         "sections": [
@@ -720,8 +720,8 @@
         "map_locations": [
           {
             "map": "Keen 5 - Omegamatic",
-            "x": 440,
-            "y": 323
+            "x": 368,
+            "y": 328
           }
         ],
         "sections": [
@@ -800,8 +800,8 @@
         "map_locations": [
           {
             "map": "Keen 5 - Omegamatic",
-            "x": 296,
-            "y": 275
+            "x": 368,
+            "y": 232
           }
         ],
         "sections": [
