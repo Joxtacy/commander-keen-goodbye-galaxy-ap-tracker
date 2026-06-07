@@ -71,7 +71,9 @@ CROP = {
     "keen4_bv": (3, 2, 1, 2), "keen4_sv": (3, 6, 1, 2), "keen4_pp": (3, 2, 1, 2),
     "keen4_cotd": (3, 2, 1, 2), "keen4_coc": (3, 2, 1, 2), "keen4_crys": (3, 2, 1, 2),
     "keen4_hil": (3, 2, 1, 2), "keen4_sy": (3, 2, 1, 2), "keen4_mir": (3, 2, 1, 2),
-    "keen4_lo": (3, 2, 1, 3), "keen4_potm": (3, 2, 1, 2), "keen4_pos": (3, 2, 1, 4),
+    "keen4_lo": (3, 2, 1, 3), "keen4_potm": (3, 2, 1, 2),
+    "keen4_pos": (3, 2, 1, 2),  # bottom was 4, but that clipped 2 rows of real
+    # cave geometry above the "EDGE OF MAP" border (rows 97-98); 2 matches the norm
     "keen4_potga": (3, 2, 1, 2), "keen4_iot": (3, 2, 1, 2), "keen4_iof": (3, 2, 1, 2),
     "keen4_wow": (3, 2, 1, 2), "keen4_bwbm": (3, 2, 1, 2),
     "keen5_ivs": (3, 4, 1, 2), "keen5_sc": (3, 2, 1, 2), "keen5_dtv": (3, 2, 1, 2),
