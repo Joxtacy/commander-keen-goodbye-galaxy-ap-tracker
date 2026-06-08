@@ -763,7 +763,8 @@
             "name": "Lifewater Flask",
             "item_count": 1,
             "access_rules": [
-              "$potf_reachable,level_potf"
+              "$potf_reachable,level_potf,pogo,stunner,potf_red1,potf_red2,potf_yellow,potf_blue",
+              "$potf_reachable,level_potf,pogo,stunner,potf_gemset"
             ],
             "visibility_rules": [
               "flasksanity",
