@@ -56,7 +56,9 @@ function ck4_all_completable()
     if not level_completable("level_potm",  {"potm_yellow"},             "potm_gemset",  false, false, nil, false, true) then return 0 end
     if not level_completable("level_pos",   {"pos_blue"},                "pos_gemset",   false, false, nil, true) then return 0 end
     if not level_completable("level_potga", {"potga_red","potga_green"}, "potga_gemset", true)  then return 0 end
-    if not level_completable("level_iot",   {"iot_blue"},                "iot_gemset",   true, true) then return 0 end
+    -- IoT completion uses the over-the-top pogo route, which skips the Blue
+    -- Gem door entirely, so only pogo (+ wetsuit region gate) is needed.
+    if not level_completable("level_iot",   nil, nil,                                    true, true) then return 0 end
     if not level_completable("level_iof",   {"iof_yellow","iof_blue"},   "iof_gemset",  false, true) then return 0 end
     if not level_completable("level_wow",   nil, nil,                                    false, true) then return 0 end
     return 1
