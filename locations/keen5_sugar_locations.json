@@ -616,7 +616,10 @@
         "name": "Bags O' Sugar 1-4 (Pogo)",
         "item_count": 4,
         "access_rules": [
-          "sugarsanity,ck5_secret_level,$korath_reachable,level_korath,pogo"
+          "ck5_secret_level,$korath_reachable,level_korath,pogo"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
@@ -635,7 +638,10 @@
         "name": "Bags O' Sugar 5-20 (Pogo)",
         "item_count": 16,
         "access_rules": [
-          "sugarsanity,ck5_secret_level,$korath_reachable,level_korath,pogo"
+          "ck5_secret_level,$korath_reachable,level_korath,pogo"
+        ],
+        "visibility_rules": [
+          "sugarsanity"
         ]
       }
     ]
