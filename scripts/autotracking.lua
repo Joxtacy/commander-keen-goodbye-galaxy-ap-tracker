@@ -267,7 +267,7 @@ local CK4_FLASK_LAYOUT = {
 	[9]  = {{lo=0, hi=0, entry="Miragia - Lifewater Flasks",                         section="Lifewater Flasks"}},
 	[11] = {{lo=0, hi=0, entry="Pyramid of the Moons - Lifewater Flasks",            section="Lifewater Flasks"}},
 	[12] = {
-		{lo=0, hi=0, entry="Pyramid of Shadows - Lifewater Flask 1",                 section="Lifewater Flask (Pogo+Stunner)"},
+		{lo=0, hi=0, entry="Pyramid of Shadows - Lifewater Flask 1",                 section="Lifewater Flask (Stunner)"},
 		{lo=1, hi=7, entry="Pyramid of Shadows - Lifewater Flasks 2-8",              section="Lifewater Flasks (Stunner)"},
 	},
 	-- POTGA: apworld's Rules.py labels engine idx 1 (lone at y=92) as "Flask 2"

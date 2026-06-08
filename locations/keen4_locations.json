@@ -573,7 +573,7 @@
             ]
           },
           {
-            "ref": "Keen 4/Pyramid of Shadows - Lifewater Flask 1/Lifewater Flask (Pogo+Stunner)"
+            "ref": "Keen 4/Pyramid of Shadows - Lifewater Flask 1/Lifewater Flask (Stunner)"
           },
           {
             "ref": "Keen 4/Pyramid of Shadows - Lifewater Flasks 2-8/Lifewater Flasks (Stunner)"
@@ -594,10 +594,10 @@
         ],
         "sections": [
           {
-            "name": "Lifewater Flask (Pogo+Stunner)",
+            "name": "Lifewater Flask (Stunner)",
             "item_count": 1,
             "access_rules": [
-              "level_pos,pogo,stunner"
+              "level_pos,stunner"
             ],
             "visibility_rules": [
               "flasksanity"
