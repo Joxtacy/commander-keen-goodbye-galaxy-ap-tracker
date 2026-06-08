@@ -18,7 +18,10 @@ end
 -- Helper: check if a level's completion requirements are met.
 -- A level is completable when:  level unlock  AND  optional pogo/wetsuit/stunner/keycard
 -- AND  (all required gems  OR  gemset).
-local function level_completable(level, gems, gemset, pogo, wetsuit, keycard, stunner)
+-- gem_or_pogo: when true, owning pogo is an *alternative* to the gem/gemset
+-- requirement (e.g. POTM's over-the-top exit, which skips the yellow-gem door).
+-- This is distinct from the `pogo` arg, which makes pogo an additional AND.
+local function level_completable(level, gems, gemset, pogo, wetsuit, keycard, stunner, gem_or_pogo)
     if not has(level) then return false end
     if pogo and not has("pogo") then return false end
     if wetsuit and not has("wetsuit") then return false end
@@ -29,7 +32,9 @@ local function level_completable(level, gems, gemset, pogo, wetsuit, keycard, st
         for _, g in ipairs(gems) do
             if not has(g) then all_gems = false; break end
         end
-        if not all_gems and not has(gemset) then return false end
+        local satisfied = all_gems or has(gemset)
+        if gem_or_pogo then satisfied = satisfied or has("pogo") end
+        if not satisfied then return false end
     end
     return true
 end
@@ -46,7 +51,9 @@ function ck4_all_completable()
     if not level_completable("level_sy",    {"sy_green"},                "sy_gemset",    true)  then return 0 end
     if not level_completable("level_mir",   nil, nil,                                     true)  then return 0 end
     if not level_completable("level_lo",    {"lo_green"},                "lo_gemset")    then return 0 end
-    if not level_completable("level_potm",  {"potm_yellow"},             "potm_gemset")  then return 0 end
+    -- POTM has three exits: yellow-gem door, secret exit (also yellow), and an
+    -- over-the-top route reachable with pogo alone (no yellow). gem_or_pogo=true.
+    if not level_completable("level_potm",  {"potm_yellow"},             "potm_gemset",  false, false, nil, false, true) then return 0 end
     if not level_completable("level_pos",   {"pos_blue"},                "pos_gemset",   false, false, nil, true) then return 0 end
     if not level_completable("level_potga", {"potga_red","potga_green"}, "potga_gemset", true)  then return 0 end
     if not level_completable("level_iot",   {"iot_blue"},                "iot_gemset",   true, true) then return 0 end

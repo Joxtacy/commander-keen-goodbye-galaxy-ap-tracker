@@ -514,7 +514,8 @@
             "item_count": 1,
             "access_rules": [
               "level_potm,potm_yellow",
-              "level_potm,potm_gemset"
+              "level_potm,potm_gemset",
+              "level_potm,pogo"
             ]
           },
           {

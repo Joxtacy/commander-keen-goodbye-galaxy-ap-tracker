@@ -120,6 +120,14 @@ own(without(CK4_FULL, "stunner"))
 check("ck4 all: no stunner (POS gate)", ck4_all_completable(), 0)
 own(without(CK4_FULL, "pp_red"))
 check("ck4 all: missing a gem", ck4_all_completable(), 0)
+-- POTM has an over-the-top exit reachable with pogo alone (no Yellow Gem).
+-- CK4_FULL owns pogo, so dropping potm_yellow must still leave POTM completable.
+own(without(CK4_FULL, "potm_yellow"))
+check("ck4 all: POTM completable via pogo over-the-top exit (no yellow)",
+    ck4_all_completable(), 1)
+-- Dropping both potm_yellow and potm's pogo route is not testable in aggregate
+-- (pogo also gates COTD/SY/MIR/POTGA/IOT), but the yellow-only path is covered
+-- by "ck4 all: full" above.
 own({})
 check("ck4 all: nothing owned", ck4_all_completable(), 0)
 
