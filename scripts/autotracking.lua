@@ -281,7 +281,7 @@ local CK4_FLASK_LAYOUT = {
 	},
 	[15] = {
 		{lo=0, hi=0, entry="Isle of Tar - Lifewater Flask 1",                        section="Lifewater Flask (Pogo)"},
-		{lo=1, hi=1, entry="Isle of Tar - Lifewater Flask 2",                        section="Lifewater Flask (Pogo+Blue)"},
+		{lo=1, hi=1, entry="Isle of Tar - Lifewater Flask 2",                        section="Lifewater Flask (Pogo)"},
 	},
 	[16] = {{lo=0, hi=0, entry="Isle of Fire - Lifewater Flasks",                    section="Lifewater Flasks"}},
 	[17] = {{lo=0, hi=0, entry="Well of Wishes - Lifewater Flasks",                  section="Lifewater Flasks"}},

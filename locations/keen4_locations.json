@@ -760,7 +760,7 @@
             "ref": "Keen 4/Isle of Tar - Lifewater Flask 1/Lifewater Flask (Pogo)"
           },
           {
-            "ref": "Keen 4/Isle of Tar - Lifewater Flask 2/Lifewater Flask (Pogo+Blue)"
+            "ref": "Keen 4/Isle of Tar - Lifewater Flask 2/Lifewater Flask (Pogo)"
           },
           {
             "ref": "Isle of Tar - Ice Cream Cone 1 (Pogo)/Ice Cream Cone 1 (Pogo)"
@@ -806,11 +806,10 @@
         ],
         "sections": [
           {
-            "name": "Lifewater Flask (Pogo+Blue)",
+            "name": "Lifewater Flask (Pogo)",
             "item_count": 1,
             "access_rules": [
-              "wetsuit,level_iot,pogo,iot_blue",
-              "wetsuit,level_iot,pogo,iot_gemset"
+              "wetsuit,level_iot,pogo"
             ],
             "visibility_rules": [
               "flasksanity"
