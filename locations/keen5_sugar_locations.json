@@ -419,8 +419,8 @@
         "name": "Bags O' Sugar 1-6 (Green Gem, Pogo)",
         "item_count": 6,
         "access_rules": [
-          "sugarsanity,level_gdh,pogo,gdh_green",
-          "sugarsanity,level_gdh,pogo,gdh_gemset"
+          "sugarsanity,$ck5_endgame_reachable,level_gdh,pogo,gdh_green",
+          "sugarsanity,$ck5_endgame_reachable,level_gdh,pogo,gdh_gemset"
         ]
       }
     ]
@@ -439,7 +439,7 @@
         "name": "Bags O' Sugar 7-10 (Pogo)",
         "item_count": 4,
         "access_rules": [
-          "sugarsanity,level_gdh,pogo"
+          "sugarsanity,$ck5_endgame_reachable,level_gdh,pogo"
         ]
       }
     ]
@@ -458,7 +458,7 @@
         "name": "Bags O' Sugar 11-13 (Pogo)",
         "item_count": 3,
         "access_rules": [
-          "sugarsanity,level_gdh,pogo"
+          "sugarsanity,$ck5_endgame_reachable,level_gdh,pogo"
         ]
       }
     ]
@@ -477,7 +477,7 @@
         "name": "Bags O' Sugar 14-15",
         "item_count": 2,
         "access_rules": [
-          "sugarsanity,level_gdh"
+          "sugarsanity,$ck5_endgame_reachable,level_gdh"
         ]
       }
     ]
@@ -496,8 +496,8 @@
         "name": "Bags O' Sugar 1-6 (Red Gem, Yellow Gem, Blue Gem, Green Gem, Pogo)",
         "item_count": 6,
         "access_rules": [
-          "sugarsanity,level_qed,pogo,qed_red,qed_yellow,qed_blue,qed_green",
-          "sugarsanity,level_qed,pogo,qed_gemset"
+          "sugarsanity,$ck5_endgame_reachable,level_qed,pogo,qed_red,qed_yellow,qed_blue,qed_green",
+          "sugarsanity,$ck5_endgame_reachable,level_qed,pogo,qed_gemset"
         ]
       }
     ]
@@ -516,7 +516,7 @@
         "name": "Bags O' Sugar 7-9 (Pogo)",
         "item_count": 3,
         "access_rules": [
-          "sugarsanity,level_qed,pogo"
+          "sugarsanity,$ck5_endgame_reachable,level_qed,pogo"
         ]
       }
     ]
