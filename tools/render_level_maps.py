@@ -110,6 +110,26 @@ COLLECTIBLES = [
     {"name": "Keycard", "item": 13, "misc": None, "scan": "info", "eps": (5,), "spr": {5: 207}},
 ]
 
+# Moving platforms are info-plane objects, not tile-plane geometry, so the base
+# render leaves their travel lanes empty. Stamp each platform's spawn tile with
+# its real in-game sprite to fill those gaps. "info" lists the platform cases of
+# the ck{4,5}_misc.c spawn switch; "spr" is the platform action's sprite chunk
+# from ACTION.CK{4,5} (every red platform — axis/fall/stand/go/sneak — draws
+# SPR_PLATFORM; purple platforms draw SPR_PURPLEPLAT1). The info value encodes
+# travel direction or difficulty variant, not platform identity, so every tile
+# carrying any of these values is one platform. Only the spawn tile is marked —
+# the platform's path can't be rendered statically. CK4 has only axis (27-30)
+# and fall (32) platforms; the higher values mean other objects there.
+PLATFORMS = {
+    4: [
+        {"name": "Platform", "info": (27, 28, 29, 30, 32), "spr": 484},
+    ],
+    5: [
+        {"name": "Platform", "info": (27, 28, 29, 30, 32, 33, 34, 35, 36, 37, 38, 39, 40), "spr": 446},
+        {"name": "Purple platform", "info": (80, 81, 82, 83, 84, 85, 86, 87), "spr": 422},
+    ],
+}
+
 
 def collectible_icon(gfx, ep, c) -> Image.Image:
     """The item's real in-game pickup sprite for this episode (sprite chunk if
@@ -127,6 +147,19 @@ def collectible_tiles(gfx, w, h, fg, info, c) -> list[tuple[int, int]]:
     return [(p["x"], p["y"]) for p in R.scan_pickups(gfx, w, h, fg, info, c["misc"], c["item"])]
 
 
+def stamp(img: Image.Image, icon: Image.Image, tx: int, ty: int, left: int, top: int) -> bool:
+    """Paste `icon` centred on game tile (tx, ty) using the level's crop. Returns
+    True if the tile fell inside the cropped image (and was drawn)."""
+    iw, ih = icon.size
+    iw_img, ih_img = img.size
+    cx = (tx - left) * TILE + TILE // 2
+    cy = (ty - top) * TILE + TILE // 2
+    if 0 <= cx < iw_img and 0 <= cy < ih_img:
+        img.paste(icon, (cx - iw // 2, cy - ih // 2), icon)
+        return True
+    return False
+
+
 def map_id_to_image() -> dict[str, str]:
     out: dict[str, str] = {}
     for ep in (4, 5):
@@ -140,10 +173,14 @@ def main() -> None:
     mapid_img = map_id_to_image()
     gfxs = {ep: R.Graphics(ep) for ep in (4, 5)}
     mapses = {ep: R.Maps(ep) for ep in (4, 5)}
-    # Pre-decode each episode's collectible icons once.
+    # Pre-decode each episode's collectible + platform icons once.
     icons = {
         ep: [(c, collectible_icon(gfxs[ep], ep, c))
              for c in COLLECTIBLES if ep in c["eps"]]
+        for ep in (4, 5)
+    }
+    plat_icons = {
+        ep: [(p, gfxs[ep].sprite_rgba(p["spr"])) for p in PLATFORMS[ep]]
         for ep in (4, 5)
     }
 
@@ -156,18 +193,19 @@ def main() -> None:
 
         img = R.render_map(gfx, w, h, bg, fg).convert("RGBA")
         img = img.crop((left * TILE, top * TILE, (w - right) * TILE, (h - bottom) * TILE))
-        iw_img, ih_img = img.size
 
         counts: dict[str, int] = {}
+        # Platforms first, so a collectible riding a platform stays drawn on top.
+        for p, icon in plat_icons[ep]:
+            wanted = set(p["info"])
+            for ty in range(h):
+                for tx in range(w):
+                    if info[ty * w + tx] in wanted and stamp(img, icon, tx, ty, left, top):
+                        counts[p["name"]] = counts.get(p["name"], 0) + 1
         for c, icon in icons[ep]:
-            iw, ih = icon.size
             for tx, ty in collectible_tiles(gfx, w, h, fg, info, c):
-                cx = (tx - left) * TILE + TILE // 2
-                cy = (ty - top) * TILE + TILE // 2
-                if not (0 <= cx < iw_img and 0 <= cy < ih_img):
-                    continue
-                img.paste(icon, (cx - iw // 2, cy - ih // 2), icon)
-                counts[c["name"]] = counts.get(c["name"], 0) + 1
+                if stamp(img, icon, tx, ty, left, top):
+                    counts[c["name"]] = counts.get(c["name"], 0) + 1
 
         img.convert("RGB").save(IMAGES / mapid_img[mapid])
         total_maps += 1
