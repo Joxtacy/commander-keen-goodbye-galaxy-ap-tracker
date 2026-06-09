@@ -131,6 +131,36 @@ check("ck4 all: POTM completable via pogo over-the-top exit (no yellow)",
 own({})
 check("ck4 all: nothing owned", ck4_all_completable(), 0)
 
+-- --- ck4_council_goal_completable --------------------------------------
+-- Only the 8 council-member levels and their requirements — deliberately
+-- omits the non-council levels (BV, SV, COC, HIL, SY, MIR, POTM, IOT, BWBM)
+-- to prove the council goal does NOT require them.
+local CK4_COUNCIL = {
+    "pogo", "wetsuit", "stunner",
+    "level_pp", "level_cotd", "level_crys", "level_lo", "level_pos",
+    "level_potga", "level_iof", "level_wow",
+    "pp_red", "pp_blue", "cotd_yellow", "crys_blue", "lo_green",
+    "pos_blue", "potga_red", "potga_green", "iof_yellow", "iof_blue",
+}
+own(CK4_FULL)
+check("ck4 council: full CK4 inventory", ck4_council_goal_completable(), 1)
+own(CK4_FULL_GEMSET)
+check("ck4 council: gemsets", ck4_council_goal_completable(), 1)
+own(CK4_COUNCIL)
+check("ck4 council: council-only inventory (non-council levels not required)",
+    ck4_council_goal_completable(), 1)
+own(without(CK4_COUNCIL, "level_wow"))
+check("ck4 council: missing a council level", ck4_council_goal_completable(), 0)
+own(without(CK4_COUNCIL, "pos_blue"))
+check("ck4 council: missing a council gem (POS, no gemset)",
+    ck4_council_goal_completable(), 0)
+own(without(CK4_COUNCIL, "stunner"))
+check("ck4 council: no stunner (POS gate)", ck4_council_goal_completable(), 0)
+own(without(CK4_COUNCIL, "wetsuit"))
+check("ck4 council: no wetsuit (IOF/WOW gate)", ck4_council_goal_completable(), 0)
+own({})
+check("ck4 council: nothing owned", ck4_council_goal_completable(), 0)
+
 -- --- Summary -----------------------------------------------------------
 print(string.format("\n%d passed, %d failed", pass, fail))
 os.exit(fail == 0 and 0 or 1)

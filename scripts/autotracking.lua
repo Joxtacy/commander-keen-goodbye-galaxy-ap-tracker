@@ -22,6 +22,29 @@ ENABLE_CK5_SECRET_LEVEL = 0
 CK4_VICTORY_LOCATION = 13800 -- Bean-With-Bacon Megarocket Complete
 CK5_VICTORY_LOCATION = 15200 -- Quantum Explosion Dynamo Complete
 
+-- Keen 4 goal from slot_data (mirrors apworld Options.CK4Goal):
+--   0 = megarocket (default): win by completing the Bean-With-Bacon Megarocket
+--   1 = council_rescue: win by completing the 8 council-member levels
+CK4_GOAL = 0
+-- The 8 Keen 4 level-complete locations that contain a council member. Under
+-- the council_rescue goal ck4_victory lights once all 8 are checked. (Derived
+-- from GAMEMAPS.CK4; the Pyramid of the Forbidden "council member" is the
+-- Janitor and is excluded.)
+CK4_COUNCIL_LOCATIONS = {
+	[12300] = true, -- The Perilous Pit Complete
+	[12400] = true, -- Cave of the Descendents Complete
+	[12600] = true, -- Crystalus Complete
+	[13000] = true, -- Lifewater Oasis Complete
+	[13200] = true, -- Pyramid of Shadows Complete
+	[13300] = true, -- Pyramid of the Gnosticine Ancients Complete
+	[13600] = true, -- Isle of Fire Complete
+	[13700] = true, -- Well of Wishes Complete
+}
+CK4_COUNCIL_TOTAL = 8
+-- Council levels seen as checked this session (reset in onClear, accumulated in
+-- onLocation as the server replays the checked-locations list on connect).
+CK4_COUNCIL_SEEN = {}
+
 -- AP item id -> readable label. The id is the contract (it matches
 -- worlds/keen/Items.py); both onItem and onClear resolve objects via the
 -- "keen_<id>" code every item declares in items.json, so the labels here are
@@ -574,8 +597,8 @@ MAP_KEY = nil
 -- overrides BadgeText/SetOverlay once the count is non-zero — which left
 -- "X/N" only visible at zero. Toggles have no default badge so the text
 -- shows through at every count.
-SCORE_COUNT = { flask_count = 0, keg_count = 0, cone_count = 0, sugar_count = 0 }
-SCORE_MAX   = { flask_count = 31, keg_count = 24, cone_count = 65, sugar_count = 126 }
+SCORE_COUNT = { flask_count = 0, keg_count = 0, cone_count = 0, sugar_count = 0, oracle_count = 0 }
+SCORE_MAX   = { flask_count = 31, keg_count = 24, cone_count = 65, sugar_count = 126, oracle_count = 8 }
 
 -- Update the items-panel score-item counter widget. If `count` is given,
 -- it replaces the running count for this code; otherwise the existing value
@@ -599,6 +622,9 @@ function update_score_overlay(code, count)
 		enabled = (ENABLE_CONESANITY == 1)
 	elseif code == "sugar_count" then
 		enabled = (ENABLE_SUGARSANITY == 1)
+	elseif code == "oracle_count" then
+		-- Only meaningful under the council-rescue goal; greyed otherwise.
+		enabled = (CK4_GOAL == 1)
 	end
 	pcall(function() obj.Active = enabled end)
 	local text = string.format("%d/%d", n, max)
@@ -619,6 +645,12 @@ function onClear(slot_data)
 		EPISODE_SELECT = slot_data["episode_select"]
 	else
 		EPISODE_SELECT = 0
+	end
+
+	if slot_data and slot_data["ck4_goal"] ~= nil then
+		CK4_GOAL = slot_data["ck4_goal"]
+	else
+		CK4_GOAL = 0
 	end
 
 	if slot_data and slot_data["enable_gemsets"] ~= nil then
@@ -721,6 +753,9 @@ function onClear(slot_data)
 			obj.Active = false
 		end
 	end
+	-- Reset council-rescue progress (re-accumulated as locations replay)
+	CK4_COUNCIL_SEEN = {}
+	update_score_overlay("oracle_count", 0)
 
 	-- Reset score-item progress counters (bumped from onLocation)
 	update_score_overlay("flask_count", 0)
@@ -773,13 +808,31 @@ function onLocation(location_id, location_name)
 		loc.AvailableChestCount = loc.AvailableChestCount - 1
 	end
 
-	-- Victory tracking: flag when final levels are completed
-	if location_id == CK4_VICTORY_LOCATION then
+	-- Victory tracking: flag when the goal is met.
+	-- Keen 4: under the megarocket goal (default) this is the Bean-With-Bacon
+	-- Megarocket completion; under the council_rescue goal it is all 8
+	-- council-member levels being completed.
+	if CK4_GOAL == 1 and CK4_COUNCIL_LOCATIONS[location_id] then
+		CK4_COUNCIL_SEEN[location_id] = true
+		local count = 0
+		for _ in pairs(CK4_COUNCIL_SEEN) do
+			count = count + 1
+		end
+		update_score_overlay("oracle_count", count)
+		if count >= CK4_COUNCIL_TOTAL then
+			local obj = Tracker:FindObjectForCode("ck4_victory")
+			if obj then
+				obj.Active = true
+			end
+		end
+	elseif CK4_GOAL ~= 1 and location_id == CK4_VICTORY_LOCATION then
 		local obj = Tracker:FindObjectForCode("ck4_victory")
 		if obj then
 			obj.Active = true
 		end
-	elseif location_id == CK5_VICTORY_LOCATION then
+	end
+
+	if location_id == CK5_VICTORY_LOCATION then
 		local obj = Tracker:FindObjectForCode("ck5_victory")
 		if obj then
 			obj.Active = true

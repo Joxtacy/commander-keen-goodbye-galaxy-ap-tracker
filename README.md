@@ -11,6 +11,22 @@ A PopTracker pack for the [Commander Keen "Goodbye Galaxy" Archipelago world](ht
 - Optional secret levels (Pyramid of the Forbidden, Korath III Base) with their own maps, pins, and item panels — shown only when enabled in the seed
 - Archipelago auto-tracking via AP connection
 - Three variants: Both Episodes, Episode 4 Only, Episode 5 Only
+- Both Keen 4 goals supported (read from slot data): the **Bean-With-Bacon
+  Megarocket** goal (default) and the **Rescue all Oracles** goal
+
+## Keen 4 goal
+
+The Keen 4 victory icon follows the seed's `ck4_goal` option:
+
+- **Megarocket** (default) — lights when the Bean-With-Bacon Megarocket is
+  completed.
+- **Rescue all Oracles** (`council_rescue`) — lights once all 8
+  council-member levels are completed: The Perilous Pit, Cave of the
+  Descendents, Crystalus, Lifewater Oasis, Pyramid of Shadows, Pyramid of the
+  Gnosticine Ancients, Isle of Fire, and Well of Wishes. The Bean-With-Bacon
+  Megarocket is not required for this goal. An **Oracles Rescued** counter on
+  the items panel shows progress (`n/8`) and turns green at 8; it stays greyed
+  under the Megarocket goal.
 
 ## Secret levels
 

@@ -64,6 +64,24 @@ function ck4_all_completable()
     return 1
 end
 
+-- Council-rescue goal: the 8 council-member levels completable. Mirrors the
+-- per-level requirements in ck4_all_completable for exactly those 8 levels
+-- (The Perilous Pit, Cave of the Descendents, Crystalus, Lifewater Oasis,
+-- Pyramid of Shadows, Pyramid of the Gnosticine Ancients, Isle of Fire, Well of
+-- Wishes). Used to drive the council goal's reachability indicator; the BWBM
+-- and the other non-council levels are not required for this goal.
+function ck4_council_goal_completable()
+    if not level_completable("level_pp",    {"pp_red","pp_blue"},         "pp_gemset")    then return 0 end
+    if not level_completable("level_cotd",  {"cotd_yellow"},             "cotd_gemset",  true)  then return 0 end
+    if not level_completable("level_crys",  {"crys_blue"},               "crys_gemset")  then return 0 end
+    if not level_completable("level_lo",    {"lo_green"},                "lo_gemset")    then return 0 end
+    if not level_completable("level_pos",   {"pos_blue"},                "pos_gemset",   false, false, nil, true) then return 0 end
+    if not level_completable("level_potga", {"potga_red","potga_green"}, "potga_gemset", true)  then return 0 end
+    if not level_completable("level_iof",   {"iof_yellow","iof_blue"},   "iof_gemset",  false, true) then return 0 end
+    if not level_completable("level_wow",   nil, nil,                                    false, true) then return 0 end
+    return 1
+end
+
 -- Shared CK5 hub-level gem requirements. RCC/NBI/BMI gate identically wherever
 -- they appear (End Game region entry and per-level completion), so define them
 -- once. EFS is deliberately NOT shared: the End Game region gate needs all four

@@ -793,6 +793,15 @@
     "codes": "ck4_victory"
   },
   {
+    "name": "Oracles Rescued",
+    "type": "toggle",
+    "img": "images/council_member.png",
+    "codes": "oracle_count",
+    "overlay_font_size": 11,
+    "overlay_align": "center",
+    "overlay_background": "#80000000"
+  },
+  {
     "name": "Keen 5 Victory",
     "type": "toggle",
     "img": "images/omegamatic_ad.png",
