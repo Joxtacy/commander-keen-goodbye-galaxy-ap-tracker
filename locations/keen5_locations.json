@@ -828,8 +828,8 @@
             "name": "Complete",
             "item_count": 1,
             "access_rules": [
-              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo,korath_green",
-              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo,korath_gemset"
+              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo,korath_green,korath_keycard",
+              "$ck5_endgame_reachable,$korath_reachable,level_korath,pogo,korath_gemset,korath_keycard"
             ],
             "visibility_rules": [
               "ck5_secret_level"
