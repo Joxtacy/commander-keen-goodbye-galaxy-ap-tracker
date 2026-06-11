@@ -1,6 +1,32 @@
 {
   "versions": [
     {
+      "package_version": "0.0.11",
+      "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.11/keen_goodbye_galaxy_ap_tracker_0.0.11.zip",
+      "sha256": "2d8a4fd05e1ae62e70d3502cf198867a2aefcdd7373c82db3c53d6d8f19fb958",
+      "changelog": [
+        "fix(keen4): IoT Lifewater Flask 2 no longer requires the blue gem",
+        "feat: hide cone/sugar pins via visibility_rules when sanity is off",
+        "feat: relax Sand Yego/Isle of Tar gem logic for pogo bypasses",
+        "feat: allow POTM completion via pogo over-the-top exit",
+        "fix: gate Isle of Tar/Fire ice cream cones behind the wetsuit",
+        "feat(maps): stamp moving platforms onto level maps",
+        "fix: gate GDH/QED bag o' sugar checks behind End Game region",
+        "fix: drop pogo from Pyramid of Shadows lifewater flask 1",
+        "fix(maps): un-clip Pyramid of Shadows bottom crop",
+        "fix(maps): align pointsanity pins to per-level CROP",
+        "feat(maps): place overworld level-entrance pins from game data",
+        "feat(maps): render all level maps from game data with every collectible",
+        "fix(locations): correct pickup/gem/exit markers misplaced vs game data",
+        "feat(maps): stamp in-game pickup sprites onto level maps",
+        "feat(locations): re-add Sand Yego Ice Cream Cone 1 (pogo)",
+        "fix(logic): QED Complete gates on End Game reach, not all CK5 levels",
+        "fix(sugar/cones): per-cluster pointsanity nodes + GDH 7-10 green-gem drop",
+        "fix(logic): drop Green Gem gate on Crystalus Yellow Gem",
+        "ci(release): group notes by type, add highlights input + cross-links"
+      ]
+    },
+    {
       "package_version": "0.0.11-rc.3",
       "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.11-rc.3/keen_goodbye_galaxy_ap_tracker_0.0.11-rc.3.zip",
       "sha256": "f5931b7c9272fd8a268286efd0bdde54b4ae7841c1289ce061990edbbefb1b99",
