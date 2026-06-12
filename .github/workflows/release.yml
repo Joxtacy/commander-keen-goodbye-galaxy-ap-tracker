@@ -11,6 +11,11 @@ on:
         description: "Optional one-line summary shown at the top of the notes"
         required: false
         type: string
+      apworld_ref:
+        description: "Archipelago-Keen ref to drift-check against (use a feature branch when releasing an RC ahead of keen-ap)"
+        required: false
+        default: "keen-ap"
+        type: string
 
 permissions:
   contents: write
@@ -47,11 +52,11 @@ jobs:
       # Gate the release on the same checks CI runs, so a dispatch on an
       # unvetted ref can't ship a broken pack or one that has drifted from the
       # apworld. Runs before any manifest/versions mutation so it fails fast.
-      - name: Checkout apworld (Joxtacy/Archipelago-Keen@keen-ap)
+      - name: Checkout apworld (Joxtacy/Archipelago-Keen)
         uses: actions/checkout@v6
         with:
           repository: Joxtacy/Archipelago-Keen
-          ref: keen-ap
+          ref: ${{ inputs.apworld_ref }}
           path: _apworld
 
       - name: Install Lua
