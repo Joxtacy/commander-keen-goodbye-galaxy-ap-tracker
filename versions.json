@@ -1,6 +1,29 @@
 {
   "versions": [
     {
+      "package_version": "0.0.12-rc.1",
+      "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.12-rc.1/keen_goodbye_galaxy_ap_tracker_0.0.12-rc.1.zip",
+      "sha256": "9bc589d53174ceb908cdcf0b7d95c1edbd77155f34b5deed8e23b09920e54662",
+      "changelog": [
+        "ci(release): make apworld drift-check ref configurable (default keen-ap)",
+        "fix(secret): require Korath keycard to complete Korath III Base",
+        "feat: hide POTF/Korath cone/sugar pins via visibility_rules when sanity is off",
+        "feat: gate POTF Lifewater Flask 1 like ice cream cones 1-10",
+        "feat(secret): gate POTF/Korath locations behind cross-level entry logic",
+        "feat(secret): match POTF/Korath pointsanity + gem rules to refined apworld logic",
+        "docs: document secret levels + shared gem-check behavior in README",
+        "feat: show POTF/Korath in tracker item panels",
+        "fix: split POTF lifewater flasks into separate checks",
+        "feat: track POTF cones + flasks checks",
+        "fix: map secret-level gem/keycard/complete locations (autotrack)",
+        "feat: add secret-level interior gem/exit/keycard pins",
+        "feat: track Korath III Base sugar + keg checks",
+        "feat: track Korath III Base gems + keycard checks",
+        "feat(maps): render secret-level maps + overworld pins from game data",
+        "feat: track secret levels (POTF, Korath III Base)"
+      ]
+    },
+    {
       "package_version": "0.0.11",
       "download_url": "https://github.com/Joxtacy/commander-keen-goodbye-galaxy-ap-tracker/releases/download/v0.0.11/keen_goodbye_galaxy_ap_tracker_0.0.11.zip",
       "sha256": "2d8a4fd05e1ae62e70d3502cf198867a2aefcdd7373c82db3c53d6d8f19fb958",
